@@ -734,6 +734,7 @@ a.valid {
   display: inline-block;
   /* box-shadow: 0 14px 28px rgb(112 0 255 / 2%), 0 10px 10px rgb(112 0 255 / 2%); */
   background: #f8f3ff;
+  background: white;
 }
 
 .button-purple:hover {
@@ -747,7 +748,7 @@ a.valid {
   transform: scale(1.05);
   position: center;
   text-decoration: none;
-  background: #f2e9fd;
+  /*background: #f2e9fd;*/
 }
 
 .profile-user-logged-as {
