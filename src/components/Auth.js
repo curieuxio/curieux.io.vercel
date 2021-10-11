@@ -1,18 +1,14 @@
-import { useState } from 'react';
+// Importing Dependencies //
+import React, { Component, useState, useEffect, useContext, useCallback } from 'react';
 import { supabase } from '../supabase/supabaseClient';
-import {
-  Flex,
-  Box,
-  FormControl,
-  FormLabel,
-  Input,
-  Stack,
-  Button,
-  Heading,
-  Text,
-  useColorModeValue,
-  useToast
-} from '@chakra-ui/react';
+import { BrowserRouter as Router, Route, Link, Links, Redirect, Switch } from 'react-router-dom';
+import { Flex, Box, FormControl, FormLabel, Input, Stack, Button, Heading, Text, useColorModeValue, useToast } from '@chakra-ui/react';
+
+// Importing Logo Images SRC //
+import CurieuxLogoPurple from '../content/images/logos/curieux-logo-purple.svg';
+
+// Importing Icon Images SRC //
+import CloseBtn from '../content/images/icons/close.svg';
 
 export default function Auth() {
     const [loading, setLoading] = useState(false);
@@ -47,44 +43,39 @@ export default function Auth() {
     }
 
     return (
-        <div>
-            <Flex minH={'100vh'} align={'center'} justify={'center'} bg={useColorModeValue('gray.50', 'gray.800')}>
-            <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
-            <Stack align={'center'}>
-                <Heading fontSize={'4xl'}>Sign in to Curieux</Heading>
-                <Text fontSize={'lg'} color={'gray.600'}>
-                Via magic link with your email below ✌️
-                </Text>
-            </Stack>
-            <Box rounded={'lg'} bg={useColorModeValue('white', 'gray.700')} boxShadow={'lg'} p={8}>
-                <Stack spacing={4}>
-                <FormControl id="email">
-                    <FormLabel>Email address</FormLabel>
-                    <Input value={email} onChange={e => setEmail(e.target.value)} type="email" />
-                </FormControl>
-                <Stack spacing={10}>
-                    <Button
-                    onClick={e => {
-                        e.preventDefault();
-                        handleLogin(email);
-                    }}
-                    isLoading={loading}
-                    loadingText="Signing in ..."
-                    colorScheme="teal"
-                    variant="outline"
-                    spinnerPlacement="start"
-                    bg={'#7000FF'}
-                    color={'white'}
-                    _hover={{
-                        bg: '#5800CC'
-                    }}>
-                    {loading || 'Send magic link'}
-                    </Button>
-                </Stack>
-                </Stack>
-            </Box>
-            </Stack>
-        </Flex>
-    </div>
+        
+        <Router>
+        <section className="sign-section-wrapper">
+        <div className="sign-section shadow" id="sign-section">
+
+            {/*  Left Part */}
+            <div className="sign-section-left">
+
+                {/*  Intro Part */}
+                <img className="sign-form-logo" alt="Curieux logo" src={CurieuxLogoPurple}/>
+                <h1 className="sign-title">Sign In via magic link with your email! ✌️</h1>
+                
+                {/*  Form Part */}
+                <form className="form-section" onSubmit={handleLogin}>
+                    <div className="inline-inputs">
+                        <div className="inline-inputs-block-signin">
+                            <label className="label-inputs" for="email">Email</label>
+                            <input value={email} onChange={e => setEmail(e.target.value)} type="email" className="sign-inputs signin-inputs" required="required" placeholder="hello@curieux.io"/>
+                        </div>
+                        <Button className="button-purple" onClick={e => {e.preventDefault(); handleLogin(email);}} isLoading={loading} loadingText="Signing in ..." style={{background: "#7000FF", fontWeight: "700", borderRadius: 12 + "px"}} className="sign-inputs-buttons"> {loading || 'Send magic link'}</Button>
+                    </div>
+                </form>
+            </div>
+
+            {/*  Right Part */}
+            <div className="sign-section-right">
+                <div className="sign-section-right-content"></div>
+            </div>  
+            <Link to="/"><img className="sign-section-close-button" alt="close" src={CloseBtn}/></Link>
+            
+        </div>
+    </section>
+    </Router>
+            
     );
 }

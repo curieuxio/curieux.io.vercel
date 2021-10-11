@@ -1,3 +1,4 @@
+// Importing Dependencies //
 import { useEffect, useState } from 'react';
 import { supabase } from '../supabase/supabaseClient';
 import { Avatar, Button } from '@chakra-ui/react';
@@ -51,26 +52,28 @@ export default function PersonalAvatar({ url, onUpload }) {
   }
 
   return (
-    <div>
+    <div className="profile-user">
       {avatarUrl ? (
-        <Avatar
-          size={'2xl'}
-          src={avatarUrl}
-          alt="Avatar"
-          mb={4}
-          pos={'relative'}
-          _after={{
-            content: '""',
-            w: 4,
-            h: 4,
-            bg: 'green.300',
-            border: '2px solid white',
-            rounded: 'full',
-            pos: 'absolute',
-            bottom: 0,
-            right: 3
-          }}
-        />
+        <div className="profile-user-picture">
+          <Avatar
+            size={'2xl'}
+            src={avatarUrl}
+            alt="Avatar"
+            mb={4}
+            pos={'relative'}
+            _after={{
+              content: '""',
+              w: 4,
+              h: 4,
+              bg: 'green.300',
+              border: '2px solid white',
+              rounded: 'full',
+              pos: 'absolute',
+              bottom: 0,
+              right: 3,
+            }}
+          />
+        </div>
       ) : (
         <Avatar
           size={'2xl'}
@@ -91,20 +94,11 @@ export default function PersonalAvatar({ url, onUpload }) {
           }}
         />
       )}
-      <div>
-        <Button
-          size="sm"
-          flex={1}
-          mb={4}
-          fontSize={'sm'}
-          rounded={'full'}
-          _focus={{
-            bg: 'gray.200'
-          }}>
-          <label className="button primary block" htmlFor="single">
+        <button className="button-purple upload-profile-picture-button" cursor={'pointer'}>
+          <label style={{cursor: 'pointer'}} htmlFor="single">
             {uploading ? 'Uploading ...' : 'Upload'}
           </label>
-        </Button>
+        </button>
 
         <input
           style={{
@@ -118,6 +112,5 @@ export default function PersonalAvatar({ url, onUpload }) {
           disabled={uploading}
         />
       </div>
-    </div>
   );
 }
