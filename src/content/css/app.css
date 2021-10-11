@@ -701,7 +701,6 @@ a.valid {
 .button-purple {
   outline: 0;
   border: none;
-  margin-left: 15px;
   cursor: pointer;
   padding: 8px 30px;
   color: #fff;
@@ -723,7 +722,7 @@ a.valid {
 .button-grey {
   outline: 0;
   border: none;
-  margin-right: 15px;
+  margin-right: 30px;
   cursor: pointer;
   padding: 8px 30px;
   color: #7000FF;

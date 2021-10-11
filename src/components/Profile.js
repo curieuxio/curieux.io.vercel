@@ -224,7 +224,7 @@ export default function Account({ session }) {
               <div className="link-input">
                 <p className="form-input-category">Apple Music</p>
                 <div className="artist-card-socials-block">
-                  <a href={AppleMusicUrl} target="_blank"><img className="artist-card-socials-icons" src={AppleMusicIcon} alt="Apple Music Logo"/></a>
+                  <a href={AppleMusicUrl} target="_blank"><img className="artist-card-socials-icons artist-card-socials-icons-apple" src={AppleMusicIcon} alt="Apple Music Logo"/></a>
                   <input className="profile-link-input"
                   type={'text'}
                   value={AppleMusicUrl || ''}
