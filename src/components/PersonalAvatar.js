@@ -63,14 +63,14 @@ export default function PersonalAvatar({ url, onUpload }) {
             pos={'relative'}
             _after={{
               content: '""',
-              w: 4,
-              h: 4,
+              w: 25 + "px",
+              h: 25 + "px",
               bg: 'green.300',
-              border: '2px solid white',
+              border: '4px solid white',
               rounded: 'full',
               pos: 'absolute',
               bottom: 0,
-              right: 3,
+              right: 3
             }}
           />
         </div>
@@ -83,10 +83,10 @@ export default function PersonalAvatar({ url, onUpload }) {
           pos={'relative'}
           _after={{
             content: '""',
-            w: 4,
-            h: 4,
+            w: 25 + "px",
+            h: 25 + "px",
             bg: 'green.300',
-            border: '2px solid white',
+            border: '4px solid white',
             rounded: 'full',
             pos: 'absolute',
             bottom: 0,

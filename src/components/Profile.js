@@ -25,6 +25,9 @@ export default function Account({ session }) {
   const [AvatarUrl, setAvatarUrl] = useState(null);
   const toast = useToast();
 
+  // Update Email //
+  //const { user, error } = await supabase.auth.update({email: 'new@email.com'})
+
   useEffect(() => {
     getProfile();
   }, [session]);
