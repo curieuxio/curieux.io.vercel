@@ -101,10 +101,12 @@ export default function Account({ session }) {
   }
 
   return (
-      <Flex minH={'100vh'} align={'center'} justify={'center'} bg={useColorModeValue('gray.50', 'gray.800')}>
+
+    <section className="artist-profile-page">
+      <div className="artist-profile-section">
 
         {/* Form Informations */}
-        <Box
+        <div className="artist-profile-block"
           maxW={'445px'}
           w={'full'}
           bg={useColorModeValue('white', 'gray.900')}
@@ -114,20 +116,23 @@ export default function Account({ session }) {
           textAlign={'center'}
           justifyItems={'center'}
           justifyContent={'center'}>
-          <PersonalAvatar
-            url={AvatarUrl}
-            onUpload={url => {
-              setAvatarUrl(url);
-              updateProfile({ ArtistName, ArtistUsername, SpotifyUrl, DeezerUrl, AppleMusicUrl, WebSiteUrl, AvatarUrl: url });
-            }}
-          />
+          
+          <div className="profile-user">
+            <PersonalAvatar
+              url={AvatarUrl}
+              onUpload={url => {
+                setAvatarUrl(url);
+                updateProfile({ ArtistName, ArtistUsername, SpotifyUrl, DeezerUrl, AppleMusicUrl, WebSiteUrl, AvatarUrl: url });
+              }}
+            />
 
-          {/* USER MAIN INFOS */}
-          <h1 className="profile-user-logged-as">You are logged as</h1>
-          <h2 className="profile-user-email">{session.user.email}</h2>
-
+            {/* USER MAIN INFOS */}
+            <h1 className="profile-user-logged-as">You are logged as</h1>
+            <h2 className="profile-user-email">{session.user.email}</h2>
+          </div>
             
-          <Stack spacing={4} p={4}>
+          {/* ARTIST NAME INFORMATIONS */}
+          <div className="artist-name-informations">
           {/* Artist Name */}
           <div className="link-input">
                 <p className="form-input-category">Artist Name</p>
@@ -171,10 +176,11 @@ export default function Account({ session }) {
               />
             </div>
           </div>
-          </Stack>
+          </div>
 
-          {/* Artist Links */}
-          <Stack spacing={4} p={4}>
+            
+          {/* ARTIST LINKS */}
+          <div className="artist-links-block">
 
             {/* Spotify Link */}
             <div className="link-input">
@@ -263,7 +269,7 @@ export default function Account({ session }) {
                 />
                 </div>
               </div>
-          </Stack>
+          </div>
 
           {/* Buttons Part */}
           
@@ -294,11 +300,12 @@ export default function Account({ session }) {
               _focus={{
                 bg: '#5800CC'
               }}>
-              {loading || 'Update'}
+              {loading ? 'Updating ...' : 'Update'}
             </button>
           </div>
 
-        </Box>
-      </Flex>
+        </div>
+        </div>
+      </section>
   );
 }

@@ -1,5 +1,5 @@
 // Importing Dependencies //
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { supabase } from '../supabase/supabaseClient';
 import { Avatar, Button } from '@chakra-ui/react';
 
@@ -52,7 +52,7 @@ export default function PersonalAvatar({ url, onUpload }) {
   }
 
   return (
-    <div className="profile-user">
+    <React.Fragment>
       {avatarUrl ? (
         <div className="profile-user-picture">
           <Avatar
@@ -111,6 +111,7 @@ export default function PersonalAvatar({ url, onUpload }) {
           onChange={uploadAvatar}
           disabled={uploading}
         />
-      </div>
+        
+      </React.Fragment>
   );
 }
