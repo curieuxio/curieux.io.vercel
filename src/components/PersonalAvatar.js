@@ -55,7 +55,7 @@ export default function PersonalAvatar({ url, onUpload }) {
     <React.Fragment>
       {avatarUrl ? (
         <div className="profile-user-picture">
-          <Avatar
+          <Avatar 
             size={'2xl'}
             src={avatarUrl}
             alt="Avatar"

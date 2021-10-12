@@ -140,7 +140,7 @@ export default function Account({ session }) {
           <div className="link-input">
                 <p className="form-input-category">Artist Name</p>
                 <div className="artist-card-socials-block">
-                  <a href={WebSiteUrl} target="_blank"><img className="artist-card-socials-icons" src={ProfileIcon} alt="Link Logo"/></a>
+                  <a><img className="artist-card-socials-icons" src={ProfileIcon} alt="Link Logo"/></a>
                   <input className="profile-link-input"
                 type={'text'}
                 value={ArtistName || ''}
@@ -162,7 +162,7 @@ export default function Account({ session }) {
           <div className="link-input">
                 <p className="form-input-category">Username</p>
                 <div className="artist-card-socials-block">
-                  <a href="" target="_blank"><img className="artist-card-socials-icons" src={LinkIcon} alt="Link Logo"/></a>
+                  <a href="" target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={LinkIcon} alt="Link Logo"/></a>
                   <input className="profile-link-input"
                 type={'text'}
                 value={ArtistUsername || ''}
@@ -189,7 +189,7 @@ export default function Account({ session }) {
             <div className="link-input">
               <p className="form-input-category">Spotify</p>
               <div className="artist-card-socials-block">
-                <a href={SpotifyUrl} target="_blank"><img className="artist-card-socials-icons" src={SpotifyIcon} alt="Spotify Logo"/></a>
+                <a href={SpotifyUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={SpotifyIcon} alt="Spotify Logo"/></a>
                 <input className="profile-link-input"
                   type={'text'}
                   value={SpotifyUrl || ''}
@@ -211,7 +211,7 @@ export default function Account({ session }) {
               <div className="link-input">
                 <p className="form-input-category">Deezer</p>
                 <div className="artist-card-socials-block">
-                  <a href={DeezerUrl} target="_blank"><img className="artist-card-socials-icons" src={DeezerIcon} alt="Deezer Logo"/></a>
+                  <a href={DeezerUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={DeezerIcon} alt="Deezer Logo"/></a>
                   <input className="profile-link-input"
                   type={'text'}
                   value={DeezerUrl || ''}
@@ -233,7 +233,7 @@ export default function Account({ session }) {
               <div className="link-input">
                 <p className="form-input-category">Apple Music</p>
                 <div className="artist-card-socials-block">
-                  <a href={AppleMusicUrl} target="_blank"><img className="artist-card-socials-icons artist-card-socials-icons-apple" src={AppleMusicIcon} alt="Apple Music Logo"/></a>
+                  <a href={AppleMusicUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons artist-card-socials-icons-apple" src={AppleMusicIcon} alt="Apple Music Logo"/></a>
                   <input className="profile-link-input"
                   type={'text'}
                   value={AppleMusicUrl || ''}
@@ -255,7 +255,7 @@ export default function Account({ session }) {
               <div className="link-input">
                 <p className="form-input-category">Web Site</p>
                 <div className="artist-card-socials-block">
-                  <a href={WebSiteUrl} target="_blank"><img className="artist-card-socials-icons" src={LinkIcon} alt="Link Logo"/></a>
+                  <a href={WebSiteUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={LinkIcon} alt="Link Logo"/></a>
                   <input className="profile-link-input"
                   type={'text'}
                   value={WebSiteUrl || ''}

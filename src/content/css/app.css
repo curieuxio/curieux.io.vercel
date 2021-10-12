@@ -693,7 +693,7 @@ a.valid {
   max-width: 445px;
   background: white;
   box-shadow: 0 14px 28px rgb(112 0 255 / 5%), 0 10px 10px rgb(112 0 255 / 5%);
-  border-radius: 30px;
+  border-radius: 1rem;
   text-align: center;
   justify-items: center;
   -webkit-justify-content: center;
@@ -1606,8 +1606,11 @@ a.valid {
 
 .artist-card-socials-icons {
   width: 55px;
-  cursor: pointer;
   padding: 6px 10px;
+}
+
+.artist-card-socials-icons-a {
+  cursor: pointer;
 }
 
 .artist-card-socials-icons-apple {
