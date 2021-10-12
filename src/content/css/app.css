@@ -740,12 +740,12 @@ a.valid {
 
 .button-purple {
   outline: 0;
+  margin-right: 20px;
   border: none;
   cursor: pointer;
   padding: 8px 30px;
   color: #fff;
   font-size: 12pt;
-  font-family: Poppins,sans-serif;
   font-weight: 800;
   border-radius: 12px;
   transition: all .2s ease-in-out;
@@ -762,12 +762,11 @@ a.valid {
 .button-grey {
   outline: 0;
   border: none;
-  margin-right: 30px;
   cursor: pointer;
   padding: 8px 30px;
   color: #7000FF;
+  margin-left: 20px;
   font-size: 12pt;
-  font-family: Poppins,sans-serif;
   font-weight: 800;
   border-radius: 12px;
   transition: all .2s ease-in-out;
@@ -776,6 +775,16 @@ a.valid {
   background: #f8f3ff;
   background: white;
 }
+
+@media screen and (max-width: 500px) {
+  .button-purple {
+    margin: 0 20px 20px;
+   }
+
+   .button-grey {
+     margin: 0;
+   }
+ }
 
 .button-purple:hover {
   background-color: #71ffd5;
@@ -831,6 +840,7 @@ a.valid {
   flex-direction: row;
   justify-content: center;
   margin-top: 40px;
+  flex-wrap: wrap;
 }
 
 /*---------- HEADER PART ---------*/

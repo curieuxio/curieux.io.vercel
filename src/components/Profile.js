@@ -275,18 +275,9 @@ export default function Account({ session }) {
           </div>
 
           {/* Buttons Part */}
-          
           <div className="profile-bottom-buttons">
-            <button className="button-grey"
-              onClick={() => supabase.auth.signOut()}
-              flex={1}
-              fontSize={'sm'}
-              rounded={'full'}
-              _focus={{
-                bg: 'gray.200'
-              }}>
-              Logout
-            </button>
+
+            {/* Update Button */}
             <button className="button-purple"
               isLoading={loading}
               loadingText="Updating ..."
@@ -304,6 +295,18 @@ export default function Account({ session }) {
                 bg: '#5800CC'
               }}>
               {loading ? 'Updating ...' : 'Update'}
+            </button>
+          
+            {/* Logout Button */}
+            <button className="button-grey"
+              onClick={() => supabase.auth.signOut()}
+              flex={1}
+              fontSize={'sm'}
+              rounded={'full'}
+              _focus={{
+                bg: 'gray.200'
+              }}>
+              Logout
             </button>
           </div>
 
