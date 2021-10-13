@@ -94,8 +94,8 @@ export default function PersonalAvatar({ url, onUpload }) {
           }}
         />
       )}
-        <button className="button-purple upload-profile-picture-button" cursor={'pointer'}>
-          <label style={{cursor: 'pointer'}} htmlFor="single">
+        <button className="button-purple upload-profile-picture-button">
+          <label htmlFor="single">
             {uploading ? 'Uploading ...' : 'Upload'}
           </label>
         </button>
