@@ -95,7 +95,7 @@ export default function PersonalAvatar({ url, onUpload }) {
         />
       )}
         <button className="button-purple upload-profile-picture-button">
-          <label htmlFor="single">
+          <label className="buttonLabel" htmlFor="single" >
             {uploading ? 'Uploading ...' : 'Upload'}
           </label>
         </button>
