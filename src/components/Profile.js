@@ -294,7 +294,7 @@ export default function Account({ session }) {
               _focus={{
                 bg: '#5800CC'
               }}>
-              {loading ? 'Updating ...' : 'Update'}
+              {loading ? 'Updating...' : 'Update'}
             </button>
           
             {/* Logout Button */}
