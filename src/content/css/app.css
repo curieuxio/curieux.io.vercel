@@ -1626,6 +1626,7 @@ a.valid {
 
 .artist-card-socials-icons-apple {
   transform: translateY(-2px);
+  height: 43px;
 }
 
 .artist-tracks {
