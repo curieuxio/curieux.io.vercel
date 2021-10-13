@@ -55,11 +55,12 @@ export default function PersonalAvatar({ url, onUpload }) {
     <React.Fragment>
       {avatarUrl ? (
         <div className="profile-user-picture">
-          <Avatar 
+          <Avatar
+            bg={'#efecf4'}
             size={'2xl'}
             src={avatarUrl}
+            marginBottom={'Opx'}
             alt="Avatar"
-            mb={4}
             pos={'relative'}
             _after={{
               content: '""',
@@ -76,10 +77,12 @@ export default function PersonalAvatar({ url, onUpload }) {
         </div>
       ) : (
         <Avatar
+          bg={'#efecf4'}
           size={'2xl'}
           src={avatarUrl}
+          marginBottom={'Opx'}
           alt="Avatar"
-          mb={4}
+            marginBottom={'Opx'}
           pos={'relative'}
           _after={{
             content: '""',

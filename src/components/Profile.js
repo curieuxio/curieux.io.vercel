@@ -278,7 +278,7 @@ export default function Account({ session }) {
           <div className="profile-bottom-buttons">
 
             {/* Update Button */}
-            <button className="button-purple"
+            <button className="button-purple update-profile-button"
               isLoading={loading}
               loadingText="Updating ..."
               onClick={() => updateProfile({ ArtistName, ArtistUsername, SpotifyUrl, DeezerUrl, AppleMusicUrl, WebSiteUrl, AvatarUrl })}
@@ -298,7 +298,7 @@ export default function Account({ session }) {
             </button>
           
             {/* Logout Button */}
-            <button className="button-grey"
+            <button className="button-grey logout-button"
               onClick={() => supabase.auth.signOut()}
               flex={1}
               fontSize={'sm'}

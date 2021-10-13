@@ -412,12 +412,12 @@ button, Button {
 
 .sign-section-wrapper {
   display: flex;
-	padding: 20px;
-	top: 0;
-	left: 0;
+  padding: 20px;
+  top: 0;
+  left: 0;
   width: 100%;
-	min-height: calc(100vh - 40px);
-	z-index: 1;
+  min-height: 100vh;
+  z-index: 1;
   background: #f7f5fa;
 }
 
@@ -588,6 +588,7 @@ width: 100%;
 
 .signin-inputs {
   width: 100%;
+  color: #545454;
 }
 
 .sign-inputs:hover {
@@ -690,6 +691,17 @@ a.valid {
   background: #f7f5fa;
 }
 
+@media screen and (max-width: 500px) {
+  .artist-profile-page {
+    padding: 0;
+  }
+
+  .artist-profile-section {
+    padding: 40px 20px;
+    border-radius: 0;
+  }
+}
+
 .artist-profile-section {
   max-width: 445px;
   background: white;
@@ -723,6 +735,10 @@ a.valid {
   box-shadow: 0 10px 30px rgb(112 0 255 / 10%), 0 5px 100px rgb(112 0 255 / 10%);
 }
 
+.user-avatar {
+  background: #F5F3F8
+}
+
 .css-1h8emob::after {
   content: "";
   width: 25px;
@@ -741,7 +757,6 @@ a.valid {
 
 .button-purple {
   outline: 0;
-  margin-right: 10px;
   border: none;
   cursor: pointer;
   padding: 8px 30px;
@@ -756,17 +771,12 @@ a.valid {
 320deg,rgba(112,0,255,.7),#7000ff);
 }
 
-.upload-profile-picture-button {
-  margin-top: 20px;
-}
-
 .button-grey {
   outline: 0;
   border: none;
   cursor: pointer;
   padding: 8px 30px;
   color: #7000FF;
-  margin-left: 10px;
   font-size: 12pt;
   font-weight: 800;
   border-radius: 12px;
@@ -781,15 +791,17 @@ a.valid {
   cursor: pointer;
 }
 
-@media screen and (max-width: 500px) {
-  .button-purple {
-    margin: 0 20px 20px;
-   }
+.upload-profile-picture-button {
+  margin-top: 20px;
+}
 
-   .button-grey {
-     margin: 0;
-   }
- }
+.update-profile-button {
+  margin: 20px 10px;
+}
+
+.logout-button {
+  margin: 10px 10px;
+}
 
 .button-purple:hover {
   background-color: #71ffd5;
@@ -827,6 +839,7 @@ a.valid {
   text-align: left;
   color: #7000FF;
   margin-bottom: 5px;
+  margin-left: 10px;
 }
 
 .profile-link-input {
@@ -1608,11 +1621,14 @@ a.valid {
   align-items: center;
   display: flex;
   transition: all 0.2s ease-in-out;
-  background: #f5edff;
   color: #7000ff;
   border-radius: 10px;
   padding: 6px 7px 6px 0;
   height: 50px;
+}
+
+.artist-card-socials-block:hover {
+  background: #f5edff;
 }
 
 .artist-card-socials-block + .artist-card-socials-block {
