@@ -21,7 +21,7 @@ export default function Auth() {
             const { error } = await supabase.auth.signIn({ email });
             if (error) throw error;
             toast({
-                title: 'Success!',
+                title: 'Success! 🤟',
                 position: 'top',
                 description: 'Check your email for the login link!',
                 status: 'success',
@@ -30,7 +30,7 @@ export default function Auth() {
             })
         } catch (error) {
             toast({
-                title: 'Error',
+                title: 'Error 😥',
                 position: 'top',
                 description: error.error_description || error.message,
                 status: 'success',
@@ -60,7 +60,7 @@ export default function Auth() {
                     <div className="inline-inputs">
                         <div className="inline-inputs-block-signin">
                             <label className="label-inputs" for="email">Email</label>
-                            <input value={email} onChange={e => setEmail(e.target.value)} type="email" className="sign-inputs signin-inputs" required="required" placeholder="hello@curieux.io"/>
+                            <input value={email} onChange={e => setEmail(e.target.value)} type="email" tabindex="-1"className="sign-inputs signin-inputs" required="required" placeholder="hello@curieux.io"/>
                         </div>
                         <Button className="button-purple" onClick={e => {e.preventDefault(); handleLogin(email);}} isLoading={loading} loadingText="Signing in ..." style={{background: "#7000FF", fontWeight: "700", borderRadius: 12 + "px"}} className="sign-inputs-buttons"> {loading || 'Send magic link'}</Button>
                     </div>

@@ -88,7 +88,7 @@ export default function Account({ session }) {
         throw error;
       }
       toast({
-        title: 'Profile updated.',
+        title: 'Profile updated! 🤟',
         position: 'top',
         variant: 'subtle',
         description: '',
