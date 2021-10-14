@@ -676,9 +676,9 @@ ul.helper-text {
   margin-top: 20px;
   display: block;
   color: red;
-text-align: left;
-font-size: 11pt;
-line-height: 14pt;
+  text-align: left;
+  font-size: 11pt;
+  line-height: 14pt;
 }
   
 a.valid {
@@ -691,6 +691,24 @@ a.valid {
   background: #f7f5fa;
 }
 
+#chakra-toast-portal {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.artist-profile-section {
+  max-width: 445px;
+  background: white;
+  /*box-shadow: 0 14px 28px rgb(112 0 255 / 5%), 0 10px 10px rgb(112 0 255 / 5%);*/
+  border-radius: 1rem;
+  text-align: center;
+  justify-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: auto;
+  padding: 40px 30px;
+}
+
 @media screen and (max-width: 500px) {
   .artist-profile-page {
     padding: 0;
@@ -700,19 +718,6 @@ a.valid {
     padding: 40px 20px;
     border-radius: 0;
   }
-}
-
-.artist-profile-section {
-  max-width: 445px;
-  background: white;
-  box-shadow: 0 14px 28px rgb(112 0 255 / 5%), 0 10px 10px rgb(112 0 255 / 5%);
-  border-radius: 1rem;
-  text-align: center;
-  justify-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  margin: auto;
-  padding: 40px 30px;
 }
 
 .artist-profile-block {
@@ -857,8 +862,18 @@ a.valid {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 10px;
   flex-wrap: wrap;
+}
+
+.profile-footer {
+  margin-top: 10px;
+  margin-bottom: -5px;
+}
+
+.profile-footer-app-version {
+  color: #7a7a7a;
+  font-size: 10pt;
 }
 
 /*---------- HEADER PART ---------*/

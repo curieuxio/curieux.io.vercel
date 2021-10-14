@@ -310,6 +310,11 @@ export default function Account({ session }) {
             </button>
           </div>
 
+          {/* FOOTER PART */}
+          <div className="profile-footer">
+            <p className="profile-footer-app-version">Bêta, version 0.1.0</p>
+          </div>
+
         </div>
         </div>
       </section>
