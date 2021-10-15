@@ -280,8 +280,7 @@ button, Button {
   background: hsl(265deg 60% 98%);
   border-radius: 18px;
   margin-top: 70px;
-  width: -moz-fit-content;
-  width: fit-content;
+  max-width: 500px;
 }
 
 .home-box-button-btn {
@@ -307,21 +306,15 @@ button, Button {
   width: max-content;
 }
 
-.home-box-button-left {
+.home-box-button {
   background: linear-gradient(320deg,rgba(112,0,255,0.7),rgba(112,0,255,1));
   color: #fff;
-  margin-left: 10px;
 }
 
-.home-box-button-left:hover {
+.home-box-button:hover {
   background-color: #71ffd5;
   color: #fff;
   cursor: pointer;
-}
-
-.home-box-button-right {
-  background: none;
-  color: #7000ff;
 }
 
 .home-box-right {
@@ -404,7 +397,8 @@ button, Button {
 
 /*---------- SIGNIN-UP PART ---------*/
 .home-box-left-signup-box {
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   padding: 10px;
   width: 100%;
@@ -416,10 +410,31 @@ button, Button {
   background: 0;
   font-size: 14pt;
   padding: 0px 10px;
-  width: calc(100% - 220px);
+  width: calc(100% - 200px);
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+/*@media all and (max-width: 900px) {
+  .signin-up-input {
+    width: calc(100% - -20px);
+  }
+}*/
+
+@media all and (max-width: 530px) {
+  .home-box-left-signup-box {
+    flex-direction: column;
+  }
+
+  .signin-up-input {
+    width: 100%;
+  }
+
+  .home-box-button {
+    margin-top: 10px;
+    width: 100% !important;
+  }
 }
 
 .sign-section-background-wrapper {
