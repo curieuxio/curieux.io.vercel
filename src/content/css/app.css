@@ -22,7 +22,7 @@ body, .App {
   -moz-osx-font-smoothing: grayscale;
 }
 
-::-webkit-scrollbar,
+/*::-webkit-scrollbar,
 *::-webkit-scrollbar-thumb {
   width: 25px;
   border-radius: 13px;
@@ -41,7 +41,7 @@ div {
 
 div:hover {
   color: rgba(0, 0, 0, 0.3);
-}
+}*/
 
 a {
   width: fit-content;
