@@ -147,6 +147,10 @@ button, Button {
 	display: inline-flex;
   background: linear-gradient(300deg,rgb(147 80 255),#7000ffe6);
 	color: #7000FF;
+  background-image: url(../images/curieux-app-bg-reflect.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .sign-home-content {
@@ -325,10 +329,10 @@ button, Button {
    align-content: center;
    align-items: center;
    justify-content: center;
-   /*background-image: url(../images/home-background-image-iphone-website.png);*/
+   /*background-image: url(../images/curieux-app-bg-reflect.svg);
    background-size: 420px;
    background-position: center;
-   background-repeat: no-repeat;
+   background-repeat: no-repeat;*/
    min-height: 600px;
 }
 
