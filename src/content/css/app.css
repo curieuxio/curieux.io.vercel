@@ -22,7 +22,7 @@ body, .App {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* *::-webkit-scrollbar,
+::-webkit-scrollbar,
 *::-webkit-scrollbar-thumb {
   width: 25px;
   border-radius: 13px;
@@ -41,7 +41,7 @@ div {
 
 div:hover {
   color: rgba(0, 0, 0, 0.3);
-}*/
+}
 
 a {
   width: fit-content;
@@ -145,7 +145,7 @@ button, Button {
   width: 100%;
   position: absolute;
 	display: inline-flex;
-	background: linear-gradient(294deg,rgb(162 105 255),rgb(105,0,246,0.9));
+  background: linear-gradient(300deg,rgb(147 80 255),#7000ffe6);
 	color: #7000FF;
 }
 
@@ -153,7 +153,7 @@ button, Button {
   position: fixed;
 }
 
-.home-box {
+.home-box-left {
   height: 100vh;
   width: 50%;
   /*height: calc(100vh - 100px);
@@ -261,7 +261,7 @@ button, Button {
 }
 
 .home-box-subtitle-box {
-   max-width: 500px;
+  max-width: 340px;
    margin: 30px auto 0 0;
 }
 
@@ -277,8 +277,8 @@ button, Button {
   font-family: Poppins;
   font-weight: 800;
   font-size: 16pt;
-  background: #f8f3ff;
-  border-radius: 23px;
+  background: hsl(265deg 60% 98%);
+  border-radius: 18px;
   margin-top: 70px;
   width: -moz-fit-content;
   width: fit-content;
@@ -324,14 +324,15 @@ button, Button {
   color: #7000ff;
 }
 
-.home-picture {
+.home-box-right {
    height: calc(100vh - 100px);
    width: 50%;
    height: 100vh;
    display: flex;
    align-content: center;
    align-items: center;
-   background-image: url(../images/home-background-image-iphone-website.png);
+   justify-content: center;
+   /*background-image: url(../images/home-background-image-iphone-website.png);*/
    background-size: 420px;
    background-position: center;
    background-repeat: no-repeat;
@@ -339,17 +340,17 @@ button, Button {
 }
 
 @media all and (max-width:1060px) {
-  .home-box, .home-picture {
+  .home-box-left, .home-box-right {
     min-height: 0px;
   }
 }
 
-@media all and (max-width:1060px) {
+@media all and (max-width: 900px) {
   .home-content {
     flex-direction: column;
   }
 
-  .home-box {
+  .home-box-left {
     padding: 30px 30px 40px 30px;
     width: 100%;
     border-radius: 0;
@@ -362,10 +363,11 @@ button, Button {
     margin-top: 50px;
   }
 
- .home-picture {
+ .home-box-right {  
     background-size: 330px;
-    height: 630px;
+    height: 480px;
     width: 100%;
+    padding: 20px;
  }
 }
 
@@ -401,6 +403,25 @@ button, Button {
 }
 
 /*---------- SIGNIN-UP PART ---------*/
+.home-box-left-signup-box {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.signin-up-input {
+  outline: 0;
+  color: #545454;
+  background: 0;
+  font-size: 14pt;
+  padding: 0px 10px;
+  width: calc(100% - 220px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .sign-section-background-wrapper {
   height: 100vh;
   width: 100%;
@@ -434,17 +455,28 @@ button, Button {
   position: relative;
 }
 
-.sign-section-left {
-  width: 290px;
+.sign-section-box {
+  width: 340px;
   display: flex;
   flex-direction: column;
-  margin: 35px;
   min-width: min-content;
+  background: #fff;
+  border-radius: 1.5rem;
+  text-align: center;
+  z-index: 1;
+  transition: all .2s ease-in-out;
+  box-shadow: 0 10px 300px rgb(0 0 0 / 10%), 0 5px 100px rgb(0 0 0 / 10%);
+  position: relative;
+  padding: 20px 30px;
 }
 
-@media all and (max-width:480px) {
-  .sign-section-left {
-    margin: 20px;
+.sign-section-box:hover {
+  transform: scale(1.01);
+}
+
+@media all and (max-width:350px) {
+  .sign-section-box {
+    width: fit-content;
   }
 }
 
@@ -484,12 +516,6 @@ button, Button {
   top: 20px;
   z-index: 1;
   cursor: pointer;
-}
-
-@media screen and (max-width: 450px) {
- .sign-section {
-    width: 100%;
-  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -576,7 +602,7 @@ width: 100%;
   font-family: Poppins, sans-serif;
   color: #1D1D1D;
   outline: 0;
-  background: #f7f7f7;
+  background: hsl(265deg 60% 98%);
   border-radius: 10px;
   border: 2px solid rgba(255,255,255, 0);
   padding: 10px;

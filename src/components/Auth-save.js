@@ -47,12 +47,12 @@ export default function Auth() {
         <Router>
 
         {/* Home Component */}
-        <section className="home-content" id="home-content">
-            <div className="home-box-left">
+        <section className="home-content sign-home-content" id="home-content">
+            <div className="home-box">
                 <a href="/" className="home-box-logo"><img src={CurieuxLogoPurple}/></a>
                 <div className="home-box-items">
                     <h1 className="home-box-title">
-                        Make your profile
+                        Make your music
                         <div className="ms-slider">
                         <ul className="ms-slider__words">
                             <li className="ms-slider__word"><span className="home-box-title-slider-word">skilled</span>! ⚡</li>
@@ -63,36 +63,74 @@ export default function Auth() {
                         </div>
                     </h1>
                     <div className="home-box-subtitle-box">
-                        <a className="home-box-subtitle">Create you music smart link, within 2 minutes!</a>
+                        <a className="home-box-subtitle">Audio-visual production & creation, because we care about your music.</a>
                     </div>
                     <div className="home-box-buttons-box">
-                        <form className="form-section" onSubmit={handleLogin}>
-                            
-                        <div className="home-box-left-signup-box">
-                            <input value={email} onChange={e => setEmail(e.target.value)} type="email" tabindex="-1" className="signin-up-input" required="required" placeholder="Enter you email"/>
-                            <Button onClick={e => {e.preventDefault(); handleLogin(email);}} isLoading={loading} loadingText="Signing up..." style={{background: "#7000FF", fontWeight: "700", borderRadius: 17 + "px", padding: '25px 15px', fontSize: 15 + "pt"}} className="home-box-button home-box-button-left link-white"> {loading || 'Start now for free!'}</Button>
-                        </div>
-                                    
-                              
-                        </form>
+                        <button class="home-box-button-btn" id="signupBtn"><Link to="/signup" className="home-box-button home-box-button-left link-white">Join!</Link></button>
+                        <button class="home-box-button-btn" id="signupBtn"><Link to="/signin" className="home-box-button home-box-button-right link-purple">Sign In!</Link></button>
                     </div>
                 </div>
             </div>
 
-            <div className="home-box-right">
-                <div className="sign-section-box shadow">
+            <div className="home-picture">
+                <div className="sign-section shadow" id="sign-section">
+
+                    {/*  Left Part */}
+                    <div className="sign-section-left">
+
+                        {/*  Intro Part */}
+                        <img className="sign-form-logo" alt="Curieux logo" src={CurieuxLogoPurple}/>
+                        <h1 className="sign-title">Sign In via magic link with your email! ✌️</h1>
+                        
+                        {/*  Form Part */}
+                        <form className="form-section" onSubmit={handleLogin}>
+                            <div className="inline-inputs">
+                                <div className="inline-inputs-block-signin">
+                                    <label className="label-inputs" for="email">Email</label>
+                                    <input value={email} onChange={e => setEmail(e.target.value)} type="email" tabindex="-1"className="sign-inputs signin-inputs" required="required" placeholder="hello@curieux.io"/>
+                                </div>
+                                <Button className="button-purple" onClick={e => {e.preventDefault(); handleLogin(email);}} isLoading={loading} loadingText="Signing in ..." style={{background: "#7000FF", fontWeight: "700", borderRadius: 12 + "px"}} className="sign-inputs-buttons"> {loading || 'Send magic link'}</Button>
+                            </div>
+                        </form>
+                    </div>
+                    {/*<Link to="/"><img className="sign-section-close-button" alt="close" src={CloseBtn}/></Link>*/}
+
+                </div>
+            </div>
+        </section>
+
+        {/* Auth BG Blurred Div */}
+        <div className="sign-section-background-wrapper"></div>
+
+        {/* Auth Component */}
+        <section className="sign-section-wrapper">
+            <div className="sign-section shadow" id="sign-section">
+
+                {/*  Left Part */}
+                <div className="sign-section-left">
+
+                    {/*  Intro Part */}
                     <img className="sign-form-logo" alt="Curieux logo" src={CurieuxLogoPurple}/>
                     <h1 className="sign-title">Sign In via magic link with your email! ✌️</h1>
+                    
+                    {/*  Form Part */}
                     <form className="form-section" onSubmit={handleLogin}>
                         <div className="inline-inputs">
                             <div className="inline-inputs-block-signin">
                                 <label className="label-inputs" for="email">Email</label>
-                                <input value={email} onChange={e => setEmail(e.target.value)} type="email" tabindex="-1" className="sign-inputs signin-inputs" required="required" placeholder="hello@curieux.io"/>
+                                <input value={email} onChange={e => setEmail(e.target.value)} type="email" tabindex="-1"className="sign-inputs signin-inputs" required="required" placeholder="hello@curieux.io"/>
                             </div>
-                            <Button className="button-purple" onClick={e => {e.preventDefault(); handleLogin(email);}} isLoading={loading} loadingText="Signing in..." style={{background: "#7000FF", fontWeight: "700", borderRadius: 12 + "px"}} className="sign-inputs-buttons"> {loading || 'Send magic link!'}</Button>
+                            <Button className="button-purple" onClick={e => {e.preventDefault(); handleLogin(email);}} isLoading={loading} loadingText="Signing in ..." style={{background: "#7000FF", fontWeight: "700", borderRadius: 12 + "px"}} className="sign-inputs-buttons"> {loading || 'Send magic link'}</Button>
                         </div>
                     </form>
                 </div>
+
+                {/*  Right Part */}
+                <div className="sign-section-right">
+                    <div className="sign-section-right-content"></div>
+                </div>  
+                {/*<Link to="/"><img className="sign-section-close-button" alt="close" src={CloseBtn}/></Link>*/}
+                
             </div>
         </section>
     </Router>
