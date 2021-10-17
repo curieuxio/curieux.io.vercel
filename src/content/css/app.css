@@ -7,7 +7,7 @@ html {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  overflow-y: overlay;
+  /*overflow-y: overlay;*/
   font-family: 'Poppins', sans-serif;
 }
 
@@ -143,7 +143,6 @@ button, Button {
 /*---------- HOME PART ---------*/
 .home-content {
   width: 100%;
-  position: absolute;
 	display: inline-flex;
   background: linear-gradient(300deg,rgb(147 80 255),#7000ffe6);
 	color: #7000FF;
@@ -265,8 +264,8 @@ button, Button {
 }
 
 .home-box-subtitle-box {
-  max-width: 340px;
-   margin: 30px auto 0 0;
+  max-width: 330px;
+  margin: 30px auto 0 0;
 }
 
 .home-box-subtitle {
@@ -285,6 +284,10 @@ button, Button {
   border-radius: 18px;
   margin-top: 70px;
   max-width: 500px;
+}
+
+.home-box-buttons-box-cta {
+  max-width: 350px;
 }
 
 .home-box-button-btn {
@@ -333,18 +336,18 @@ button, Button {
    align-content: center;
    align-items: center;
    justify-content: center;
-   /*background-image: url(../images/curieux-app-bg-reflect.svg);
+   background-image: url(../images/home-background-image-iphone-website.png);
    background-size: 420px;
    background-position: center;
-   background-repeat: no-repeat;*/
+   background-repeat: no-repeat;
    min-height: 600px;
 }
 
-@media all and (max-width:1060px) {
+/*@media all and (max-width:1060px) {
   .home-box-left, .home-box-right {
     min-height: 0px;
   }
-}
+}*/
 
 @media all and (max-width: 900px) {
   .home-content {
@@ -396,6 +399,7 @@ button, Button {
  .home-box-buttons-box {
    margin-top: 40px;
  }
+
 }
 
 @media all and (max-width:320px) {
@@ -419,7 +423,7 @@ button, Button {
   background: 0;
   font-size: 14pt;
   padding: 0px 10px;
-  width: calc(100% - 200px);
+  width: 100%;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -434,10 +438,18 @@ button, Button {
 @media all and (max-width: 530px) {
   .home-box-left-signup-box {
     flex-direction: column;
+    align-items: baseline;
+  }
+
+  .home-box-buttons-box {
+    /*background: none;*/
   }
 
   .signin-up-input {
     width: 100%;
+    /*background: hsl(265deg 60% 98%);*/
+    padding: 10px;
+    border-radius: 15px;
   }
 
   .home-box-button {
@@ -733,6 +745,159 @@ ul.helper-text {
   
 a.valid {
   color: #71ffd5;
+}
+
+/* ---------- MAIN SECTION ----------*/
+.main-section {
+  display: flex;
+  flex-direction: row;
+  height: 570px;
+  width: 100%;
+  padding: 40px;
+}
+
+.main-section-box-left {
+  width: 50%;
+  height: 100%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-image: url(../images/curieux-app-bg-reflect.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 360px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.main-section-box-title {
+  color: white;
+  font-weight: 800;
+  font-size: 30pt;
+  line-height: 30pt;
+  max-width: 380px;
+}
+
+.main-section-box-subtitle {
+  color: white;
+  font-weight: 300;
+  font-size: 18pt;
+  margin-top: 20px;
+  line-height: 18pt;
+}
+
+.main-section-box-right {
+  width: 50%;
+  height: 100%;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 10px 30px rgb(112 0 255 / 5%), 0 5px 100px rgb(112 0 255 / 5%);
+  min-width: 360px;
+  background-image: url(../images/home-background-image-iphone-website.png);
+  background-size: 400px;
+  background-position: center 40px;
+  background-repeat: no-repeat;
+}
+
+
+@media screen and (max-width: 820px) {
+  .main-section {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .main-section-box-left, .main-section-box-right {
+    width: 100%;
+  }
+  .main-section-box-left {
+    border-radius: 0;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  .main-section-box-right {
+    border-radius: 0;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-section {
+    width:100%;
+    padding: 30px;
+  }
+  .main-section-box-left {
+    min-width: 0;
+    padding: 30px;
+  }
+  .main-section-box-right {
+    min-width: 0;
+    background-size: 270px;
+    background-position: center 5px;
+  }
+  .main-section-box-title {
+    font-size: 25pt;
+    line-height: 26pt;
+  }
+  .main-section-box-subtitle {
+    font-size: 14pt;
+    line-height: 18pt;
+  }
+  .home-box-buttons-box-cta {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* ---------- FOOTER PART ----------*/
+.home-footer {
+  height: 350px;
+  width: 100%;
+  background: #1D1D1D;
+}
+
+.home-footer-informations {
+  max-width: 1300px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 40px;
+  background: #1D1D1D;
+  min-height: min-content;
+}
+
+@media screen and (max-width: 500px) {
+  .home-footer-informations {
+    padding: 20px;
+  }
+}
+
+
+.home-footer-column {
+  width: 25%;
+  height: 100px;
+  min-width: 200px;
+  padding: 0 10px;
+}
+
+.home-footer-logo {
+  width: 150px;
+  transform: translateY(-2px);
+}
+
+.home-footer-column-title {
+  font-weight: 600;
+  font-size: 14pt;
+}
+
+.home-footer-column-text {
+  font-weight: 500;
+  font-size: 11pt;
 }
 
 /*---------- PROFILE PART ---------*/
