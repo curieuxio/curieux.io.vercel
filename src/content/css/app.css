@@ -293,7 +293,7 @@ button, Button {
   font-size: 16pt;
   background: hsl(265deg 60% 98%);
   border-radius: 18px;
-  margin-top: 70px;
+  margin-top: 50px;
   max-width: 500px;
 }
 
@@ -471,15 +471,15 @@ button, Button {
 
   .home-box-button {
     margin-top: 10px;
-    width: 100% !important;
+    min-width: 100% !important;
   }
 
   .home-box-button-cta {
     margin-top: 15px;
-    padding: 30px !important;
+    padding: 25px !important;
     width: 100% !important;
     color: #7e27f2 !important;
-    color: #3e3e3e !important;
+    background: white !important;
   }
 }
 

@@ -1,5 +1,6 @@
 // Importing Dependencies //
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { supabase } from '../supabase/supabaseClient';
 import PersonalAvatar from './PersonalAvatar';
 import { Box, useColorModeValue, Button, Flex, FormControl, FormLabel, Input, Stack, Text, useToast } from '@chakra-ui/react';
@@ -106,6 +107,13 @@ export default function Account({ session }) {
   return (
 
     <section className="artist-profile-page">
+
+      {/* Changing Meta Data Dynamically */}
+      <Helmet>
+        <title>Profile! ⚡</title>
+        <meta name="description" content="Edit your artist profile! ⚡"></meta>
+      </Helmet>
+
       <div className="artist-profile-section">
 
         {/* Form Informations */}

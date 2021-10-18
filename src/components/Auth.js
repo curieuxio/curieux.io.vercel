@@ -1,5 +1,6 @@
 // Importing Dependencies //
 import React, { Component, useState, useEffect, useContext, useCallback } from 'react';
+import { Helmet } from 'react-helmet';
 import { supabase } from '../supabase/supabaseClient';
 import { BrowserRouter as Router, Route, Link, Links, Redirect, Switch } from 'react-router-dom';
 import { Flex, Box, FormControl, FormLabel, Input, Stack, Button, Heading, Text, useColorModeValue, useToast } from '@chakra-ui/react';
@@ -47,6 +48,12 @@ export default function Auth() {
     return (
         
         <Router>
+        
+        {/* Changing Meta Data Dynamically */}
+        <Helmet>
+            <title>Curieux - Your artist profile in 2 minutes! ⚡</title>
+            <meta name="description" content="Your artist profile in 2 minutes! ⚡"></meta>
+        </Helmet> 
 
         {/* Home Component */}
         <section className="home-content" id="home-content">
@@ -70,7 +77,7 @@ export default function Auth() {
                     <form className="home-box-buttons-box" onSubmit={handleLogin}>
                         <div className="home-box-left-signup-box">
                             <input value={email} onChange={e => setEmail(e.target.value)} type="email" tabindex="-1" className="signin-up-input" required="required" placeholder="Enter you email"/>
-                            <Button onClick={e => {e.preventDefault(); handleLogin(email);}} isLoading={loading} loadingText="Sending link..." style={{background: "#7b1df3", flexWrap: "nowrap", fontWeight: "700", borderRadius: 17 + "px", padding: '25px 25px', fontSize: 15 + "pt", width: 100+ "%", maxWidth: "fit-content"}} className="home-box-button home-box-button-left link-white"> {loading || 'SignUp or SignIn!'}</Button>{/* Start now for free! */}
+                            <Button onClick={e => {e.preventDefault(); handleLogin(email);}} isLoading={loading} loadingText="Sending link..." style={{background: "#7b1df3", flexWrap: "nowrap", fontWeight: "700", borderRadius: 17 + "px", padding: '25px 25px', fontSize: 15 + "pt", width: 100+ "%", minWidth: "fit-content"}} className="home-box-button home-box-button-left link-white"> {loading || 'SignUp or SignIn!'}</Button>{/* Start now for free! */}
                         </div>
                     </form>
                 </div>
