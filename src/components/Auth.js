@@ -1,6 +1,6 @@
 // Importing Dependencies //
 import React, { Component, useState, useEffect, useContext, useCallback } from 'react';
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 import { supabase } from '../supabase/supabaseClient';
 import { BrowserRouter as Router, Route, Link, Links, Redirect, Switch } from 'react-router-dom';
 import { Flex, Box, FormControl, FormLabel, Input, Stack, Button, Heading, Text, useColorModeValue, useToast } from '@chakra-ui/react';
@@ -49,11 +49,11 @@ export default function Auth() {
         
         <Router>
         
-        {/* Changing Meta Data Dynamically */}
+        {/* Changing Meta Data Dynamically 
         <Helmet>
             <title>Curieux - Your artist profile in 2 minutes! ⚡</title>
             <meta name="description" content="Your artist profile in 2 minutes! ⚡"></meta>
-        </Helmet> 
+        </Helmet>*/}
 
         {/* Home Component */}
         <section className="home-content" id="home-content">
