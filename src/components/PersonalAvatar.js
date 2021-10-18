@@ -88,7 +88,7 @@ export default function PersonalAvatar({ url, onUpload }) {
             content: '""',
             w: 25 + "px",
             h: 25 + "px",
-            bg: 'blurblur#3959',
+            bg: '#71ffd5',
             border: '4px solid white',
             rounded: 'full',
             pos: 'absolute',
