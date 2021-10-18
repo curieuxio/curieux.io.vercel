@@ -286,6 +286,17 @@ button, Button {
   max-width: 500px;
 }
 
+.home-box-buttons-box-cta-section {
+  display: inline-flex;
+  font-family: Poppins;
+  font-weight: 800;
+  font-size: 16pt;
+  background: hsl(265deg 60% 98%);
+  border-radius: 18px;
+  margin-top: 70px;
+  max-width: 500px;
+}
+
 .home-box-buttons-box-cta {
   max-width: 350px;
 }
@@ -417,7 +428,7 @@ button, Button {
   width: 100%;
 }
 
-.signin-up-input {
+.signin-up-input, .signin-up-input-cta {
   outline: 0;
   color: #545454;
   background: 0;
@@ -441,20 +452,34 @@ button, Button {
     align-items: baseline;
   }
 
-  .home-box-buttons-box {
-    /*background: none;*/
+  .home-box-buttons-box-cta-section {
+    background: none;
   }
 
   .signin-up-input {
     width: 100%;
-    /*background: hsl(265deg 60% 98%);*/
-    padding: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+  }
+
+  .signin-up-input-cta {
+    width: 100%;
+    background: hsl(265deg 60% 98%);
+    padding: 15px;
     border-radius: 15px;
   }
 
   .home-box-button {
     margin-top: 10px;
     width: 100% !important;
+  }
+
+  .home-box-button-cta {
+    margin-top: 15px;
+    padding: 30px !important;
+    width: 100% !important;
+    color: #7e27f2 !important;
+    color: #3e3e3e !important;
   }
 }
 

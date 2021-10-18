@@ -98,10 +98,10 @@ export default function Auth() {
                 <div className="main-section-box-left">
                     <p className="main-section-box-title">Create & edit your page as you want!</p>
                     <p className="main-section-box-subtitle">And share it to the world!</p>
-                    <form className="home-box-buttons-box home-box-buttons-box-cta" onSubmit={handleLogin}>
+                    <form className="home-box-buttons-box-cta-section home-box-buttons-box-cta" onSubmit={handleLogin}>
                         <div className="home-box-left-signup-box">
-                            <input value={email} onChange={e => setEmail(e.target.value)} type="email" tabindex="-1" className="signin-up-input" required="required" placeholder="Enter you email"/>
-                            <Button onClick={e => {e.preventDefault(); handleLogin(email);}} isLoading={loading} loadingText="Signing up..." style={{background: "#7b1df3", flexWrap: "nowrap", fontWeight: "700", borderRadius: 17 + "px", padding: '25px 25px', fontSize: 15 + "pt", width: 100+ "%", maxWidth: "fit-content"}} className="home-box-button home-box-button-left link-white"> {loading || 'Start now!'}</Button>{/* Start now for free! */}
+                            <input value={email} onChange={e => setEmail(e.target.value)} type="email" tabindex="-1" className="signin-up-input-cta" required="required" placeholder="Enter you email"/>
+                            <Button onClick={e => {e.preventDefault(); handleLogin(email);}} isLoading={loading} loadingText="Signing up..." style={{background: "#7b1df3", flexWrap: "nowrap", fontWeight: "700", borderRadius: 17 + "px", padding: '25px 25px', fontSize: 15 + "pt", width: 100+ "%", maxWidth: "fit-content"}} className="home-box-button-cta home-box-button-left link-white"> {loading || 'Start now!'}</Button>{/* Start now for free! */}
                         </div>
                     </form>
                 </div>
