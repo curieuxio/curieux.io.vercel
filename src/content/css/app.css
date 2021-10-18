@@ -157,7 +157,7 @@ button, Button {
 }
 
 .home-box-left {
-  height: 100vh;
+  /*height: 100vh;*/
   width: 50%;
   /*height: calc(100vh - 100px);
   width: calc(50% - 100px);*/
