@@ -22,6 +22,10 @@ body, .App {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.css-3b6enb, .css-1abt8wl {
+  background: #4fffca !important;
+}
+
 /*::-webkit-scrollbar,
 *::-webkit-scrollbar-thumb {
   width: 25px;
@@ -773,10 +777,6 @@ a.valid {
 }
 
 /* ---------- MAIN SECTION ----------*/
-.css-3b6enb{
-  background: #4fffca !important;
-}
- 
 .main-section {
   display: flex;
   flex-direction: row;
