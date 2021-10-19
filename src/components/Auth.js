@@ -38,6 +38,7 @@ export default function Auth() {
                 description: error.error_description || error.message,
                 status: 'success',
                 duration: 5000,
+                background: 'blue',
                 isClosable: true
             });
         } finally {

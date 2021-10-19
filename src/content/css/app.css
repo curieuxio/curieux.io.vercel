@@ -773,6 +773,10 @@ a.valid {
 }
 
 /* ---------- MAIN SECTION ----------*/
+.css-3b6enb{
+  background: #4fffca !important;
+}
+ 
 .main-section {
   display: flex;
   flex-direction: row;
@@ -982,14 +986,6 @@ a.valid {
 
 .user-avatar {
   background: #F5F3F8
-}
-
-.css-1h8emob::after {
-  content: "";
-  width: 25px;
-  height: 25px;
-  background: var(--chakra-colors-green-300);
-  border: 4px solid white;
 }
 
 .artist-name-informations {
