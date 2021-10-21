@@ -889,7 +889,7 @@ a.valid {
 }
 
 .home-footer-informations {
-  max-width: 1300px;
+  /*max-width: 1300px;*/
   color: white;
   display: flex;
   flex-direction: row;
@@ -906,12 +906,14 @@ a.valid {
   }
 }
 
-
 .home-footer-column {
   width: 25%;
   height: 100px;
   min-width: 200px;
-  padding: 0 10px;
+}
+
+.home-footer-column + .home-footer-column  {
+  padding-left: 20px;
 }
 
 .home-footer-logo {
