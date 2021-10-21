@@ -914,6 +914,7 @@ a.valid {
 .home-footer-bottom-informations {
   margin-top: 40px;
   flex-wrap: wrap;
+  margin-bottom: 100px;
 }
 
 @media screen and (max-width: 500px) {
