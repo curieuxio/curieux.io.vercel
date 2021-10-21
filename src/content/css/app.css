@@ -908,12 +908,19 @@ a.valid {
 
 .home-footer-column {
   width: 25%;
-  height: 100px;
+  min-height: fit-content;
+  margin-bottom: 20px;
   min-width: 200px;
 }
 
 .home-footer-column + .home-footer-column  {
   padding-left: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .home-footer-column + .home-footer-column {
+    padding: 0px;
+  }
 }
 
 .home-footer-logo {
