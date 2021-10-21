@@ -62,7 +62,7 @@ export default function Auth() {
                 <a href="/" className="home-box-logo"><img src={CurieuxLogoPurple}/></a>
                 <div className="home-box-items">
                     <h1 className="home-box-title">
-                        Make your profile
+                        Make your music
                         <div className="ms-slider">
                         <ul className="ms-slider__words">
                             <li className="ms-slider__word"><span className="home-box-title-slider-word">skilled</span>! ⚡</li>
@@ -119,20 +119,30 @@ export default function Auth() {
         {/* FOOTER PART */}
         <section className="home-footer">
             <div className="home-footer-informations">
-                <div className="home-footer-column">
-                    <a  href=""><img className="home-footer-logo" alt="Curieux Logo" src={CurieuxLogoWhite}/></a>
+                <div className="home-footer-top-informations">
+                    <h3 className="home-footer-main-title">Ready to make your music skilled?</h3>
+                    <p className="home-footer-main-subtitle">Join Curieux for free and promote your music to your fans with only one link!</p>
                 </div>
-                <div className="home-footer-column">
-                    <h4 className="home-footer-column-title">Support</h4>
-                    <a className="home-footer-column-text">This is an email</a>
-                </div>
-                <div className="home-footer-column">
-                    <h4 className="home-footer-column-title">External Links</h4>
-                    <a className="home-footer-column-text">This is a link</a>
-                </div>
-                <div className="home-footer-column">
-                    <h4 className="home-footer-column-title">Site Map</h4>
-                    <a className="home-footer-column-text">This is an anchor</a>
+                <div className="home-footer-bottom-informations">
+                    <div className="home-footer-column">
+                        <a  href=""><img className="home-footer-logo" alt="Curieux Logo" src={CurieuxLogoWhite}/></a>
+                        {/*<h4>Make your music skilled! ⚡</h4>*/}
+                    </div>
+                    <div className="home-footer-column">
+                        <h4 className="home-footer-column-title">Support</h4>
+                        <a href="mailto:hello@curieux.io" className="home-footer-column-text">hello@curieux.io</a>
+                        <a href="https://m.me/curieux.io" target="_blank" className="home-footer-column-text">Messenger</a>
+                        <a href="https://drift.me/curieux.io" target="_blank" className="home-footer-column-text">Drift chat</a>
+                    </div>
+                    <div className="home-footer-column">
+                        <h4 className="home-footer-column-title">External Links</h4>
+                        <a href="https://open.spotify.com/user/k6zri3sdtajjdjmiy669lvhtj" target="_blank" className="home-footer-column-text">Spotify</a>
+                        <a href="https://instagram.com/curieux.io" target="_blank" className="home-footer-column-text">Instagram</a>
+                    </div>
+                    <div className="home-footer-column">
+                        <h4 className="home-footer-column-title">Site Map</h4>
+                        <a href="" className="home-footer-column-text">Home</a>
+                    </div>
                 </div>
             </div>
 
