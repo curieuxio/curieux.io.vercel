@@ -945,6 +945,8 @@ a.valid {
   min-height: fit-content;
   margin-bottom: 20px;
   min-width: 200px;
+  display: flex;
+  flex-direction: column;
 }
 
 .home-footer-column  {
