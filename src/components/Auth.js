@@ -26,7 +26,7 @@ export default function Auth() {
             toast({
                 title: 'Success! 🤟',
                 position: 'top',
-                description: 'Check your email for the login link!',
+                description: 'Check your email for the login link! It may arrive in your spams & promotions tabs!',
                 status: 'success',
                 duration: 5000,
                 isClosable: true
