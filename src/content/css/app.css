@@ -883,21 +883,22 @@ a.valid {
 
 /* ---------- FOOTER PART ----------*/
 .home-footer {
-  height: 350px;
   width: 100%;
-  background: #1D1D1D;
+  background: #1d1d1d;
 }
 
 .home-footer-informations {
-  /*max-width: 1300px;*/
-  color: white;
+  color: #fff;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin: auto;
   padding: 40px;
-  background: #1D1D1D;
+  background: #1d1d1d;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
   min-height: min-content;
+  max-width: 1050px;
 }
 
 .home-footer-top-informations, .home-footer-bottom-informations {
@@ -907,8 +908,9 @@ a.valid {
 .home-footer-top-informations {
   flex-direction: column;
   flex-wrap: wrap;
-  padding-bottom: 40px;
-  border-bottom: solid 1px rgba(255,255,255, 0.05);
+  padding-bottom: 80px;
+  margin-top: 40px;
+  border-bottom: 1px solid hsla(0,0%,100%,.05);
 }
 
 .home-footer-bottom-informations {
@@ -963,13 +965,20 @@ a.valid {
 .home-footer-column-title {
   font-weight: 600;
   font-size: 14pt;
+  margin-bottom: 20px;
 }
 
 .home-footer-column-text {
   font-weight: 300;
   font-size: 11pt;
-  opacity: 0.5;
   display: flex;
+  color: #858585;
+}
+
+.home-footer-copyright {
+  color: #858585;
+  font-size: 11pt;
+  font-weight: 300;
 }
 
 /*---------- PROFILE PART ---------*/

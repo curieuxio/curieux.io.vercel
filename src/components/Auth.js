@@ -144,6 +144,7 @@ export default function Auth() {
                         <a href="" className="home-footer-column-text">Home</a>
                     </div>
                 </div>
+                <h6 className="home-footer-copyright">© Curieux, 2021</h6>
             </div>
 
         </section>
