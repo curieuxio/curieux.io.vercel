@@ -302,7 +302,7 @@ button, Button {
 }
 
 .home-box-buttons-box-cta {
-  max-width: 350px;
+  max-width: 360px;
 }
 
 .home-box-button-btn {
@@ -777,7 +777,11 @@ a.valid {
 }
 
 /* ---------- MAIN SECTION ----------*/
-.main-section {
+.bullet-points-section {
+  min-height: 300px;
+}
+
+.cta-section {
   display: flex;
   flex-direction: row;
   height: 570px;
@@ -785,7 +789,7 @@ a.valid {
   padding: 40px;
 }
 
-.main-section-box-left {
+.cta-section-box-left {
   width: 50%;
   height: 100%;
   border-top-left-radius: 30px;
@@ -802,7 +806,7 @@ a.valid {
   align-items: baseline;
 }
 
-.main-section-box-title {
+.cta-section-box-title {
   color: white;
   font-weight: 800;
   font-size: 30pt;
@@ -810,7 +814,7 @@ a.valid {
   max-width: 380px;
 }
 
-.main-section-box-subtitle {
+.cta-section-box-subtitle {
   color: white;
   font-weight: 300;
   font-size: 18pt;
@@ -818,7 +822,7 @@ a.valid {
   line-height: 18pt;
 }
 
-.main-section-box-right {
+.cta-section-box-right {
   width: 50%;
   height: 100%;
   border-top-right-radius: 30px;
@@ -833,19 +837,19 @@ a.valid {
 
 
 @media screen and (max-width: 820px) {
-  .main-section {
+  .cta-section {
     flex-direction: column;
     height: fit-content;
   }
-  .main-section-box-left, .main-section-box-right {
+  .cta-section-box-left, .cta-section-box-right {
     width: 100%;
   }
-  .main-section-box-left {
+  .cta-section-box-left {
     border-radius: 0;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
   }
-  .main-section-box-right {
+  .cta-section-box-right {
     border-radius: 0;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -854,24 +858,24 @@ a.valid {
 }
 
 @media screen and (max-width: 600px) {
-  .main-section {
+  .cta-section {
     width:100%;
     padding: 30px;
   }
-  .main-section-box-left {
+  .cta-section-box-left {
     min-width: 0;
     padding: 30px;
   }
-  .main-section-box-right {
+  .cta-section-box-right {
     min-width: 0;
     background-size: 270px;
     background-position: center 5px;
   }
-  .main-section-box-title {
+  .cta-section-box-title {
     font-size: 25pt;
     line-height: 26pt;
   }
-  .main-section-box-subtitle {
+  .cta-section-box-subtitle {
     font-size: 14pt;
     line-height: 18pt;
   }

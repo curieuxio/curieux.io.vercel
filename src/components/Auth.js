@@ -73,7 +73,7 @@ export default function Auth() {
                         </div>
                     </h1>
                     <div className="home-box-subtitle-box">
-                        <a className="home-box-subtitle">Your music smart link, within 2 minutes!</a>
+                        <a className="home-box-subtitle">Your music smart link, 100% free!</a> {/* within 2 minutes! */}
                     </div>
                     <form className="home-box-buttons-box" onSubmit={handleLogin}>
                         <div className="home-box-left-signup-box">
@@ -102,10 +102,14 @@ export default function Auth() {
         </section>
 
         {/* MAIN SECTION PART */}
-        <section className="main-section">
-                <div className="main-section-box-left">
-                    <p className="main-section-box-title">Create & edit your page as you want!</p>
-                    <p className="main-section-box-subtitle">And share it to the world!</p>
+        {/*<section className="bullet-points-section">
+
+        </section> */}  
+
+        <section className="cta-section">
+                <div className="cta-section-box-left">
+                    <p className="cta-section-box-title">Create & edit your page as you want!</p>
+                    <p className="cta-section-box-subtitle">And share it to the world!</p>
                     <form className="home-box-buttons-box-cta-section home-box-buttons-box-cta" onSubmit={handleLogin}>
                         <div className="home-box-left-signup-box">
                             <input value={email} onChange={e => setEmail(e.target.value)} type="email" tabindex="-1" className="signin-up-input-cta" required="required" placeholder="Enter you email"/>
@@ -113,7 +117,7 @@ export default function Auth() {
                         </div>
                     </form>
                 </div>
-                <div className="main-section-box-right"></div>
+                <div className="cta-section-box-right"></div>
         </section>
 
         {/* FOOTER PART */}
