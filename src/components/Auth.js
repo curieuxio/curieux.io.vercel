@@ -125,7 +125,7 @@ export default function Auth() {
                 </div>
                 <div className="home-footer-bottom-informations">
                     <div className="home-footer-column">
-                        <a  href=""><img className="home-footer-logo" alt="Curieux Logo" src={CurieuxLogoWhite}/></a>
+                        <a className="home-footer-logo-box" href=""><img className="home-footer-logo" alt="Curieux Logo" src={CurieuxLogoWhite}/></a>
                         {/*<h4>Make your music skilled! ⚡</h4>*/}
                     </div>
                     <div className="home-footer-column">

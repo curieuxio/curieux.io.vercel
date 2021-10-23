@@ -953,10 +953,26 @@ a.valid {
   padding-right: 20px;
 }
 
+@media screen and (max-width: 900px) {
+  .home-footer-column {
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .home-footer-column {
+    width: 50%;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .home-footer-column {
     padding: 0px;
   }
+}
+
+.home-footer-logo-box {
+  margin-bottom: 30px;
 }
 
 .home-footer-logo {
