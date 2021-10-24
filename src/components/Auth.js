@@ -160,7 +160,7 @@ export default function Auth() {
                     </div>
                     <div className="home-footer-column">
                         <h4 className="home-footer-column-title">Site Map</h4>
-                        <a href="" className="home-footer-column-text">Home</a>
+                        <Link to="signup" smooth={true} duration={500} className="home-footer-column-text">Home</Link>
                     </div>
                 </div>
                 <h6 className="home-footer-copyright">© Curieux, 2021</h6>
