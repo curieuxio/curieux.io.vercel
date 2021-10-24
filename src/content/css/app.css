@@ -1026,6 +1026,7 @@ a.valid {
   display: flex;
   color: #858585;
   transition: all .2s ease-in-out;
+  cursor: pointer;
 }
 
 .home-footer-column-text:hover {
