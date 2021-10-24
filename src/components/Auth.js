@@ -135,7 +135,7 @@ export default function Auth() {
                     </div>
                     <div className="home-footer-top-informations-right-box">
                         <form action="https://app.curieux.io">
-                            <Button type="submit" style={{marginLeft: "auto", background: "#7b1df3", flexWrap: "nowrap", fontWeight: "700", borderRadius: 17 + "px", padding: '25px 25px', fontSize: 15 + "pt", width: 100+ "%", maxWidth: "fit-content", display: "flex", alignItems: "center"}} className="home-box-button-cta home-box-button-left link-white">Start now for free!</Button>
+                            <Button type="submit" style={{marginLeft: "auto", background: "#7b1df3", flexWrap: "nowrap", fontWeight: "700", borderRadius: 17 + "px", padding: '25px 25px', fontSize: 15 + "pt", width: 100+ "%", maxWidth: "fit-content", display: "flex", alignItems: "center"}} className="home-footer-cta-button">Start now for free!</Button>
                         </form>
                     </div>
                 </div>

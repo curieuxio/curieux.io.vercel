@@ -925,6 +925,20 @@ a.valid {
   width: 50%
 }
 
+@media screen and (max-width: 670px) {
+  .home-footer-top-informations-left-box, .home-footer-top-informations-right-box {
+    width: 100%;
+  }
+
+  .home-footer-top-informations-right-box {
+    margin-top: 30px;
+  }
+
+  .home-footer-cta-button {
+    margin: 0 auto 0 0 !important;
+  }
+}
+
 .home-footer-bottom-informations {
   margin-top: 40px;
   flex-wrap: wrap;
