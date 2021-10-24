@@ -2,9 +2,9 @@
 import React, { Component, useState, useEffect, useContext, useCallback } from 'react';
 // import { Helmet } from 'react-helmet';
 import { supabase } from '../supabase/supabaseClient';
-import { BrowserRouter as Router, Route, Link, Links, Redirect, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Links, Redirect, Switch } from 'react-router-dom';
 import { Flex, Box, FormControl, FormLabel, Input, Stack, Button, Heading, Text, useColorModeValue, useToast } from '@chakra-ui/react';
-import { CSSReset } from '@chakra-ui/css-reset';
+import { Link } from 'react-scroll';
 
 // Importing Logo Images SRC //
 import CurieuxLogoPurple from '../content/images/logos/curieux-logo-purple.svg';
@@ -133,16 +133,13 @@ export default function Auth() {
                         <h3 className="home-footer-main-title">Ready to make your music skilled?</h3>
                         <p className="home-footer-main-subtitle">Join Curieux for free and promote your music to your fans with only one link!</p>
                     </div>
-                    <div className="home-footer-top-informations-right-box">
-                        <form action="https://app.curieux.io">
-                            <Button type="submit" style={{marginLeft: "auto", background: "#ffffff1a", color: "white", flexWrap: "nowrap", fontWeight: "700", borderRadius: 17 + "px", padding: '25px 25px', fontSize: 15 + "pt", width: 100+ "%", maxWidth: "fit-content", display: "flex", alignItems: "center"}} className="home-footer-cta-button">Start now for free!</Button>
-                        </form>
+                    <div className="home-footer-top-informations-right-box"> {/* onClick={(e) => {e.preventDefault(); window.location.href='#signup';}} */}
+                            <Link to="signup" smooth={true} duration={500}><Button type="button"  style={{marginLeft: "auto", background: "#ffffff1a", color: "white", flexWrap: "nowrap", fontWeight: "700", borderRadius: 17 + "px", padding: '25px 25px', fontSize: 15 + "pt", width: 100+ "%", maxWidth: "fit-content", display: "flex", alignItems: "center"}} className="home-footer-cta-button">Start now for free!</Button></Link>
                     </div>
                 </div>
                 <div className="home-footer-bottom-informations">
                     <div className="home-footer-column">
                         <a className="home-footer-logo-box" href=""><img className="home-footer-logo" alt="Curieux Logo" src={CurieuxLogoWhite}/></a>
-                        {/*<h4>Make your music skilled! ⚡</h4>*/}
                         <div className="home-footer-socials-box">
                             <a className="home-footer-social-button" href="https://instagram.com/curieux.io" target="_blank"><img className="home-footer-social-icon" alt="Instagram Icon" src={InstagramIcon}/></a>
                             <a className="home-footer-social-button" href="https://twitter.com/curieuxio" target="_blank"><img className="home-footer-social-icon" alt="Instagram Icon" src={TwitterIcon}/></a>

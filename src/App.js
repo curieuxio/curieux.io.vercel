@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import { supabase } from './supabase/supabaseClient';
 import { ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter as Router, Route, Links, Redirect, Switch } from 'react-router-dom';
-import { CSSReset } from '@chakra-ui/css-reset';
 
 // Importing Styles //
 import './content/css/reset.css';
