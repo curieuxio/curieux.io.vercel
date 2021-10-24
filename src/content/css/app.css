@@ -910,17 +910,24 @@ a.valid {
 }
 
 .home-footer-top-informations {
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   padding-bottom: 80px;
   margin-top: 40px;
   border-bottom: 1px solid hsla(0,0%,100%,.05);
 }
 
+.home-footer-top-informations-left-box {
+  width: 50%
+}
+
+.home-footer-top-informations-right-box {
+  width: 50%
+}
+
 .home-footer-bottom-informations {
   margin-top: 40px;
   flex-wrap: wrap;
-  margin-bottom: 100px;
 }
 
 @media screen and (max-width: 500px) {
@@ -931,7 +938,7 @@ a.valid {
 
 .home-footer-main-title {
   font-size: 20pt;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 25pt;
 }
 
@@ -1006,6 +1013,27 @@ a.valid {
   color: #858585;
   font-size: 11pt;
   font-weight: 300;
+}
+
+.home-footer-socials-box {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 100px;
+}
+
+.home-footer-social-button + .home-footer-social-button {
+  margin-left: 10px;
+}
+
+.home-footer-social-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  transition: all .2s ease-in-out;
+}
+
+.home-footer-social-icon:hover {
+  opacity: 1;
 }
 
 /*---------- PROFILE PART ---------*/

@@ -11,6 +11,11 @@ import CurieuxLogoPurple from '../content/images/logos/curieux-logo-purple.svg';
 import CurieuxLogoWhite from '../content/images/logos/curieux-logo-white.svg';
 
 // Importing Icon Images SRC //
+import InstagramIcon from '../content/images/icons/social-icons/instagram-white-icon.svg';
+import TwitterIcon from '../content/images/icons/social-icons/twitter-white-icon.svg';
+import SpotifyIcon from '../content/images/icons/social-icons/spotify-white-icon.svg';
+
+// Importing Icon Images SRC //
 import CloseBtn from '../content/images/icons/close.svg';
 
 export default function Auth() {
@@ -57,7 +62,7 @@ export default function Auth() {
         </Helmet>*/}
 
         {/* Home Component */}
-        <section className="home-content" id="home-content">
+        <section className="home-content" id="signup">
             <div className="home-box-left">
                 <a href="/" className="home-box-logo"><img src={CurieuxLogoPurple}/></a>
                 <div className="home-box-items">
@@ -124,13 +129,25 @@ export default function Auth() {
         <section className="home-footer">
             <div className="home-footer-informations">
                 <div className="home-footer-top-informations">
-                    <h3 className="home-footer-main-title">Ready to make your music skilled?</h3>
-                    <p className="home-footer-main-subtitle">Join Curieux for free and promote your music to your fans with only one link!</p>
+                    <div className="home-footer-top-informations-left-box">
+                        <h3 className="home-footer-main-title">Ready to make your music skilled?</h3>
+                        <p className="home-footer-main-subtitle">Join Curieux for free and promote your music to your fans with only one link!</p>
+                    </div>
+                    <div className="home-footer-top-informations-right-box">
+                        <form action="https://app.curieux.io">
+                            <Button type="submit" style={{marginLeft: "auto", background: "#7b1df3", flexWrap: "nowrap", fontWeight: "700", borderRadius: 17 + "px", padding: '25px 25px', fontSize: 15 + "pt", width: 100+ "%", maxWidth: "fit-content", display: "flex", alignItems: "center"}} className="home-box-button-cta home-box-button-left link-white">Start now for free!</Button>
+                        </form>
+                    </div>
                 </div>
                 <div className="home-footer-bottom-informations">
                     <div className="home-footer-column">
                         <a className="home-footer-logo-box" href=""><img className="home-footer-logo" alt="Curieux Logo" src={CurieuxLogoWhite}/></a>
                         {/*<h4>Make your music skilled! ⚡</h4>*/}
+                        <div className="home-footer-socials-box">
+                            <a className="home-footer-social-button" href="https://instagram.com/curieux.io" target="_blank"><img className="home-footer-social-icon" alt="Instagram Icon" src={InstagramIcon}/></a>
+                            <a className="home-footer-social-button" href="https://twitter.com/curieuxio" target="_blank"><img className="home-footer-social-icon" alt="Instagram Icon" src={TwitterIcon}/></a>
+                            <a className="home-footer-social-button" href="https://open.spotify.com/user/k6zri3sdtajjdjmiy669lvhtj" target="_blank"><img className="home-footer-social-icon" alt="Instagram Icon" src={SpotifyIcon}/></a>
+                        </div>
                     </div>
                     <div className="home-footer-column">
                         <h4 className="home-footer-column-title">Support</h4>
@@ -142,6 +159,7 @@ export default function Auth() {
                         <h4 className="home-footer-column-title">External Links</h4>
                         <a href="https://open.spotify.com/user/k6zri3sdtajjdjmiy669lvhtj" target="_blank" className="home-footer-column-text">Spotify</a>
                         <a href="https://instagram.com/curieux.io" target="_blank" className="home-footer-column-text">Instagram</a>
+                        <a href="https://twitter.com/curieux.io" target="_blank" className="home-footer-column-text">Twitter</a>
                     </div>
                     <div className="home-footer-column">
                         <h4 className="home-footer-column-title">Site Map</h4>
