@@ -1008,12 +1008,13 @@ a.valid {
 .home-footer-column-title {
   font-weight: 600;
   font-size: 14pt;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .home-footer-column-text {
   font-weight: 300;
   font-size: 11pt;
+  line-height: 20pt;
   display: flex;
   color: #858585;
   transition: all .2s ease-in-out;
