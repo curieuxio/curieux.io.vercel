@@ -918,10 +918,13 @@ a.valid {
   border-bottom: 1px solid hsla(0,0%,100%,.05);
 }
 
+.home-footer-top-informations-left-box {
+  display: flex;
+}
+
 .home-footer-top-informations-left-box, .home-footer-top-informations-right-box {
   width: calc(100% / 2);
   max-height: max-content;
-  display: flex;
   flex-direction: column;
   margin-bottom: 0;
   padding: 0;
