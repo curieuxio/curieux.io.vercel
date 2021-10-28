@@ -284,7 +284,7 @@ button, Button {
   font-family: Poppins;
   font-weight: 800;
   font-size: 16pt;
-  background: hsl(265deg 60% 98%);
+  background: white;
   border-radius: 18px;
   margin-top: 70px;
   max-width: 500px;
