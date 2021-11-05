@@ -83,7 +83,7 @@ export default function Auth() {
                     <form className="home-box-buttons-box" onSubmit={handleLogin}>
                         <div className="home-box-left-signup-box">
                             <input value={email} onChange={e => setEmail(e.target.value)} type="email" tabindex="-1" className="signin-up-input" required="required" placeholder="Enter you email"/>
-                            <Button onClick={e => {e.preventDefault(); handleLogin(email);}} isLoading={loading} loadingText="Sending link..." style={{background: "#7b1df3", flexWrap: "nowrap", fontWeight: "700", borderRadius: 17 + "px", padding: '25px 25px', fontSize: 15 + "pt", width: 100+ "%", minWidth: "fit-content", display: "flex", alignItems: "center"}} className="home-box-button home-box-button-left link-white"> {loading || 'Sign Up or Sign In!'}</Button>{/* Start now for free! */}
+                            <Button onClick={e => {e.preventDefault(); handleLogin(email);}} isLoading={loading} loadingText="Sending link..." style={{background: "#7b1df3", webkitAppearance: "none", flexWrap: "nowrap", fontWeight: "700", borderRadius: 17 + "px", padding: '25px 25px', fontSize: 15 + "pt", width: 100+ "%", minWidth: "fit-content", display: "flex", alignItems: "center"}} className="home-box-button home-box-button-left link-white"> {loading || 'Sign Up or Sign In!'}</Button>{/* Start now for free! */}
                         </div>
                     </form>
                 </div>
@@ -118,7 +118,7 @@ export default function Auth() {
                     <form className="home-box-buttons-box-cta-section home-box-buttons-box-cta" onSubmit={handleLogin}>
                         <div className="home-box-left-signup-box">
                             <input value={email} onChange={e => setEmail(e.target.value)} type="email" tabindex="-1" className="signin-up-input-cta" required="required" placeholder="Enter you email"/>
-                            <Button onClick={e => {e.preventDefault(); handleLogin(email);}} isLoading={loading} loadingText="Signing up..." style={{background: "#7b1df3", flexWrap: "nowrap", fontWeight: "700", borderRadius: 17 + "px", padding: '25px 25px', fontSize: 15 + "pt", width: 100+ "%", maxWidth: "fit-content", display: "flex", alignItems: "center"}} className="home-box-button-cta home-box-button-left link-white"> {loading || 'Start now!'}</Button>{/* Start now for free! */}
+                            <Button onClick={e => {e.preventDefault(); handleLogin(email);}} isLoading={loading} loadingText="Signing up..." style={{background: "#7b1df3", webkitAppearance: "none", flexWrap: "nowrap", fontWeight: "700", borderRadius: 17 + "px", padding: '25px 25px', fontSize: 15 + "pt", width: 100+ "%", maxWidth: "fit-content", display: "flex", alignItems: "center"}} className="home-box-button-cta home-box-button-left link-white"> {loading || 'Start now!'}</Button>{/* Start now for free! */}
                         </div>
                     </form>
                 </div>
@@ -134,7 +134,7 @@ export default function Auth() {
                         <p className="home-footer-main-subtitle">Join Curieux for free and promote your music to your fans with only one link!</p>
                     </div>
                     <div className="home-footer-top-informations-right-box"> {/* onClick={(e) => {e.preventDefault(); window.location.href='#signup';}} */}
-                            <Link to="signup" smooth={true} duration={500}><Button type="button"  style={{marginLeft: "auto", background: "#ffffff1a", color: "white", flexWrap: "nowrap", fontWeight: "700", maxWidth: "max-content", borderRadius: 17 + "px", padding: '25px 25px', fontSize: 15 + "pt", width: 100+ "%", display: "flex", alignItems: "center"}} className="home-footer-cta-button">Start now for free!</Button></Link>
+                            <Link to="signup" smooth={true} duration={500}><Button type="button"  style={{marginLeft: "auto", webkitAppearance: "none", background: "#ffffff1a", color: "white", flexWrap: "nowrap", fontWeight: "700", maxWidth: "max-content", borderRadius: 17 + "px", padding: '25px 25px', fontSize: 15 + "pt", width: 100+ "%", display: "flex", alignItems: "center"}} className="home-footer-cta-button">Start now for free!</Button></Link>
                     </div>
                 </div>
                 <div className="home-footer-bottom-informations">
