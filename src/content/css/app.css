@@ -27,6 +27,12 @@ body, .App {
   font-size: 15pt;
 }
 
+.css-onkibi {
+  width: 15px !important;
+  height: 15px !important;
+  line-height: 15pt;
+}
+
 /*::-webkit-scrollbar,
 *::-webkit-scrollbar-thumb {
   width: 25px;
@@ -303,7 +309,7 @@ button, Button {
   font-weight: 800;
   font-size: 16pt;
   border-radius: 22.5px;
-  margin-top: 50px;
+  margin-top: 62.5px;
   max-width: 625px;
 }
 
@@ -904,7 +910,7 @@ a.valid {
   flex-direction: column;
   flex-wrap: wrap;
   margin: auto;
-  padding: 50px;
+  padding: 60px;
   background: #1d1d1d;
   min-height: -webkit-min-content;
   min-height: -moz-min-content;
@@ -921,7 +927,7 @@ a.valid {
   flex-wrap: wrap;
   padding-bottom: 75px;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 20px;
   border-bottom: 1px solid hsla(0,0%,100%,.05);
 }
 
@@ -957,7 +963,7 @@ a.valid {
 }
 
 .home-footer-bottom-informations {
-  margin-top: 40px;
+  margin-top: 50px;
   flex-wrap: wrap;
   margin-bottom: 50px;
 }
@@ -1056,12 +1062,12 @@ a.valid {
 }
 
 .home-footer-social-button + .home-footer-social-button {
-  margin-left: 12.5px;
+  margin-left: 14px;
 }
 
 .home-footer-social-icon {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   opacity: 0.5;
   transition: all .2s ease-in-out;
 }
