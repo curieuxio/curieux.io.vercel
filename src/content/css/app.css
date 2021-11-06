@@ -171,14 +171,20 @@ button, Button {
   border-top-right-radius: 60px;
   display: flex;
   align-content: center;
-  padding: 50px;
+  padding: 60px;
   text-align: left;
   flex-direction: column;
   min-height: 500px;
 }
 
 .home-box-logo {
-  width: 180px;
+  width: 225px;
+}
+
+@media all and (max-width:480px) {
+  .home-box-logo {
+   width: 180px;
+  }
 }
 
 .home-box-items {
@@ -190,8 +196,8 @@ button, Button {
 }
 
 .home-box-title {
-  line-height: 50pt;
-  font-size: 50pt;
+  line-height: 62.5pt;
+  font-size: 62.5pt;
   font-weight: 800;
   z-index: 12131312;
   flex: 1 1 100%;
@@ -204,7 +210,7 @@ button, Button {
    display: inline-block;
    margin-top: -12px;
    color: #7000FF;
-   height: 70pt;
+   height: 87.5pt;
    overflow: hidden;
    vertical-align: middle;
    -webkit-mask-image: linear-gradient(transparent 0%, white 10%, white 50%, white 90%, transparent 100%);
@@ -232,7 +238,7 @@ button, Button {
 
 .ms-slider__word {
    display: block;
-   line-height: 70pt;
+   line-height: 85.5pt;
    text-align: left;
    color: #7000FF;
 }
@@ -273,8 +279,8 @@ button, Button {
 }
 
 .home-box-subtitle {
-  font-size: 18pt;
-  line-height: 18pt;
+  font-size: 22.5pt;
+  line-height: 22.5pt;
   font-weight: 300;
   color: #7000FF;
 }
@@ -285,9 +291,9 @@ button, Button {
   font-weight: 800;
   font-size: 16pt;
   background: hsl(265deg 60% 98%);
-  border-radius: 18px;
+  border-radius: 22.5px;
   margin-top: 70px;
-  max-width: 500px;
+  max-width: 625px;
 }
 
 .home-box-buttons-box-cta-section {
@@ -295,13 +301,13 @@ button, Button {
   font-family: Poppins;
   font-weight: 800;
   font-size: 16pt;
-  border-radius: 18px;
+  border-radius: 22.5px;
   margin-top: 50px;
-  max-width: 500px;
+  max-width: 625px;
 }
 
 .home-box-buttons-box-cta {
-  max-width: 360px;
+  max-width: 450px;
   background: white;
 }
 
@@ -316,7 +322,7 @@ button, Button {
 }
 
 .chakra-button:focus {
-  box-shadow: 0px 0px 0px 3px #dad5e1 !important;
+  box-shadow: 0px 0px 0px 4px #dad5e1 !important;
 }
 
 .home-box-button {
@@ -352,7 +358,7 @@ button, Button {
    align-items: center;
    justify-content: center;
    background-image: url(../images/home-background-image-iphone-website.png);
-   background-size: 420px;
+   background-size: 440px;
    background-position: center;
    background-repeat: no-repeat;
    min-height: 600px;
@@ -428,7 +434,7 @@ button, Button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px;
+  padding: 12.5px;
   width: 100%;
 }
 
@@ -436,7 +442,7 @@ button, Button {
   outline: 0;
   color: #545454;
   background: 0;
-  font-size: 14pt;
+  font-size: 17.5pt;
   padding: 0px 10px;
   width: 100%;
   text-overflow: ellipsis;
@@ -784,22 +790,22 @@ a.valid {
 .cta-section {
   display: flex;
   flex-direction: row;
-  height: 570px;
+  height: 710px;
   width: 100%;
-  padding: 40px;
+  padding: 60px;
 }
 
 .cta-section-box-left {
   width: 50%;
   height: 100%;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
   background-image: url(../images/curieux-app-bg-reflect.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-width: 360px;
-  padding: 40px;
+  padding: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -809,28 +815,28 @@ a.valid {
 .cta-section-box-title {
   color: white;
   font-weight: 800;
-  font-size: 30pt;
-  line-height: 30pt;
+  font-size: 37.5pt;
+  line-height: 37.5pt;
   max-width: 380px;
 }
 
 .cta-section-box-subtitle {
   color: white;
   font-weight: 300;
-  font-size: 18pt;
+  font-size: 22.5pt;
   margin-top: 20px;
-  line-height: 18pt;
+  line-height: 22.5pt;
 }
 
 .cta-section-box-right {
   width: 50%;
   height: 100%;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
   box-shadow: 0 10px 30px rgb(112 0 255 / 5%), 0 5px 100px rgb(112 0 255 / 5%);
   min-width: 360px;
   background-image: url(../images/home-background-image-iphone-website.png);
-  background-size: 400px;
+  background-size: 440px;
   background-position: center 40px;
   background-repeat: no-repeat;
 }
@@ -897,12 +903,12 @@ a.valid {
   flex-direction: column;
   flex-wrap: wrap;
   margin: auto;
-  padding: 40px;
+  padding: 50px;
   background: #1d1d1d;
   min-height: -webkit-min-content;
   min-height: -moz-min-content;
   min-height: min-content;
-  max-width: 1050px;
+  max-width: 1310px;
 }
 
 .home-footer-top-informations, .home-footer-bottom-informations {
@@ -912,9 +918,9 @@ a.valid {
 .home-footer-top-informations {
   flex-direction: row;
   flex-wrap: wrap;
-  padding-bottom: 60px;
+  padding-bottom: 75px;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 25px;
   border-bottom: 1px solid hsla(0,0%,100%,.05);
 }
 
@@ -962,31 +968,31 @@ a.valid {
 }
 
 .home-footer-main-title {
-  font-size: 20pt;
+  font-size: 25pt;
   font-weight: 800;
-  line-height: 25pt;
+  line-height: 30pt;
 }
 
 .home-footer-main-subtitle {
-  font-size: 11pt;
-  line-height: 14pt;
+  font-size: 14pt;
+  line-height: 17.5pt;
   opacity: 0.5;
   font-weight: 300;
-  margin-top: 20px;
-  max-width: 300px;
+  margin-top: 25px;
+  max-width: 375px;
 }
 
 .home-footer-column {
   width: 25%;
   min-height: fit-content;
-  margin-bottom: 20px;
-  min-width: 200px;
+  margin-bottom: 25px;
+  min-width: 250px;
   display: flex;
   flex-direction: column;
 }
 
 .home-footer-column  {
-  padding-right: 20px;
+  padding-right: 25px;
 }
 
 @media screen and (max-width: 900px) {
@@ -1012,20 +1018,20 @@ a.valid {
 }
 
 .home-footer-logo {
-  width: 150px;
-  transform: translateY(-2px);
+  width: 190px;
+  transform: translateY(-2.5px);
 }
 
 .home-footer-column-title {
   font-weight: 600;
-  font-size: 14pt;
-  margin-bottom: 15px;
+  font-size: 17.5pt;
+  margin-bottom: 19px;
 }
 
 .home-footer-column-text {
   font-weight: 300;
-  font-size: 11pt;
-  line-height: 20pt;
+  font-size: 14pt;
+  line-height: 25pt;
   display: flex;
   color: #858585;
   transition: all .2s ease-in-out;
@@ -1038,14 +1044,14 @@ a.valid {
 
 .home-footer-copyright {
   color: #858585;
-  font-size: 11pt;
+  font-size: 14pt;
   font-weight: 300;
 }
 
 .home-footer-socials-box {
   display: flex;
   flex-direction: row;
-  margin-bottom: 30px;
+  margin-bottom: 37.5px;
 }
 
 .home-footer-social-button + .home-footer-social-button {
@@ -1053,8 +1059,8 @@ a.valid {
 }
 
 .home-footer-social-icon {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   opacity: 0.5;
   transition: all .2s ease-in-out;
 }
@@ -1065,7 +1071,7 @@ a.valid {
 
 /*---------- PROFILE PART ---------*/
 .artist-profile-page {
-  padding: 20px;
+  padding: 25px;
   background: #f7f5fa;
 }
 
