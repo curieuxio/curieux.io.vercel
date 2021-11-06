@@ -78,7 +78,7 @@ export default function PersonalAvatar({ url, onUpload }) {
       ) : (
         <Avatar
           bg={'#efecf4'}
-          size={'300px'}
+          size={'2xl'}
           src={avatarUrl}
           marginBottom={'Opx'}
           alt="Avatar"
@@ -110,7 +110,7 @@ export default function PersonalAvatar({ url, onUpload }) {
           }}
           type="file"
           id="single"
-          accept="image/*"
+          accept="image/png, image/gif, image/jpeg"
           onChange={uploadAvatar}
           disabled={uploading}
         />

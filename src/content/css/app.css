@@ -1090,7 +1090,7 @@ a.valid {
 .artist-profile-section {
   max-width: 555px;
   background: #fff;
-  border-radius: 1.25rem;
+  border-radius: 1.7rem;
   text-align: center;
   justify-items: center;
   justify-content: center;
@@ -1126,7 +1126,7 @@ a.valid {
   width: 170px;
   height: fit-content;
   border-radius: 100%;
-  box-shadow: 0 10px 30px rgb(112 0 255 / 10%), 0 5px 100px rgb(112 0 255 / 10%);
+  /*box-shadow: 0 10px 30px rgb(112 0 255 / 10%), 0 5px 100px rgb(112 0 255 / 10%);*/
 }
 
 .user-avatar {
