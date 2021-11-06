@@ -1056,12 +1056,12 @@ a.valid {
 }
 
 .home-footer-social-button + .home-footer-social-button {
-  margin-left: 10px;
+  margin-left: 12.5px;
 }
 
 .home-footer-social-icon {
-  width: 25px;
-  height: 25px;
+  width: 28px;
+  height: 28px;
   opacity: 0.5;
   transition: all .2s ease-in-out;
 }
