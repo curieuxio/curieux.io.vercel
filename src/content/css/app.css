@@ -1088,16 +1088,14 @@ a.valid {
 }
 
 .artist-profile-section {
-  max-width: 445px;
-  background: white;
-  /*box-shadow: 0 14px 28px rgb(112 0 255 / 5%), 0 10px 10px rgb(112 0 255 / 5%);*/
-  border-radius: 1rem;
+  max-width: 555px;
+  background: #fff;
+  border-radius: 1.25rem;
   text-align: center;
   justify-items: center;
-  -webkit-justify-content: center;
   justify-content: center;
   margin: auto;
-  padding: 40px 30px;
+  padding: 50px 37px;
 }
 
 @media screen and (max-width: 500px) {
@@ -1180,15 +1178,15 @@ a.valid {
 }
 
 .upload-profile-picture-button {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .update-profile-button {
-  margin: 20px 10px;
+  margin: 25px 12.5px;
 }
 
 .logout-button {
-  margin: 10px 10px;
+  margin: 12.5px 12.5px;
 }
 
 .button-purple:hover {
@@ -1207,9 +1205,9 @@ a.valid {
 
 .profile-user-logged-as {
   font-weight: 700;
-  font-size: 14pt;
+  font-size: 18pt;
   color: #3d3d3d;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .profile-user-email {
@@ -1218,23 +1216,23 @@ a.valid {
 }
 
 .link-input {
-    margin-top: 20px;
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-top: 25px;
 }
 
 .form-input-category {
   font-weight: 700;
   text-align: left;
   color: #7000FF;
-  margin-bottom: 5px;
-  margin-left: 10px;
+  margin-bottom: 6.25px;
+  margin-left: 12.5px;
 }
 
 .profile-link-input {
-  border-radius: 7px;
+  border-radius: 8.75px;
   width: 100%;
-  padding: 7px 10px;
-  font-size: 11pt;
+  padding: 8.75px 12.5px;
+  font-size: 13.75pt;
   outline: 0;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1245,38 +1243,38 @@ a.valid {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 12.5px;
   flex-wrap: wrap;
 }
 
 .profile-footer {
-  margin-top: 10px;
-  margin-bottom: -5px;
+  margin-top: 12.5px;
+  margin-bottom: -6.25px;
 }
 
 .profile-footer-app-version {
   color: #7a7a7a;
-  font-size: 10pt;
+  font-size: 12.5pt;
 }
 
 .artist-card-socials-icons-block {
   display: flex;
   flex-direction: column;
-  margin-left: -6px;
+  margin-left: -7.5px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
 .artist-card-socials-block {
-  font-size: 9pt;
+  font-size: 11.25pt;
   align-items: center;
   display: flex;
   transition: all 0.2s ease-in-out;
   color: #7000ff;
-  border-radius: 10px;
-  padding: 6px 7px 6px 0;
-  height: 50px;
+  border-radius: 12.5px;
+  padding: 7.5px 8.75px 7.5px 0;
+  height: 62.5px;
 }
 
 .artist-card-socials-block:hover {
@@ -1284,12 +1282,12 @@ a.valid {
 }
 
 .artist-card-socials-block + .artist-card-socials-block {
-  margin-top: 3px;
+  margin-top: 3.75px;
 }
 
 .artist-card-socials-icons {
-  width: 55px;
-  padding: 6px 10px;
+  width: 68.5px;
+  padding: 7.5px 12.5px;
 }
 
 .artist-card-socials-icons-a {
@@ -1297,6 +1295,6 @@ a.valid {
 }
 
 .artist-card-socials-icons-apple {
-  transform: translateY(-2px);
-  height: 43px;
+  transform: translateY(-2.5px);
+  height: 53.75px;
 }
