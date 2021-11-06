@@ -57,7 +57,7 @@ export default function PersonalAvatar({ url, onUpload }) {
         <div className="profile-user-picture">
           <Avatar
             bg={'#efecf4'}
-            size={'2xl'}
+            size={'300px'}
             src={avatarUrl}
             marginBottom={'Opx'}
             alt="Avatar"
@@ -71,14 +71,14 @@ export default function PersonalAvatar({ url, onUpload }) {
               rounded: 'full',
               pos: 'absolute',
               bottom: 0,
-              right: 3
+              right: 5
             }}
           />
         </div>
       ) : (
         <Avatar
           bg={'#efecf4'}
-          size={'2xl'}
+          size={'300px'}
           src={avatarUrl}
           marginBottom={'Opx'}
           alt="Avatar"
@@ -93,7 +93,7 @@ export default function PersonalAvatar({ url, onUpload }) {
             rounded: 'full',
             pos: 'absolute',
             bottom: 0,
-            right: 3
+            right: 5
           }}
         />
       )}

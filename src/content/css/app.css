@@ -1122,9 +1122,9 @@ a.valid {
 
 .profile-user-picture {
   background: white;
-  padding: 5px;
-  width: fit-content;
-  height: 137.5px;
+  padding: 6.25px;
+  width: 170px;
+  height: fit-content;
   border-radius: 100%;
   box-shadow: 0 10px 30px rgb(112 0 255 / 10%), 0 5px 100px rgb(112 0 255 / 10%);
 }
@@ -1179,14 +1179,17 @@ a.valid {
 
 .upload-profile-picture-button {
   margin-top: 25px;
+  font-size: 15pt;
 }
 
 .update-profile-button {
   margin: 25px 12.5px;
+  font-size: 15pt;
 }
 
 .logout-button {
   margin: 12.5px 12.5px;
+  font-size: 15pt;
 }
 
 .button-purple:hover {
@@ -1213,6 +1216,7 @@ a.valid {
 .profile-user-email {
   color: #7000FF;
   font-weight: 500;
+  font-size: 15pt;
 }
 
 .link-input {
@@ -1226,6 +1230,7 @@ a.valid {
   color: #7000FF;
   margin-bottom: 6.25px;
   margin-left: 12.5px;
+  font-size: 15pt;
 }
 
 .profile-link-input {
