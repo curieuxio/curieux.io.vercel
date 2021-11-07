@@ -22,6 +22,11 @@ body, .App {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#chakra-toast-portal {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
 .css-3b6enb, .css-1abt8wl {
   background: #4fffca !important;
   font-size: 15pt;
@@ -31,6 +36,11 @@ body, .App {
   width: 15px !important;
   height: 15px !important;
   line-height: 15pt;
+}
+
+/* User Banner */
+.css-taa2t4 {
+  height: 200px !important;
 }
 
 /*::-webkit-scrollbar,
@@ -1082,11 +1092,6 @@ a.valid {
   background: #f7f5fa;
 }
 
-#chakra-toast-portal {
-  font-family: 'Poppins', sans-serif;
-  color: white;
-}
-
 .artist-profile-section {
   max-width: 555px;
   background: #fff;
@@ -1095,7 +1100,31 @@ a.valid {
   justify-items: center;
   justify-content: center;
   margin: auto;
-  padding: 50px 37px;
+}
+
+.artist-profile-banner {
+  height: 250px;
+  width: 100%;
+  border-radius: 1.7rem 1.7rem 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.artist-profile-banner-content {
+  height: 100%;
+  width: 100%;
+  transform: scale(1.2);
+}
+
+.artist-profile-block {
+  min-width: fit-content;
+  /*margin-top: -50px;*/
+  background: white;
+  border-radius: 1.7rem 1.7rem 0 0;
+}
+
+.artist-profile-block-content {
+  padding: 40px 37px;
 }
 
 @media screen and (max-width: 500px) {
@@ -1104,28 +1133,42 @@ a.valid {
   }
 
   .artist-profile-section {
-    padding: 40px 20px;
     border-radius: 0;
+  }
+
+  .artist-profile-block-content {
+    padding: 40px 20px;
   }
 }
 
-.artist-profile-block {
-  
+.artist-profile-main-informations {
+  background: #ffffff;
+  border-radius: 1.7rem 1.7rem 0 0;
+  width: 100%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -50px;
+  z-index: 1;
 }
-
 
 .profile-user {
   display: flex;
   align-items: center;
   flex-direction: column;
+  /*margin-top: -135px;*/
 }
 
 .profile-user-picture {
   background: white;
+  display: flex;
   padding: 6.25px;
-  width: 170px;
-  height: fit-content;
+  width: 172px;
+  height: 172px;
   border-radius: 100%;
+  margin: auto;
+  margin-top: -85px;
   /*box-shadow: 0 10px 30px rgb(112 0 255 / 10%), 0 5px 100px rgb(112 0 255 / 10%);*/
 }
 
@@ -1180,6 +1223,9 @@ a.valid {
 .upload-profile-picture-button {
   margin-top: 25px;
   font-size: 15pt;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
 }
 
 .update-profile-button {
@@ -1210,7 +1256,6 @@ a.valid {
   font-weight: 700;
   font-size: 18pt;
   color: #3d3d3d;
-  margin-top: 25px;
 }
 
 .profile-user-email {
