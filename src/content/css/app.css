@@ -1139,6 +1139,10 @@ a.valid {
   .artist-profile-block-content {
     padding: 40px 20px;
   }
+
+  .artist-profile-banner {
+    border-radius: 0;
+  }
 }
 
 .artist-profile-main-informations {
