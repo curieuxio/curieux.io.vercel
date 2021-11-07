@@ -110,7 +110,7 @@ export default function PersonalAvatar({ url, onUpload }) {
           }}
           type="file"
           id="single"
-          accept="image/png, image/gif, image/jpeg"
+          accept="image/png, image/gif, image/jpeg, image/heic"
           onChange={uploadAvatar}
           disabled={uploading}
         />
