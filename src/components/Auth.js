@@ -82,7 +82,7 @@ export default function Auth() {
                     </div>
                     <form className="home-box-buttons-box" onSubmit={handleLogin}>
                         <div className="home-box-left-signup-box">
-                            <input value={email} onChange={e => setEmail(e.target.value)} type="email" tabindex="-1" className="signin-up-input" required="required" placeholder="Enter you email"/>
+                            <input value={email} onChange={e => setEmail(e.target.value)} type="text" name="email" tabindex="-1" className="signin-up-input" required="required" placeholder="Enter you email"/>
                             <Button onClick={e => {e.preventDefault(); handleLogin(email);}} isLoading={loading} loadingText="Sending link..." style={{background: "#7b1df3", webkitAppearance: "none", flexWrap: "nowrap", fontWeight: "700", borderRadius: 22 + "px", padding: '30px', fontSize: 18.75 + "pt", width: 100+ "%", minWidth: "fit-content", display: "flex", alignItems: "center"}} className="home-box-button home-box-button-left link-white"> {loading || 'Sign Up or Sign In!'}</Button>{/* Start now for free! */}
                         </div>
                     </form>

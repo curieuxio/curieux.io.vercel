@@ -15,6 +15,21 @@ html {
   background: #71ffd5;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px hsl(265deg 60% 98%) inset !important;
+}
+
+input::selection {
+  background: #71ffd5;
+}
+
+input:-webkit-autofill{
+  -webkit-text-fill-color: #545454 !important;
+}
+
 body, .App {
   margin: 0;
   font-family: 'Poppins', sans-serif;
