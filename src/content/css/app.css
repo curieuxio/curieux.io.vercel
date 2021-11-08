@@ -1120,7 +1120,7 @@ a.valid {
   min-width: fit-content;
   /*margin-top: -50px;*/
   background: white;
-  border-radius: 1.7rem 1.7rem 0 0;
+  border-radius: 1.7rem;
 }
 
 .artist-profile-block-content {
