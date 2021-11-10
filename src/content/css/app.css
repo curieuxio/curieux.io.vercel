@@ -15,21 +15,6 @@ html {
   background: #71ffd5;
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px hsl(265deg 60% 98%) inset !important;
-}
-
-input::selection {
-  background: #71ffd5;
-}
-
-input:-webkit-autofill{
-  -webkit-text-fill-color: #545454 !important;
-}
-
 body, .App {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -336,6 +321,28 @@ button, Button {
   border-radius: 22.5px;
   margin-top: 62.5px;
   max-width: 625px;
+}
+
+.home-box-buttons-box-cta:-webkit-autofill,
+.home-box-buttons-box-cta:-webkit-autofill:hover, 
+.home-box-buttons-box-cta:-webkit-autofill:focus, 
+.home-box-buttons-box-cta.home-box-buttons-box-cta-section:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px hsl(265deg 60% 98%) inset !important;
+}
+
+.home-box-buttons-box-cta-section:-webkit-autofill,
+.home-box-buttons-box-cta-section:-webkit-autofill:hover, 
+.home-box-buttons-box-cta-section:-webkit-autofill:focus, 
+.home-box-buttons-box-cta-section:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+input::selection {
+  background: #71ffd5;
+}
+
+input:-webkit-autofill{
+  -webkit-text-fill-color: #545454 !important;
 }
 
 .home-box-buttons-box-cta {
