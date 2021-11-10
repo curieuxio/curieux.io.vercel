@@ -136,7 +136,7 @@ export default function Auth() {
                         <p className="home-footer-main-subtitle">Join Curieux for free and promote your music to your fans with only one link!</p>
                     </div>
                     <div className="home-footer-top-informations-right-box"> {/* onClick={(e) => {e.preventDefault(); window.location.href='#signup';}} */}
-                            <Link to="signup" smooth={true} duration={500}><Button type="button"  style={{marginLeft: "auto", webkitAppearance: "none", background: "#ffffff1a", color: "white", flexWrap: "nowrap", fontWeight: "700", maxWidth: "max-content", borderRadius: 22 + "px", padding: '31px 31px', fontSize: 18.5 + "pt", width: 100+ "%", display: "flex", alignItems: "center"}} className="home-footer-cta-button">Start now for free!</Button></Link>
+                            <Link className="home-footer-cta-button" to="signup" tabindex="1" smooth={true} duration={500} type="button" style={{marginLeft: "auto", webkitAppearance: "none", background: "#ffffff1a", color: "white", flexWrap: "nowrap", fontWeight: "700", maxWidth: "max-content", borderRadius: 22 + "px", padding: '13px 30px', fontSize: 18.5 + "pt", width: 100+ "%", display: "flex", alignItems: "center"}}>Start now for free!</Link>
                     </div>
                 </div>
                 <div className="home-footer-bottom-informations">
