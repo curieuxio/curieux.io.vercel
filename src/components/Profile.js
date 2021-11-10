@@ -156,19 +156,20 @@ export default function Account({ session }) {
                   <div className="artist-card-socials-block">
                     <a><img className="artist-card-socials-icons" src={ProfileIcon} alt="Link Logo"/></a>
                     <input className="profile-link-input"
-                  type={'text'}
-                  value={ArtistName || ''}
-                  onChange={e => setArtistName(e.target.value)}
-                  placeholder={ArtistName || 'Name'}
-                  color={useColorModeValue('gray.800', 'gray.200')}
-                  bg={useColorModeValue('gray.100', 'gray.600')}
-                  rounded={'full'}
-                  border={0}
-                  _focus={{
-                    bg: useColorModeValue('gray.200', 'gray.800'),
-                    outline: 'none'
-                  }}
-                />
+                      type={'text'}
+                      value={ArtistName || ''}
+                      onChange={e => setArtistName(e.target.value)}
+                      placeholder={ArtistName || 'Name'}
+                      color={useColorModeValue('gray.800', 'gray.200')}
+                      bg={useColorModeValue('gray.100', 'gray.600')}
+                      rounded={'full'}
+                      border={0}
+
+                      _focus={{
+                        bg: useColorModeValue('gray.200', 'gray.800'),
+                        outline: 'none'
+                      }}
+                    />
               </div>
             </div>
 
@@ -178,19 +179,20 @@ export default function Account({ session }) {
                   <div className="artist-card-socials-block">
                     <a href={ArtistUsername} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={LinkIcon} alt="Link Logo"/></a>
                     <input className="profile-link-input"
-                  type={'text'}
-                  value={ArtistUsername || ''}
-                  onChange={e => setArtistUsername(e.target.value)}
-                  placeholder={ArtistUsername || 'Username'}
-                  color={useColorModeValue('gray.800', 'gray.200')}
-                  bg={useColorModeValue('gray.100', 'gray.600')}
-                  rounded={'full'}
-                  border={0}
-                  _focus={{
-                    bg: useColorModeValue('gray.200', 'gray.800'),
-                    outline: 'none'
-                  }}
-                />
+                      type={'text'}
+                      value={ArtistUsername || ''}
+                      onChange={e => setArtistUsername(e.target.value)}
+                      placeholder={ArtistUsername || 'Username'}
+                      color={useColorModeValue('gray.800', 'gray.200')}
+                      bg={useColorModeValue('gray.100', 'gray.600')}
+                      rounded={'full'}
+                      border={0}
+
+                      _focus={{
+                        bg: useColorModeValue('gray.200', 'gray.800'),
+                        outline: 'none'
+                      }}
+                    />
               </div>
             </div>
             </div>
@@ -213,6 +215,7 @@ export default function Account({ session }) {
                     bg={useColorModeValue('gray.100', 'gray.600')}
                     rounded={'full'}
                     border={0}
+
                     _focus={{
                       bg: useColorModeValue('gray.200', 'gray.800'),
                       outline: 'none'
@@ -227,19 +230,20 @@ export default function Account({ session }) {
                   <div className="artist-card-socials-block">
                     <a href={DeezerUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={DeezerIcon} alt="Deezer Logo"/></a>
                     <input className="profile-link-input"
-                    type={'text'}
-                    value={DeezerUrl || ''}
-                    onChange={e => setDeezerUrl(e.target.value)}
-                    placeholder={DeezerUrl || 'https://deezer.com'}
-                    color={useColorModeValue('gray.800', 'gray.200')}
-                    bg={useColorModeValue('gray.100', 'gray.600')}
-                    rounded={'full'}
-                    border={0}
-                    _focus={{
-                      bg: useColorModeValue('gray.200', 'gray.800'),
-                      outline: 'none'
-                    }}
-                  />
+                      type={'text'}
+                      value={DeezerUrl || ''}
+                      onChange={e => setDeezerUrl(e.target.value)}
+                      placeholder={DeezerUrl || 'https://deezer.com'}
+                      color={useColorModeValue('gray.800', 'gray.200')}
+                      bg={useColorModeValue('gray.100', 'gray.600')}
+                      rounded={'full'}
+                      border={0}
+
+                      _focus={{
+                        bg: useColorModeValue('gray.200', 'gray.800'),
+                        outline: 'none'
+                      }}
+                    />
                   </div>
                 </div>
 
@@ -249,19 +253,20 @@ export default function Account({ session }) {
                   <div className="artist-card-socials-block">
                     <a href={AppleMusicUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons artist-card-socials-icons-apple" src={AppleMusicIcon} alt="Apple Music Logo"/></a>
                     <input className="profile-link-input"
-                    type={'text'}
-                    value={AppleMusicUrl || ''}
-                    onChange={e => setAppleMusicUrl(e.target.value)}
-                    placeholder={AppleMusicUrl || 'https://music.apple.com'}
-                    color={useColorModeValue('gray.800', 'gray.200')}
-                    bg={useColorModeValue('gray.100', 'gray.600')}
-                    rounded={'full'}
-                    border={0}
-                    _focus={{
-                      bg: useColorModeValue('gray.200', 'gray.800'),
-                      outline: 'none'
-                    }}
-                  />
+                      type={'text'}
+                      value={AppleMusicUrl || ''}
+                      onChange={e => setAppleMusicUrl(e.target.value)}
+                      placeholder={AppleMusicUrl || 'https://music.apple.com'}
+                      color={useColorModeValue('gray.800', 'gray.200')}
+                      bg={useColorModeValue('gray.100', 'gray.600')}
+                      rounded={'full'}
+                      border={0}
+
+                      _focus={{
+                        bg: useColorModeValue('gray.200', 'gray.800'),
+                        outline: 'none'
+                      }}
+                    />
                   </div>
                 </div>
 
@@ -271,19 +276,20 @@ export default function Account({ session }) {
                   <div className="artist-card-socials-block">
                     <a href={WebSiteUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={LinkIcon} alt="Link Logo"/></a>
                     <input className="profile-link-input"
-                    type={'text'}
-                    value={WebSiteUrl || ''}
-                    onChange={e => setWebSiteUrl(e.target.value)}
-                    placeholder={WebSiteUrl || 'https://artistwebsite.com'}
-                    color={useColorModeValue('gray.800', 'gray.200')}
-                    bg={useColorModeValue('gray.100', 'gray.600')}
-                    rounded={'full'}
-                    border={0}
-                    _focus={{
-                      bg: useColorModeValue('gray.200', 'gray.800'),
-                      outline: 'none'
-                    }}
-                  />
+                      type={'text'}
+                      value={WebSiteUrl || ''}
+                      onChange={e => setWebSiteUrl(e.target.value)}
+                      placeholder={WebSiteUrl || 'https://artistwebsite.com'}
+                      color={useColorModeValue('gray.800', 'gray.200')}
+                      bg={useColorModeValue('gray.100', 'gray.600')}
+                      rounded={'full'}
+                      border={0}
+
+                      _focus={{
+                        bg: useColorModeValue('gray.200', 'gray.800'),
+                        outline: 'none'
+                      }}
+                    />
                   </div>
                 </div>
             </div>
@@ -302,12 +308,15 @@ export default function Account({ session }) {
                 bg={'#7000FF'}
                 color={'white'}
                 boxShadow={'0 5px 20px 0px rgb(72 187 120 / 43%)'}
+                
                 _hover={{
                   bg: '#5800CC'
                 }}
+                
                 _focus={{
                   bg: '#5800CC'
                 }}>
+
                 {loading ? 'Updating...' : 'Update'}
               </button>
             
@@ -317,9 +326,11 @@ export default function Account({ session }) {
                 flex={1}
                 fontSize={'sm'}
                 rounded={'full'}
+
                 _focus={{
                   bg: 'gray.200'
                 }}>
+                  
                 Logout
               </button>
             </div>
