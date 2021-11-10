@@ -15,6 +15,15 @@ html {
   background: #71ffd5;
 }
 
+input::selection {
+  background: #71ffd5;
+}
+
+input:-webkit-autofill{
+  -webkit-text-fill-color: #545454 !important;
+}
+
+
 body, .App {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -323,26 +332,18 @@ button, Button {
   max-width: 625px;
 }
 
-.home-box-buttons-box-cta:-webkit-autofill,
-.home-box-buttons-box-cta:-webkit-autofill:hover, 
-.home-box-buttons-box-cta:-webkit-autofill:focus, 
-.home-box-buttons-box-cta.home-box-buttons-box-cta-section:-webkit-autofill:active {
+.signup-cta-home input:-webkit-autofill,
+.signup-cta-home input:-webkit-autofill:hover, 
+.signup-cta-home input:-webkit-autofill:focus, 
+.signup-cta-home input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px hsl(265deg 60% 98%) inset !important;
 }
 
-.home-box-buttons-box-cta-section:-webkit-autofill,
-.home-box-buttons-box-cta-section:-webkit-autofill:hover, 
-.home-box-buttons-box-cta-section:-webkit-autofill:focus, 
-.home-box-buttons-box-cta-section:-webkit-autofill:active {
+.signup-cta-section input:-webkit-autofill,
+.signup-cta-section input:-webkit-autofill:hover, 
+.signup-cta-section input:-webkit-autofill:focus, 
+.signup-cta-section input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
-}
-
-input::selection {
-  background: #71ffd5;
-}
-
-input:-webkit-autofill{
-  -webkit-text-fill-color: #545454 !important;
 }
 
 .home-box-buttons-box-cta {
