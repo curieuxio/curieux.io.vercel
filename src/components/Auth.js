@@ -165,7 +165,7 @@ export default function Auth() {
                         <Link to="signup" smooth={true} duration={500} className="home-footer-column-text">Home</Link>
                     </div>
                 </div>
-                <h6 className="home-footer-copyright">© Curieux, 2021</h6>
+                <h6 className="home-footer-copyright">© Curieux, 2022</h6>
             </div>
 
         </section>
