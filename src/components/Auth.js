@@ -152,7 +152,7 @@ export default function Auth() {
                         <h4 className="home-footer-column-title">Support</h4>
                         <a href="mailto:hello@curieux.io" className="home-footer-column-text">hello@curieux.io</a>
                         <a href="https://m.me/curieux.io" target="_blank" className="home-footer-column-text">Messenger</a>
-                        <a href="https://drift.me/curieux.io" target="_blank" className="home-footer-column-text">Drift chat</a>
+                        <a href="https://drift.me/curieuxio" target="_blank" className="home-footer-column-text">Drift chat</a>
                     </div>
                     <div className="home-footer-column">
                         <h4 className="home-footer-column-title">External Links</h4>
