@@ -122,47 +122,48 @@ export default function Account({ session }) {
     <section className="artist-profile-page">
 
       {/* Header Wrapper Part */}
-      <section className="header">
 
-<div className="header-top-informations">
-    <Link to="/studio/dashboard"><img className="header-logo" src={HeaderLogo} alt="Curieux logo"/></Link>
-    <a className="header-user-name">Hello {ArtistUsername} !</a>
-</div>
+      {/*<section className="header">
 
-<div className="header-menu">
-    <div className="header-menu-content">   
-        <Link to="/studio/dashboard">
-            <div className="header-menu-button-div" id="dashboardBtn">
-                <img className="header-menu-button" id="dashboardBtn-img" src={DashboardIcon} alt="Dashboard Icon"/>
-                <a className="header-menu-button-text" id="dashboardBtn-text">Dashboard</a>
+        <div className="header-top-informations">
+            <Link to="/studio/dashboard"><img className="header-logo" src={HeaderLogo} alt="Curieux logo"/></Link>
+            <a className="header-user-name">Hello {ArtistUsername} !</a>
+        </div>
+
+        <div className="header-menu">
+            <div className="header-menu-content">   
+                <Link to="/studio/dashboard">
+                    <div className="header-menu-button-div" id="dashboardBtn">
+                        <img className="header-menu-button" id="dashboardBtn-img" src={DashboardIcon} alt="Dashboard Icon"/>
+                        <a className="header-menu-button-text" id="dashboardBtn-text">Dashboard</a>
+                    </div>
+                </Link>
+
+                <Link to="/studio/profile">
+                    <div className="header-menu-button-div" id="profileBtn">
+                        <img className="header-menu-button" id="profileBtn-img" src={ProfileIcon} alt="Profile Icon"/>
+                        <a className="header-menu-button-text" id="profileBtn-text">Profile</a>
+                    </div>
+                </Link>
+
+                <Link to="/studio/wallet">
+                    <div className="header-menu-button-div" id="walletBtn">
+                        <img className="header-menu-button" id="walletBtn-img" src={WalletIcon} alt="Wallet Icon"/>
+                        <a className="header-menu-button-text" id="walletBtn-text">Wallet</a>
+                    </div>
+                </Link>
+                
+                <Link to="/studio/settings">
+                    <div className="header-menu-button-div" id="settingsBtn">
+                        <img className="header-menu-button" id="settingsBtn-img" src={SettingsIcon} alt="Settings Icon"/>
+                        <a className="header-menu-button-text" id="settingsBtn-text">Settings</a>
+                    </div>
+                </Link>
             </div>
-        </Link>
 
-        <Link to="/studio/profile">
-            <div className="header-menu-button-div" id="profileBtn">
-                <img className="header-menu-button" id="profileBtn-img" src={ProfileIcon} alt="Profile Icon"/>
-                <a className="header-menu-button-text" id="profileBtn-text">Profile</a>
-            </div>
-        </Link>
+        </div>
 
-        <Link to="/studio/wallet">
-            <div className="header-menu-button-div" id="walletBtn">
-                <img className="header-menu-button" id="walletBtn-img" src={WalletIcon} alt="Wallet Icon"/>
-                <a className="header-menu-button-text" id="walletBtn-text">Wallet</a>
-            </div>
-        </Link>
-        
-        <Link to="/studio/settings">
-            <div className="header-menu-button-div" id="settingsBtn">
-                <img className="header-menu-button" id="settingsBtn-img" src={SettingsIcon} alt="Settings Icon"/>
-                <a className="header-menu-button-text" id="settingsBtn-text">Settings</a>
-            </div>
-        </Link>
-    </div>
-
-</div>
-
-</section>
+        </section>*/}
 
       {/* Changing Meta Data Dynamically
       <Helmet>
@@ -183,7 +184,7 @@ export default function Account({ session }) {
           textAlign={'center'}
           justifyItems={'center'}
           justifyContent={'center'}>
-          
+
           <div className="profile-user">
             <PersonalAvatar
               url={AvatarUrl}
@@ -193,64 +194,64 @@ export default function Account({ session }) {
               }}
             />
           </div>
-          
+
           {/* USER INFOS */}
           <div className="artist-profile-block-content">
-            
+
             {/* USER MAIN INFOS */}
             <h1 className="profile-user-logged-as">You are logged as</h1>
             <h2 className="profile-user-email">{session.user.email}</h2>
-            
+
             {/* ARTIST NAME INFORMATIONS */}
             <div className="artist-name-informations">
-            {/* Artist Name */}
-            <div className="link-input">
-                  <p className="form-input-category">Artist Name</p>
-                  <div className="artist-card-socials-block">
-                    <a><img className="artist-card-socials-icons" src={ArtistProfileIcon} alt="Link Logo"/></a>
-                    <input className="profile-link-input"
-                      type={'text'}
-                      value={ArtistName || ''}
-                      onChange={e => setArtistName(e.target.value)}
-                      placeholder={ArtistName || 'Name'}
-                      color={useColorModeValue('gray.800', 'gray.200')}
-                      bg={useColorModeValue('gray.100', 'gray.600')}
-                      rounded={'full'}
-                      border={0}
+              {/* Artist Name */}
+              <div className="link-input">
+                <p className="form-input-category">Artist Name</p>
+                <div className="artist-card-socials-block">
+                  <a><img className="artist-card-socials-icons" src={ArtistProfileIcon} alt="Link Logo" /></a>
+                  <input className="profile-link-input"
+                    type={'text'}
+                    value={ArtistName || ''}
+                    onChange={e => setArtistName(e.target.value)}
+                    placeholder={ArtistName || 'Name'}
+                    color={useColorModeValue('gray.800', 'gray.200')}
+                    bg={useColorModeValue('gray.100', 'gray.600')}
+                    rounded={'full'}
+                    border={0}
 
-                      _focus={{
-                        bg: useColorModeValue('gray.200', 'gray.800'),
-                        outline: 'none'
-                      }}
-                    />
+                    _focus={{
+                      bg: useColorModeValue('gray.200', 'gray.800'),
+                      outline: 'none'
+                    }}
+                  />
+                </div>
+              </div>
+
+              {/* Artist Username */}
+              <div className="link-input">
+                <p className="form-input-category">Username</p>
+                <div className="artist-card-socials-block">
+                  <a href={ArtistUsername} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={LinkIcon} alt="Link Logo" /></a>
+                  <input className="profile-link-input"
+                    type={'text'}
+                    value={ArtistUsername || ''}
+                    onChange={e => setArtistUsername(e.target.value)}
+                    placeholder={ArtistUsername || 'Username'}
+                    color={useColorModeValue('gray.800', 'gray.200')}
+                    bg={useColorModeValue('gray.100', 'gray.600')}
+                    rounded={'full'}
+                    border={0}
+
+                    _focus={{
+                      bg: useColorModeValue('gray.200', 'gray.800'),
+                      outline: 'none'
+                    }}
+                  />
+                </div>
               </div>
             </div>
 
-            {/* Artist Username */}
-            <div className="link-input">
-                  <p className="form-input-category">Username</p>
-                  <div className="artist-card-socials-block">
-                    <a href={ArtistUsername} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={LinkIcon} alt="Link Logo"/></a>
-                    <input className="profile-link-input"
-                      type={'text'}
-                      value={ArtistUsername || ''}
-                      onChange={e => setArtistUsername(e.target.value)}
-                      placeholder={ArtistUsername || 'Username'}
-                      color={useColorModeValue('gray.800', 'gray.200')}
-                      bg={useColorModeValue('gray.100', 'gray.600')}
-                      rounded={'full'}
-                      border={0}
 
-                      _focus={{
-                        bg: useColorModeValue('gray.200', 'gray.800'),
-                        outline: 'none'
-                      }}
-                    />
-              </div>
-            </div>
-            </div>
-
-              
             {/* ARTIST LINKS */}
             <div className="artist-links-block">
 
@@ -258,7 +259,7 @@ export default function Account({ session }) {
               <div className="link-input">
                 <p className="form-input-category">Spotify</p>
                 <div className="artist-card-socials-block">
-                  <a href={SpotifyUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={SpotifyIcon} alt="Spotify Logo"/></a>
+                  <a href={SpotifyUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={SpotifyIcon} alt="Spotify Logo" /></a>
                   <input className="profile-link-input"
                     type={'text'}
                     value={SpotifyUrl || ''}
@@ -276,75 +277,75 @@ export default function Account({ session }) {
                   />
                 </div>
               </div>
-              
-                {/* Deezer Link */}
-                <div className="link-input">
-                  <p className="form-input-category">Deezer</p>
-                  <div className="artist-card-socials-block">
-                    <a href={DeezerUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={DeezerIcon} alt="Deezer Logo"/></a>
-                    <input className="profile-link-input"
-                      type={'text'}
-                      value={DeezerUrl || ''}
-                      onChange={e => setDeezerUrl(e.target.value)}
-                      placeholder={DeezerUrl || 'https://deezer.com'}
-                      color={useColorModeValue('gray.800', 'gray.200')}
-                      bg={useColorModeValue('gray.100', 'gray.600')}
-                      rounded={'full'}
-                      border={0}
 
-                      _focus={{
-                        bg: useColorModeValue('gray.200', 'gray.800'),
-                        outline: 'none'
-                      }}
-                    />
-                  </div>
+              {/* Deezer Link */}
+              <div className="link-input">
+                <p className="form-input-category">Deezer</p>
+                <div className="artist-card-socials-block">
+                  <a href={DeezerUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={DeezerIcon} alt="Deezer Logo" /></a>
+                  <input className="profile-link-input"
+                    type={'text'}
+                    value={DeezerUrl || ''}
+                    onChange={e => setDeezerUrl(e.target.value)}
+                    placeholder={DeezerUrl || 'https://deezer.com'}
+                    color={useColorModeValue('gray.800', 'gray.200')}
+                    bg={useColorModeValue('gray.100', 'gray.600')}
+                    rounded={'full'}
+                    border={0}
+
+                    _focus={{
+                      bg: useColorModeValue('gray.200', 'gray.800'),
+                      outline: 'none'
+                    }}
+                  />
                 </div>
+              </div>
 
-                {/* Apple Music Link */}
-                <div className="link-input">
-                  <p className="form-input-category">Apple Music</p>
-                  <div className="artist-card-socials-block">
-                    <a href={AppleMusicUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons artist-card-socials-icons-apple" src={AppleMusicIcon} alt="Apple Music Logo"/></a>
-                    <input className="profile-link-input"
-                      type={'text'}
-                      value={AppleMusicUrl || ''}
-                      onChange={e => setAppleMusicUrl(e.target.value)}
-                      placeholder={AppleMusicUrl || 'https://music.apple.com'}
-                      color={useColorModeValue('gray.800', 'gray.200')}
-                      bg={useColorModeValue('gray.100', 'gray.600')}
-                      rounded={'full'}
-                      border={0}
+              {/* Apple Music Link */}
+              <div className="link-input">
+                <p className="form-input-category">Apple Music</p>
+                <div className="artist-card-socials-block">
+                  <a href={AppleMusicUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons artist-card-socials-icons-apple" src={AppleMusicIcon} alt="Apple Music Logo" /></a>
+                  <input className="profile-link-input"
+                    type={'text'}
+                    value={AppleMusicUrl || ''}
+                    onChange={e => setAppleMusicUrl(e.target.value)}
+                    placeholder={AppleMusicUrl || 'https://music.apple.com'}
+                    color={useColorModeValue('gray.800', 'gray.200')}
+                    bg={useColorModeValue('gray.100', 'gray.600')}
+                    rounded={'full'}
+                    border={0}
 
-                      _focus={{
-                        bg: useColorModeValue('gray.200', 'gray.800'),
-                        outline: 'none'
-                      }}
-                    />
-                  </div>
+                    _focus={{
+                      bg: useColorModeValue('gray.200', 'gray.800'),
+                      outline: 'none'
+                    }}
+                  />
                 </div>
+              </div>
 
-                {/* WebSite Link */}
-                <div className="link-input">
-                  <p className="form-input-category">Web Site</p>
-                  <div className="artist-card-socials-block">
-                    <a href={WebSiteUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={LinkIcon} alt="Link Logo"/></a>
-                    <input className="profile-link-input"
-                      type={'text'}
-                      value={WebSiteUrl || ''}
-                      onChange={e => setWebSiteUrl(e.target.value)}
-                      placeholder={WebSiteUrl || 'https://artistwebsite.com'}
-                      color={useColorModeValue('gray.800', 'gray.200')}
-                      bg={useColorModeValue('gray.100', 'gray.600')}
-                      rounded={'full'}
-                      border={0}
+              {/* WebSite Link */}
+              <div className="link-input">
+                <p className="form-input-category">Web Site</p>
+                <div className="artist-card-socials-block">
+                  <a href={WebSiteUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={LinkIcon} alt="Link Logo" /></a>
+                  <input className="profile-link-input"
+                    type={'text'}
+                    value={WebSiteUrl || ''}
+                    onChange={e => setWebSiteUrl(e.target.value)}
+                    placeholder={WebSiteUrl || 'https://artistwebsite.com'}
+                    color={useColorModeValue('gray.800', 'gray.200')}
+                    bg={useColorModeValue('gray.100', 'gray.600')}
+                    rounded={'full'}
+                    border={0}
 
-                      _focus={{
-                        bg: useColorModeValue('gray.200', 'gray.800'),
-                        outline: 'none'
-                      }}
-                    />
-                  </div>
+                    _focus={{
+                      bg: useColorModeValue('gray.200', 'gray.800'),
+                      outline: 'none'
+                    }}
+                  />
                 </div>
+              </div>
             </div>
 
             {/* Buttons Part */}
@@ -361,18 +362,18 @@ export default function Account({ session }) {
                 bg={'#7000FF'}
                 color={'white'}
                 boxShadow={'0 5px 20px 0px rgb(72 187 120 / 43%)'}
-                
+
                 _hover={{
                   bg: '#5800CC'
                 }}
-                
+
                 _focus={{
                   bg: '#5800CC'
                 }}>
 
                 {loading ? 'Updating...' : 'Update'}
               </button>
-            
+
               {/* Logout Button */}
               <button className="button-grey logout-button"
                 onClick={() => supabase.auth.signOut()}
@@ -383,19 +384,19 @@ export default function Account({ session }) {
                 _focus={{
                   bg: 'gray.200'
                 }}>
-                  
+
                 Logout
               </button>
             </div>
 
-          {/* FOOTER PART */}
-          <div className="profile-footer">
-            <p className="profile-footer-app-version">Bêta, version 0.1.0</p>
-          </div>
+            {/* FOOTER PART */}
+            <div className="profile-footer">
+              <p className="profile-footer-app-version">Bêta, version 0.1.0</p>
+            </div>
 
-        </div>
+          </div>
         </div>
       </div>
-      </section>
+    </section>
   );
 }
