@@ -1118,6 +1118,138 @@ a.valid {
   opacity: 1;
 }
 
+/*---------- STUDIO PART ----------*/
+
+/*---------- HEADER PART ---------*/
+.header {
+  background: linear-gradient(90deg,rgb(255, 255, 255, 0),rgb(255, 255, 255, 0.03));
+  background-position: center;
+  background-size: cover;
+  width: var(--header-width);
+  min-width: var(--header-width);
+  position: fixed;
+  height: calc(100vh - var(--audio-player-height));
+  left: 0;
+  top: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  -webkit-app-region: drag;
+  z-index: 1;
+}
+
+.header-logo {
+  cursor: pointer;
+  width: 120px;
+}
+
+.header-top-icons {
+  width: 20px;
+  height: 20px;
+  right: 20px;
+  margin: -2px 0 0 15px;
+  cursor: pointer;
+  transition: all .3s cubic-bezier(1, 0.2, 0.57, 0.81);
+}
+
+.header-top-icons:hover {
+ transform: rotate(-90deg); 
+}
+
+.header-title {
+  font-weight: 700;
+  text-align: left;
+  margin-top: 75px;
+}
+
+.header-top-informations {
+  display: flex;
+  flex-direction: column;
+  width: calc(var(--header-width) - 60px);
+  min-height: calc(var(--artist-board-banner-height) - 25px - 30px);
+  top: 0;
+  border-bottom-left-radius: 50px;
+  padding: 25px 30px 30px 30px;
+}
+
+.header-top-informations-text {
+  text-align: left;
+  display: grid;
+  align-content: space-around;
+}
+
+.header-user-name {
+  font-weight: 600;
+  font-size: 12pt;
+  color: white;
+  margin-top: 30px;
+}
+
+.header-user-username {
+  font-weight: 400;
+  font-size: 11pt;
+  max-width: 100px;
+  cursor: pointer;
+}
+
+.header-menu {
+  width: var(--header-width);
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--artist-board-banner-height) - 240px - var(--audio-player-height));
+  margin-left: auto;
+  margin-right: auto;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 20px 0 20px 0;
+}
+
+.header-menu-content {
+  height: 100%;
+  padding-bottom: 45px;
+}
+
+.header-menu-button-div, #dashboardBtn, #profileBtn, #walletBtn,  #settingsBtn {
+  outline: 0;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: max-content;
+  border: 2px solid rgba(255,255,255,.0);
+  display: flex;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-left: 15px;
+}
+
+.header-menu-button-div + .header-menu-button-div {
+  margin-top: 5px;
+}
+
+.header-menu-button-div:hover, #dashboardBtn:hover, #profileBtn:hover, #walletBtn:hover,  #settingsBtn:hover {
+  filter: grayscale(1) brightness(1.5);
+  /*background: linear-gradient(0deg,rgb(250, 251, 255, 0.7),rgb(255, 255, 255, 0.5));*/
+  border: 2px solid rgba(29,29,29,.01);
+  box-shadow: 0 5px 15px rgba(112, 0, 255, 0.05), 0 5px 15px rgba(112, 0, 255, 0.01);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  transition: all 0.2s ease-in-out;
+}
+
+.header-menu-button-div-clicked {
+  outline: 0;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: max-content;
+  border: 2px solid rgba(255,255,255,.0);
+  display: flex;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-left: 15px;
+  filter: grayscale(1) brightness(1.5);
+}
+
 /*---------- PROFILE PART ---------*/
 .artist-profile-page {
   padding: 25px;
@@ -1308,7 +1440,7 @@ a.valid {
 .form-input-category {
   font-weight: 700;
   text-align: left;
-  color: #7000FF;
+  color: #3d3d3d /*#7000FF*/;
   margin-bottom: 6.25px;
   margin-left: 12.5px;
   font-size: 15pt;

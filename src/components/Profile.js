@@ -1,12 +1,13 @@
 // Importing Dependencies //
 import { useState, useEffect } from 'react';
 // import { Helmet } from 'react-helmet';
+import Link from 'react-scroll/modules/components/Link';
 import { supabase } from '../supabase/supabaseClient';
-import PersonalAvatar from './PersonalAvatar';
+import PersonalAvatar from './profile-content/personalAvatar';
 import { Box, useColorModeValue, Button, Flex, FormControl, FormLabel, Input, Stack, Text, useToast } from '@chakra-ui/react';
 
 // Importing Artist Card Icons Images SRC //
-import ProfileIcon from '../content/images/icons/profile-icon.svg';
+import ArtistProfileIcon from '../content/images/icons/profile-icon.svg';
 import SpotifyIcon from '../content/images/icons/social-icons/spotify-icon.svg';
 import AppleMusicIcon from '../content/images/icons/social-icons/applemusic-icon.svg';
 import DeezerIcon from '../content/images/icons/social-icons/deezer-icon.svg';
@@ -16,6 +17,15 @@ import LinkIcon from '../content/images/icons/link-icon.svg';
 
 // Importing User Avatar //
 import { Avatar } from '@chakra-ui/react';
+
+// Importing Logo Images SRC //
+import HeaderLogo from '../content/images/logos/curieux-logo-white.svg';
+
+// Importing Header Icons Images SRC //
+import DashboardIcon from '../content/images/icons/dashboard.svg';
+import ProfileIcon from '../content/images/icons/profile.svg';
+import WalletIcon from '../content/images/icons/wallet.svg';
+import SettingsIcon from '../content/images/icons/settings.svg';
 
 // Profile Page //
 export default function Account({ session }) {
@@ -111,6 +121,49 @@ export default function Account({ session }) {
 
     <section className="artist-profile-page">
 
+      {/* Header Wrapper Part */}
+      <section className="header">
+
+<div className="header-top-informations">
+    <Link to="/studio/dashboard"><img className="header-logo" src={HeaderLogo} alt="Curieux logo"/></Link>
+    <a className="header-user-name">Hello {ArtistUsername} !</a>
+</div>
+
+<div className="header-menu">
+    <div className="header-menu-content">   
+        <Link to="/studio/dashboard">
+            <div className="header-menu-button-div" id="dashboardBtn">
+                <img className="header-menu-button" id="dashboardBtn-img" src={DashboardIcon} alt="Dashboard Icon"/>
+                <a className="header-menu-button-text" id="dashboardBtn-text">Dashboard</a>
+            </div>
+        </Link>
+
+        <Link to="/studio/profile">
+            <div className="header-menu-button-div" id="profileBtn">
+                <img className="header-menu-button" id="profileBtn-img" src={ProfileIcon} alt="Profile Icon"/>
+                <a className="header-menu-button-text" id="profileBtn-text">Profile</a>
+            </div>
+        </Link>
+
+        <Link to="/studio/wallet">
+            <div className="header-menu-button-div" id="walletBtn">
+                <img className="header-menu-button" id="walletBtn-img" src={WalletIcon} alt="Wallet Icon"/>
+                <a className="header-menu-button-text" id="walletBtn-text">Wallet</a>
+            </div>
+        </Link>
+        
+        <Link to="/studio/settings">
+            <div className="header-menu-button-div" id="settingsBtn">
+                <img className="header-menu-button" id="settingsBtn-img" src={SettingsIcon} alt="Settings Icon"/>
+                <a className="header-menu-button-text" id="settingsBtn-text">Settings</a>
+            </div>
+        </Link>
+    </div>
+
+</div>
+
+</section>
+
       {/* Changing Meta Data Dynamically
       <Helmet>
         <title>Profile! ⚡</title>
@@ -154,7 +207,7 @@ export default function Account({ session }) {
             <div className="link-input">
                   <p className="form-input-category">Artist Name</p>
                   <div className="artist-card-socials-block">
-                    <a><img className="artist-card-socials-icons" src={ProfileIcon} alt="Link Logo"/></a>
+                    <a><img className="artist-card-socials-icons" src={ArtistProfileIcon} alt="Link Logo"/></a>
                     <input className="profile-link-input"
                       type={'text'}
                       value={ArtistName || ''}

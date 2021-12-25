@@ -1,6 +1,6 @@
 // Importing Dependencies //
 import React, { useEffect, useState } from 'react';
-import { supabase } from '../supabase/supabaseClient';
+import { supabase } from '../../supabase/supabaseClient';
 import { Avatar, Button } from '@chakra-ui/react';
 
 export default function PersonalAvatar({ url, onUpload }) {
@@ -68,7 +68,7 @@ export default function PersonalAvatar({ url, onUpload }) {
             alt="Avatar"
             pos={'relative'}
             borderRadius={'1.7rem 1.7rem 0 0'}
-            filter={'blur(10px)'}
+            filter={'blur(3px)'}
           />
         </div>
       </div>
