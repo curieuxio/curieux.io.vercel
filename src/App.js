@@ -10,8 +10,9 @@ import './content/css/app.css';
 
 // Importing Components //
 import Auth from './components/Auth';
-import Home from './components/Home';
-import Profile from './components/Profile';
+import EditProfile from './components/EditProfile';
+import PublicProfile from './components/PublicProfile';
+
 
 export default function App() {
   const [session, setSession] = useState(null);
@@ -27,10 +28,9 @@ export default function App() {
   return <div className="App" onContextMenu={(e)=> e.preventDefault()}>
     <Router>
       <Switch>
-        {/*<Route exact path="/" component={Home} />
-        <Route exact path="/signin" component={Auth} />
-        <Route exact path="/profile" component={Profile} />*/}
-        <ChakraProvider>{!session ? <Auth /> : <Profile key={session.user.id} session={session} />}</ChakraProvider>
+        
+        <EditProfile/>
+
       </Switch>
     </Router>
   </div>;

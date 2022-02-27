@@ -1516,3 +1516,90 @@ a.valid {
   transform: translateY(-2.5px);
   height: 53.75px;
 }
+
+
+
+
+
+
+/*----- Public Profile -----*/
+.artistIdentity {
+
+}
+
+.artistIdentity a {
+  align-items: center;
+  display: flex;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.artistPicture {
+  background: #f7f5fa;
+  max-width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  margin: auto;
+}
+
+.artistName {
+  font-weight: 800;
+  font-size: 18pt;
+  color: #3d3d3d;
+  margin-top: 30px;
+}
+
+.artistUsername {
+  font-weight: 500;
+  font-size: 14pt;
+  color: #3d3d3d;
+  margin-right: 5px;
+}
+
+.artistLinkLogo {
+  width: 25px;
+  max-height: 25px;
+}
+
+.artistLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex;
+  color: #7000FF;
+  font-weight: 800;
+  font-size: 14pt;
+}
+
+.linkBlock {
+  border-radius: 20px;
+  padding: 5px;
+  margin: 10px;
+  transition: .2s all ease-in-out;
+}
+
+.linkBlock:hover {
+  background: #f5edff;
+}
+
+.linkBlock a {
+  align-items: center;
+  display: flex;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.serviceLogo {
+  width: 40px;
+  max-height: 40px;
+  margin-right: 20px;
+}
+
+.serviceTitle {
+  color: #7000ff;
+}
+
+.footerCurieuxLogo {
+  width: 180px;
+  margin-bottom: 30px;
+}

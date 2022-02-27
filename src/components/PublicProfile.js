@@ -1,5 +1,6 @@
 // Importing Dependencies //
 import { useState, useEffect } from 'react';
+import { useParams } from "react-router-dom";
 // import { Helmet } from 'react-helmet';
 import Link from 'react-scroll/modules/components/Link';
 import { supabase } from '../supabase/supabaseClient';
@@ -8,9 +9,12 @@ import { Box, useColorModeValue, Button, Flex, FormControl, FormLabel, Input, St
 
 // Importing Artist Card Icons Images SRC //
 import ArtistProfileIcon from '../content/images/icons/profile-icon.svg';
-import SpotifyIcon from '../content/images/icons/social-icons/spotify-icon.svg';
-import AppleMusicIcon from '../content/images/icons/social-icons/applemusic-icon.svg';
-import DeezerIcon from '../content/images/icons/social-icons/deezer-icon.svg';
+import SpotifyIcon from '../content/images/logos/musicServicesLogos/spotify-logo.svg';
+import DeezerIcon from '../content/images/logos/musicServicesLogos/deezer-logo.svg';
+import AppleMusicIcon from '../content/images/logos/musicServicesLogos/applemusic-logo.svg';
+import TidalIcon from '../content/images/logos/musicServicesLogos/tidal-logo.svg';
+import YoutubeIcon from '../content/images/logos/musicServicesLogos/youtube-logo.svg';
+import AmazonIcon from '../content/images/logos/musicServicesLogos/amazon-logo.svg';
 import InstagramIcon from '../content/images/icons/social-icons/instagram-icon.svg';
 import TwitterIcon from '../content/images/icons/social-icons/twitter-icon.svg';
 import LinkIcon from '../content/images/icons/link-icon.svg';
@@ -29,6 +33,9 @@ import SettingsIcon from '../content/images/icons/settings.svg';
 
 // Profile Page //
 export default function Account({ session }) {
+
+  const { id } = useParams();
+
   const [loading, setLoading] = useState(true);
   const [ArtistName, setArtistName] = useState(null);
   const [ArtistUsername, setArtistUsername] = useState(null);
