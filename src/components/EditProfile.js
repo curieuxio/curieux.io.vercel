@@ -23,6 +23,7 @@ import LinkIcon from '../content/images/icons/link-icon.svg';
 import CurieuxPurpleLogo from '../content/images/logos/curieux-logo-purple.svg';
 
 // Profile Page //
+
 const user = [
 	{
 		ArtistUsername: "blurblur",
@@ -34,14 +35,36 @@ const user = [
     YoutubeUrl: "https://www.youtube.com/c/blurblur",
     AmazonUrl: "https://music.amazon.fr/artists/B07L3GX331/blurblur",
     WebsiteUrl: "",
+	},
+
+  {
+		ArtistUsername: "theweeknd",
+    ArtistName: "The Weeknd",
+    SpotifyUrl: "https://open.spotify.com/artist/75Up6LdWwOKmrHwDILwdwz",
+    DeezerUrl: "https://www.deezer.com/fr/artist/15239255",
+    AppleMusicUrl: "https://music.apple.com/en/artist/blurblur/1391996009",
+    TidalUrl: "https://tidal.com/browse/artist/10688119",
+    YoutubeUrl: "https://www.youtube.com/c/blurblur",
+    AmazonUrl: "https://music.amazon.fr/artists/B07L3GX331/blurblur",
+    WebsiteUrl: "",
 	}
 ];
 
 export default function EditProfile() {
+
+  const [ArtistName, setArtistName] = useState(null);
+  const [ArtistUsername, setArtistUsername] = useState(null);
+  const [SpotifyUrl, setSpotifyUrl] = useState(null);
+  const [DeezerUrl, setDeezerUrl] = useState(null);
+  const [AppleMusicUrl, setAppleMusicUrl] = useState(null);
+  const [TidalUrl, setTidalUrl] = useState(null);
+  const [YoutubeUrl, setYoutubeUrl] = useState(null);
+  const [AmazonUrl, setAmazonUrl] = useState(null);
+  const [WebSiteUrl, setWebSiteUrl] = useState(null);
   
 	const [subdomain, setSubDomain] = useState(null);
 	useEffect(() => {
-		const host = window.location.host; // gets the full domain of the app
+		const host = window.location.host; // Gets the full domain of the app
 
 		const arr = host
 			.split(".")
@@ -49,8 +72,37 @@ export default function EditProfile() {
 		if (arr.length > 0) setSubDomain(arr[0]);
 	}, []);
 
-	const requestedUser = user.find((user) => user.ArtistUsername === subdomain);
+
+  async function getProfile() {
+    try {
+      const user = supabase.auth.user();
+
+      let { data, error, status } = await supabase
+        .from('profiles')
+        .select(`ArtistName, ArtistUsername, SpotifyUrl, DeezerUrl, AppleMusicUrl, TidalUrl, YoutubeUrl, AmazonUral, WebSiteUrl`)
+        .eq('id', user.id)
+        .single();
+
+      if (error && status !== 406) {
+        throw error;
+      }
+
+      if (data) {
+        setArtistName(data.ArtistName);
+        setArtistUsername(data.ArtistUsername);
+        setSpotifyUrl(data.SpotifyUrl);
+        setDeezerUrl(data.DeezerUrl);
+        setAppleMusicUrl(data.AppleMusicUrl);
+        setWebSiteUrl(data.WebSiteUrl);
+      }
+    } catch (error) {
+      alert(error.message);
+    } finally {
+    }
+  }
 	
+	const requestedUser = user.find((user) => user.ArtistUsername === subdomain);
+
 	return (
     <section className="artist-profile-page">
       
@@ -85,56 +137,84 @@ export default function EditProfile() {
           {/* Spotify Link */}
           <div className="linkBlock spotifyLinkBlock">
             <a href={requestedUser.SpotifyUrl} target="_blank">
-              <img className="serviceLogo" src={SpotifyIcon}/>
-              <h3 className="serviceTitle">Listen</h3>
+              <div className="linkBlockTopContent">
+                <img className="serviceLogo spotifyLogo" src={SpotifyIcon}/>
+              </div>
+              <div className="linkBlockBottomContent">
+                <h3 className="serviceTitle">Listen</h3>
+              </div>
             </a>
           </div>
 
           {/* Deezer Link */}
           <div className="linkBlock deezerLinkBlock">
             <a href={requestedUser.DeezerUrl} target="_blank">
-              <img className="serviceLogo deezerLogo" src={DeezerIcon}/>
-              <h3 className="serviceTitle">Listen</h3>
+              <div className="linkBlockTopContent">
+                <img className="serviceLogo deezerLogo" src={DeezerIcon}/>
+              </div>
+              <div className="linkBlockBottomContent">
+                <h3 className="serviceTitle">Listen</h3>
+              </div>
             </a>
           </div>
 
           {/* AppleMusic Link */}
           <div className="linkBlock appleMusicLinkBlock">
             <a href={requestedUser.AppleMusicUrl} target="_blank">
-              <img className="serviceLogo appleMusicLogo" src={AppleMusicIcon}/>
-              <h3 className="serviceTitle">Listen</h3>
+              <div className="linkBlockTopContent">
+                <img className="serviceLogo appleMusicLogo" src={AppleMusicIcon}/>
+              </div>
+              <div className="linkBlockBottomContent">
+                <h3 className="serviceTitle">Listen</h3>
+              </div>
             </a>
           </div>
 
           {/* Tidal Link */}
           <div className="linkBlock tidalLinkBlock">
             <a href={requestedUser.TidalUrl} target="_blank">
-              <img className="serviceLogo" src={TidalIcon}/>
-              <h3 className="serviceTitle">Listen</h3>
+              <div className="linkBlockTopContent">
+                <img className="serviceLogo tidalLogo" src={TidalIcon}/>
+              </div>
+              <div className="linkBlockBottomContent">
+                <h3 className="serviceTitle">Listen</h3>
+              </div>
             </a>
           </div>
 
           {/* Youtube Link */}
           <div className="linkBlock youtubeLinkBlock">
             <a href={requestedUser.YoutubeUrl} target="_blank">
-              <img className="serviceLogo" src={YoutubeIcon}/>
-              <h3 className="serviceTitle">Listen</h3>
+              <div className="linkBlockTopContent">
+                <img className="serviceLogo youtubeLogo" src={YoutubeIcon}/>
+              </div>
+              <div className="linkBlockBottomContent">
+                <h3 className="serviceTitle">Listen</h3>
+              </div>
             </a>
           </div>
 
           {/* Amazon Link */}
           <div className="linkBlock amazonLinkBlock">
             <a href={requestedUser.AmazonUrl} target="_blank">
-              <img className="serviceLogo" src={AmazonIcon}/>
-              <h3 className="serviceTitle">Listen</h3>
+              <div className="linkBlockTopContent">
+                <img className="serviceLogo amazonLogo" src={AmazonIcon}/>
+              </div>
+              <div className="linkBlockBottomContent">
+                <h3 className="serviceTitle">Listen</h3>
+              </div>
             </a>
           </div>
 
           {/* Website Link */}
           <div className="linkBlock websiteLinkBlock">
             <a href={requestedUser.WebsiteUrl} target="_blank">
-              <img className="serviceLogo websiteLogo" src={WebsiteIcon}/>
-              <h3 className="serviceTitle">Website</h3>
+            <div className="linkBlockTopContent">
+                <img className="serviceLogo websiteLogo" src={WebsiteIcon}/>
+              </div>
+              <div className="linkBlockBottomContent">
+                <h3 className="serviceTitle">Website</h3>
+              </div>
             </a>
           </div>
 

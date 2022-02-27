@@ -1535,12 +1535,12 @@ a.valid {
   justify-content: center;
   display: flex;
   flex-direction: column;
-  background: white;
+  background: #1D1D1D;
   border-radius: 20px;
 }
 
 .artistIdentity {
-
+  margin-bottom: 35px;
 }
 
 .artistIdentity a {
@@ -1562,14 +1562,14 @@ a.valid {
 .artistName {
   font-weight: 800;
   font-size: 26pt;
-  color: #3d3d3d;
+  color: #ffffff;
   margin-top: 30px;
 }
 
 .artistUsername {
   font-weight: 500;
   font-size: 16pt;
-  color: #3d3d3d;
+  color: #ffffff;
   margin-right: 5px;
 }
 
@@ -1580,40 +1580,66 @@ a.valid {
 
 .artistLinks {
   display: flex;
-  flex-direction: column;
-  justify-content: flex;
-  color: #7000FF;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
   font-weight: 800;
   font-size: 14pt;
+  justify-content: space-between;
 }
 
 .linkBlock {
-  border-radius: 20px;
-  padding: 10px 15px;
-  margin: 10px;
-  transition: .2s all ease-in-out;
-  height: max-content;
+  border-radius: 15px;
+  /*padding: 20px 20px;*/
   display: flex;
+  background: #ffffff;
+  width: calc(50% - 10px);
+  margin: 0px 0 20px;
+  /* width: 100%; */
   align-items: center;
-  min-height: 50px;
+  opacity: 0.9;
+  transition: all .2s ease-in-out;
 }
 
 .linkBlock:hover {
-  background: #f5edff;
+  background: #f9f9f9;
+  opacity: 1;
 }
 
 .linkBlock a {
   align-items: center;
-  display: flex;
-  margin: auto;
   width: 100%;
-  text-align: center;
+}
+
+.linkBlockTopContent {
+  padding: 20px 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #3e3e3e;
+}
+
+.linkBlockBottomContent {
+  background: #313131;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.linkBlock:last-child:hover {
+  background: #727272;
 }
 
 .serviceLogo {
-  height: 50px;
-  margin-right: 20px;
-  max-width: 130px;
+  height: 45px;
+  width: 55px;
+  max-width: 100%;
 }
 
 .deezerLogo {
@@ -1633,8 +1659,8 @@ a.valid {
 }
 
 .serviceTitle {
-  color: #7000ff;
-  margin-left: auto;
+  /*color: #7000ff;*/
+  color: white;
 }
 
 .footerCurieuxLogo {
