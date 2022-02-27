@@ -1619,7 +1619,7 @@ a.valid {
 
 .linkBlock:hover {
   background: #f9f9f9;
-  filter: brightness(1.1);
+  filter: brightness(1.3);
 }
 
 .linkBlock a {

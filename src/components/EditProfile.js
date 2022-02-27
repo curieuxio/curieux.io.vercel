@@ -1,7 +1,7 @@
 // Importing Dependencies //
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-// import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import Link from 'react-scroll/modules/components/Link';
 import { supabase } from '../supabase/supabaseClient';
 import PersonalAvatar from './profile-content/personalAvatar';
@@ -106,152 +106,154 @@ export default function EditProfile() {
 	return (
     <section className="artistProfilePage">
       
-      {subdomain ? (
-              requestedUser ? (
-                <div className="artistProfileBlock">
+      {/* Changing Meta Data Dynamically */}
+      <Helmet>
+        <title>{requestedUser.ArtistName} - Curieux ⚡</title>
+        <meta name="description" content="Edit your artist profile! ⚡"></meta>
+      </Helmet>
+      
+      {subdomain ? (requestedUser ? (
+        <div className="artistProfileBlock">
+          {/* USER INFOS */}
+          <div className="artistProfile">
 
-  
+            {/* ARTIST NAME INFORMATIONS */}
 
-    {/* USER INFOS */}
-    <div className="artistProfile">
+              {/* Artist Identity */}
+              <section className="artistIdentity">
 
-      {/* ARTIST NAME INFORMATIONS */}
+                <div className="artistPicture">
 
-        {/* Artist Identity */}
-        <section className="artistIdentity">
+                </div>
 
-          <div className="artistPicture">
+                <h1 className="artistName">{requestedUser.ArtistName}</h1>
+                <a className="pageSubtitle" href="" target="_blank">
+                  <h2 className="artistUsername">@{requestedUser.ArtistUsername}</h2>
+                  <img className="artistLinkLogo" src={LinkIcon}/>
+                </a>
+              </section>
+
+              {/* Artist Links */}
+              <section className="artistLinks">
+
+                {/* Spotify Link */}
+                <div className="linkBlock spotifyLinkBlock">
+                  <a href={requestedUser.SpotifyUrl} target="_blank">
+                    <div className="linkBlockTopContent">
+                        <img className="serviceLogo spotifyLogo" src={SpotifyIcon}/>
+                    </div>
+                    <div className="linkBlockBottomContent">
+                      <h3 className="serviceTitle">Listen</h3>
+                    </div>
+                  </a>
+                </div>
+
+                {/* Deezer Link */}
+                <div className="linkBlock deezerLinkBlock">
+                  <a href={requestedUser.DeezerUrl} target="_blank">
+                    <div className="linkBlockTopContent">
+                      <img className="serviceLogo deezerLogo" src={DeezerIcon}/>
+                    </div>
+                    <div className="linkBlockBottomContent">
+                      <h3 className="serviceTitle">Listen</h3>
+                    </div>
+                  </a>
+                </div>
+
+                {/* AppleMusic Link */}
+                <div className="linkBlock appleMusicLinkBlock">
+                  <a href={requestedUser.AppleMusicUrl} target="_blank">
+                    <div className="linkBlockTopContent">
+                      <img className="serviceLogo appleMusicLogo" src={AppleMusicIcon}/>
+                    </div>
+                    <div className="linkBlockBottomContent">
+                      <h3 className="serviceTitle">Listen</h3>
+                    </div>
+                  </a>
+                </div>
+
+                {/* Tidal Link */}
+                <div className="linkBlock tidalLinkBlock">
+                  <a href={requestedUser.TidalUrl} target="_blank">
+                    <div className="linkBlockTopContent">
+                      <img className="serviceLogo tidalLogo" src={TidalIcon}/>
+                    </div>
+                    <div className="linkBlockBottomContent">
+                      <h3 className="serviceTitle">Listen</h3>
+                    </div>
+                  </a>
+                </div>
+
+                {/* Youtube Link */}
+                <div className="linkBlock youtubeLinkBlock">
+                  <a href={requestedUser.YoutubeUrl} target="_blank">
+                    <div className="linkBlockTopContent">
+                      <img className="serviceLogo youtubeLogo" src={YoutubeIcon}/>
+                    </div>
+                    <div className="linkBlockBottomContent">
+                      <h3 className="serviceTitle">Listen</h3>
+                    </div>
+                  </a>
+                </div>
+
+                {/* Amazon Link */}
+                <div className="linkBlock amazonLinkBlock">
+                  <a href={requestedUser.AmazonUrl} target="_blank">
+                    <div className="linkBlockTopContent">
+                      <img className="serviceLogo amazonLogo" src={AmazonIcon}/>
+                    </div>
+                    <div className="linkBlockBottomContent">
+                      <h3 className="serviceTitle">Listen</h3>
+                    </div>
+                  </a>
+                </div>
+
+                {/* Website Link */}
+                <div className="linkBlock websiteLinkBlock">
+                  <a href={requestedUser.WebsiteUrl} target="_blank">
+                  <div className="linkBlockTopContent">
+                      <img className="serviceLogo websiteLogo" src={WebsiteIcon}/>
+                    </div>
+                    <div className="linkBlockBottomContent">
+                      <h3 className="serviceTitle">Website</h3>
+                    </div>
+                  </a>
+                </div>
+
+              </section>
+
+            {/* FOOTER PART */}
+            <div className="profileFooter">
+              <a href="https://app.curieux.io" target="_blank"><img className="footerCurieuxLogo" src={CurieuxWhiteLogo}/></a>
+              <p className="profile-footer-app-version">Bêta, version 0.1.0</p>
+            </div>
 
           </div>
-
-          <h1 className="artistName">{requestedUser.ArtistName}</h1>
-          <a className="pageSubtitle" href="" target="_blank">
-            <h2 className="artistUsername">@{requestedUser.ArtistUsername}</h2>
-            <img className="artistLinkLogo" src={LinkIcon}/>
-          </a>
-        </section>
-
-        {/* Artist Links */}
-        <section className="artistLinks">
-
-          {/* Spotify Link */}
-          <div className="linkBlock spotifyLinkBlock">
-            <a href={requestedUser.SpotifyUrl} target="_blank">
-              <div className="linkBlockTopContent">
-                  <img className="serviceLogo spotifyLogo" src={SpotifyIcon}/>
-              </div>
-              <div className="linkBlockBottomContent">
-                <h3 className="serviceTitle">Listen</h3>
-              </div>
-            </a>
-          </div>
-
-          {/* Deezer Link */}
-          <div className="linkBlock deezerLinkBlock">
-            <a href={requestedUser.DeezerUrl} target="_blank">
-              <div className="linkBlockTopContent">
-                <img className="serviceLogo deezerLogo" src={DeezerIcon}/>
-              </div>
-              <div className="linkBlockBottomContent">
-                <h3 className="serviceTitle">Listen</h3>
-              </div>
-            </a>
-          </div>
-
-          {/* AppleMusic Link */}
-          <div className="linkBlock appleMusicLinkBlock">
-            <a href={requestedUser.AppleMusicUrl} target="_blank">
-              <div className="linkBlockTopContent">
-                <img className="serviceLogo appleMusicLogo" src={AppleMusicIcon}/>
-              </div>
-              <div className="linkBlockBottomContent">
-                <h3 className="serviceTitle">Listen</h3>
-              </div>
-            </a>
-          </div>
-
-          {/* Tidal Link */}
-          <div className="linkBlock tidalLinkBlock">
-            <a href={requestedUser.TidalUrl} target="_blank">
-              <div className="linkBlockTopContent">
-                <img className="serviceLogo tidalLogo" src={TidalIcon}/>
-              </div>
-              <div className="linkBlockBottomContent">
-                <h3 className="serviceTitle">Listen</h3>
-              </div>
-            </a>
-          </div>
-
-          {/* Youtube Link */}
-          <div className="linkBlock youtubeLinkBlock">
-            <a href={requestedUser.YoutubeUrl} target="_blank">
-              <div className="linkBlockTopContent">
-                <img className="serviceLogo youtubeLogo" src={YoutubeIcon}/>
-              </div>
-              <div className="linkBlockBottomContent">
-                <h3 className="serviceTitle">Listen</h3>
-              </div>
-            </a>
-          </div>
-
-          {/* Amazon Link */}
-          <div className="linkBlock amazonLinkBlock">
-            <a href={requestedUser.AmazonUrl} target="_blank">
-              <div className="linkBlockTopContent">
-                <img className="serviceLogo amazonLogo" src={AmazonIcon}/>
-              </div>
-              <div className="linkBlockBottomContent">
-                <h3 className="serviceTitle">Listen</h3>
-              </div>
-            </a>
-          </div>
-
-          {/* Website Link */}
-          <div className="linkBlock websiteLinkBlock">
-            <a href={requestedUser.WebsiteUrl} target="_blank">
-            <div className="linkBlockTopContent">
-                <img className="serviceLogo websiteLogo" src={WebsiteIcon}/>
-              </div>
-              <div className="linkBlockBottomContent">
-                <h3 className="serviceTitle">Website</h3>
-              </div>
-            </a>
-          </div>
-
-        </section>
-
-      {/* FOOTER PART */}
-      <div className="profileFooter">
-        <a href="https://app.curieux.io" target="_blank"><img className="footerCurieuxLogo" src={CurieuxWhiteLogo}/></a>
-        <p className="profile-footer-app-version">Bêta, version 0.1.0</p>
-      </div>
-
-    </div>
-  </div>
-                  
-              ) : (
-                <h1>Not Found</h1>
-              )
-            ) : (
-              <div>
-                {user.map((user) => (
-                  <div>
-                    <a
-                      key={user.ArtistUsername}
-                      href={
-                        window.location.protocol +
-                        "//" +
-                        user.ArtistUsername +
-                        "." +
-                        window.location.host
-                      }
-                    >
-                      {user.ArtistUsername}
-                    </a>
-                  </div>
-                ))}
-              </div>
-            )}
+        </div>
+                        
+                    ) : (
+                      <h1>Not Found</h1>
+                    )
+                  ) : (
+                    <div>
+                      {user.map((user) => (
+                        <div>
+                          <a
+                            key={user.ArtistUsername}
+                            href={
+                              window.location.protocol +
+                              "//" +
+                              user.ArtistUsername +
+                              "." +
+                              window.location.host
+                            }
+                          >
+                            {user.ArtistUsername}
+                          </a>
+                        </div>
+                      ))}
+                    </div>
+                  )}
       
     </section>
   );
