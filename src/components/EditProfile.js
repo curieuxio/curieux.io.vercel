@@ -107,13 +107,15 @@ export default function EditProfile() {
     <section className="artistProfilePage">
       
       {/* Changing Meta Data Dynamically */}
-      <Helmet>
-        <title>{requestedUser.ArtistName} - Curieux ⚡</title>
-        <meta name="description" content="Edit your artist profile! ⚡"></meta>
-      </Helmet>
+      
       
       {subdomain ? (requestedUser ? (
         <div className="artistProfileBlock">
+          <Helmet>
+            <title>{requestedUser.ArtistName} - Curieux ⚡</title>
+            <meta name="description" content="Edit your artist profile! ⚡"></meta>
+          </Helmet>
+
           {/* USER INFOS */}
           <div className="artistProfile">
 
