@@ -1525,7 +1525,7 @@ a.valid {
 /*----- Public Profile -----*/
 .artistProfilePage {
     padding: 25px;
-    background: #3b3b3b;
+    background: #131313;
     /* background: #3b3b3b;*/
     backdrop-filter: blur(25px);
 }
@@ -1622,7 +1622,7 @@ a.valid {
 }
 
 .linkBlock:hover {
-  background: #f9f9f9;
+  background: #252525;
   filter: brightness(1.3);
 }
 
