@@ -1584,7 +1584,8 @@ a.valid {
 
 .artistUsername {
   font-weight: 500;
-  font-size: 16pt;
+  font-size: 14pt;
+  margin-top: 5pt;
   color: #919191;
   margin-right: 5px;
 }
