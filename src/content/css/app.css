@@ -1526,6 +1526,8 @@ a.valid {
 .artistProfilePage {
     padding: 25px;
     background: #3b3b3b;
+    /* background: #3b3b3b;*/
+    backdrop-filter: blur(25px);
 }
 
 .artistProfile {
@@ -1582,10 +1584,13 @@ a.valid {
   margin-top: 30px;
 }
 
+.pageSubtitle {
+  margin-top: 5px;
+}
+
 .artistUsername {
   font-weight: 500;
   font-size: 14pt;
-  margin-top: 5pt;
   color: #919191;
   margin-right: 5px;
 }
