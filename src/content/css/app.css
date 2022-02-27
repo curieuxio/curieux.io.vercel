@@ -1523,6 +1523,22 @@ a.valid {
 
 
 /*----- Public Profile -----*/
+.artistProfile {
+  /*padding: 20px;*/
+}
+
+.artisteProfileBlock {
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 20px;
+}
+
 .artistIdentity {
 
 }
@@ -1540,6 +1556,7 @@ a.valid {
   height: 300px;
   border-radius: 20px;
   margin: auto;
+  margin-top: 40px;
 }
 
 .artistName {
@@ -1572,10 +1589,10 @@ a.valid {
 
 .linkBlock {
   border-radius: 20px;
-  padding: 5px;
+  padding: 15px;
   margin: 10px;
   transition: .2s all ease-in-out;
-  height: 40px;
+  height: max-content;
   display: flex;
   align-items: center;
 }
@@ -1593,16 +1610,29 @@ a.valid {
 }
 
 .serviceLogo {
-  width: 40px;
-  max-height: 40px;
+  height: 50px;
   margin-right: 20px;
+  max-width: 130px;
+}
+
+.appleMusicLogo {
+  transform: translateY(-2px);
+}
+
+.amazonLogo {
+  transform: translateY(4px);
+}
+
+.websiteLogo {
+  height: 35px;
 }
 
 .serviceTitle {
   color: #7000ff;
+  margin-left: auto;
 }
 
 .footerCurieuxLogo {
-  width: 180px;
+  width: 150px;
   margin-bottom: 30px;
 }

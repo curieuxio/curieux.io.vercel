@@ -56,12 +56,12 @@ export default function EditProfile() {
       
       {subdomain ? (
               requestedUser ? (
-                <div className="artist-profile-section">
+                <div className="artisteProfileBlock">
 
   
 
     {/* USER INFOS */}
-    <div className="artist-profile-block-content">
+    <div className="artistProfile">
 
       {/* ARTIST NAME INFORMATIONS */}
 
@@ -86,7 +86,7 @@ export default function EditProfile() {
           <div className="linkBlock spotifyLinkBlock">
             <a href={requestedUser.SpotifyUrl} target="_blank">
               <img className="serviceLogo" src={SpotifyIcon}/>
-              <h3 className="serviceTitle">Spotify</h3>
+              <h3 className="serviceTitle">Listen</h3>
             </a>
           </div>
 
@@ -94,15 +94,15 @@ export default function EditProfile() {
           <div className="linkBlock deezerLinkBlock">
             <a href={requestedUser.DeezerUrl} target="_blank">
               <img className="serviceLogo" src={DeezerIcon}/>
-              <h3 className="serviceTitle">Apple Music</h3>
+              <h3 className="serviceTitle">Listen</h3>
             </a>
           </div>
 
           {/* AppleMusic Link */}
           <div className="linkBlock appleMusicLinkBlock">
             <a href={requestedUser.AppleMusicUrl} target="_blank">
-              <img className="serviceLogo" src={AppleMusicIcon}/>
-              <h3 className="serviceTitle">Apple Music</h3>
+              <img className="serviceLogo appleMusicLogo" src={AppleMusicIcon}/>
+              <h3 className="serviceTitle">Listen</h3>
             </a>
           </div>
 
@@ -110,7 +110,7 @@ export default function EditProfile() {
           <div className="linkBlock tidalLinkBlock">
             <a href={requestedUser.TidalUrl} target="_blank">
               <img className="serviceLogo" src={TidalIcon}/>
-              <h3 className="serviceTitle">Tidal</h3>
+              <h3 className="serviceTitle">Listen</h3>
             </a>
           </div>
 
@@ -118,7 +118,7 @@ export default function EditProfile() {
           <div className="linkBlock youtubeLinkBlock">
             <a href={requestedUser.YoutubeUrl} target="_blank">
               <img className="serviceLogo" src={YoutubeIcon}/>
-              <h3 className="serviceTitle">Youtube</h3>
+              <h3 className="serviceTitle">Listen</h3>
             </a>
           </div>
 
@@ -126,14 +126,14 @@ export default function EditProfile() {
           <div className="linkBlock amazonLinkBlock">
             <a href={requestedUser.AmazonUrl} target="_blank">
               <img className="serviceLogo" src={AmazonIcon}/>
-              <h3 className="serviceTitle">Amazon</h3>
+              <h3 className="serviceTitle">Listen</h3>
             </a>
           </div>
 
           {/* Website Link */}
           <div className="linkBlock websiteLinkBlock">
             <a href={requestedUser.WebsiteUrl} target="_blank">
-              <img className="serviceLogo" src={WebsiteIcon}/>
+              <img className="serviceLogo websiteLogo" src={WebsiteIcon}/>
               <h3 className="serviceTitle">Website</h3>
             </a>
           </div>
