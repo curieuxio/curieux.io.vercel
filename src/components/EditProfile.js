@@ -104,11 +104,11 @@ export default function EditProfile() {
 	const requestedUser = user.find((user) => user.ArtistUsername === subdomain);
 
 	return (
-    <section className="artist-profile-page">
+    <section className="artistProfilePage">
       
       {subdomain ? (
               requestedUser ? (
-                <div className="artisteProfileBlock">
+                <div className="artistProfileBlock">
 
   
 
