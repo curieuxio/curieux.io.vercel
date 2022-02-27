@@ -1640,7 +1640,7 @@ a.valid {
 
 .linkBlockBottomContent {
   background: #313131;
-  height: 40px;
+  padding: 10px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1685,6 +1685,11 @@ a.valid {
 .serviceTitle {
   /*color: #7000ff;*/
   color: white;
+}
+
+.serviceName {
+  font-weight: 500;
+  font-size: 12pt;
 }
 
 .profileFooter {

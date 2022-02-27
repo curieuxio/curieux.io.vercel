@@ -145,7 +145,7 @@ export default function EditProfile() {
                         <img className="serviceLogo spotifyLogo" src={SpotifyIcon}/>
                     </div>
                     <div className="linkBlockBottomContent">
-                      <h3 className="serviceTitle">Listen</h3>
+                      <h3 className="serviceTitle">Listen on <span className="serviceName">Spotify</span></h3>
                     </div>
                   </a>
                 </div>
@@ -157,7 +157,7 @@ export default function EditProfile() {
                       <img className="serviceLogo deezerLogo" src={DeezerIcon}/>
                     </div>
                     <div className="linkBlockBottomContent">
-                      <h3 className="serviceTitle">Listen</h3>
+                      <h3 className="serviceTitle">Listen on <span className="serviceName">Deezer</span></h3>
                     </div>
                   </a>
                 </div>
@@ -169,7 +169,7 @@ export default function EditProfile() {
                       <img className="serviceLogo appleMusicLogo" src={AppleMusicIcon}/>
                     </div>
                     <div className="linkBlockBottomContent">
-                      <h3 className="serviceTitle">Listen</h3>
+                      <h3 className="serviceTitle">Listen on <span className="serviceName">Apple Music</span></h3>
                     </div>
                   </a>
                 </div>
@@ -181,7 +181,7 @@ export default function EditProfile() {
                       <img className="serviceLogo tidalLogo" src={TidalIcon}/>
                     </div>
                     <div className="linkBlockBottomContent">
-                      <h3 className="serviceTitle">Listen</h3>
+                      <h3 className="serviceTitle">Listen on <span className="serviceName">Tidal</span></h3>
                     </div>
                   </a>
                 </div>
@@ -193,7 +193,7 @@ export default function EditProfile() {
                       <img className="serviceLogo youtubeLogo" src={YoutubeIcon}/>
                     </div>
                     <div className="linkBlockBottomContent">
-                      <h3 className="serviceTitle">Listen</h3>
+                      <h3 className="serviceTitle">Listen on <span className="serviceName">Youtube</span></h3>
                     </div>
                   </a>
                 </div>
@@ -205,7 +205,7 @@ export default function EditProfile() {
                       <img className="serviceLogo amazonLogo" src={AmazonIcon}/>
                     </div>
                     <div className="linkBlockBottomContent">
-                      <h3 className="serviceTitle">Listen</h3>
+                      <h3 className="serviceTitle">Listen on <span className="serviceName">Amazon</span></h3>
                     </div>
                   </a>
                 </div>
@@ -217,7 +217,7 @@ export default function EditProfile() {
                       <img className="serviceLogo websiteLogo" src={WebsiteIcon}/>
                     </div>
                     <div className="linkBlockBottomContent">
-                      <h3 className="serviceTitle">Website</h3>
+                      <h3 className="serviceTitle">Go on my on <span className="serviceName">Website</span></h3>
                     </div>
                   </a>
                 </div>
