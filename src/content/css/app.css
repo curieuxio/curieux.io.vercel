@@ -1625,6 +1625,7 @@ a.valid {
   border: solid 2px transparent;
   width: 100%;
   transition: all .2s ease-in-out;
+  border-radius: 12px;
 }
 
 .linkBlock a:hover {
