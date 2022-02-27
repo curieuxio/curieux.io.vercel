@@ -20,7 +20,7 @@ import TwitterIcon from '../content/images/icons/social-icons/twitter-icon.svg';
 import LinkIcon from '../content/images/icons/link-icon.svg';
 
 // Importing Logo Images SRC //
-import CurieuxPurpleLogo from '../content/images/logos/curieux-logo-purple.svg';
+import CurieuxWhiteLogo from '../content/images/logos/curieux-logo-white.svg';
 
 // Profile Page //
 
@@ -221,8 +221,8 @@ export default function EditProfile() {
         </section>
 
       {/* FOOTER PART */}
-      <div className="profile-footer">
-        <a href="https://app.curieux.io" target="_blank"><img className="footerCurieuxLogo" src={CurieuxPurpleLogo}/></a>
+      <div className="profileFooter">
+        <a href="https://app.curieux.io" target="_blank"><img className="footerCurieuxLogo" src={CurieuxWhiteLogo}/></a>
         <p className="profile-footer-app-version">Bêta, version 0.1.0</p>
       </div>
 

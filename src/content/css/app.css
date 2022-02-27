@@ -1663,7 +1663,11 @@ a.valid {
   color: white;
 }
 
+.profileFooter {
+  margin: 20px 0 20px 0;
+}
+
 .footerCurieuxLogo {
-  width: 150px;
+  width: 130px;
   margin-bottom: 30px;
 }
