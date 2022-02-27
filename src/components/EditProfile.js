@@ -138,7 +138,7 @@ export default function EditProfile() {
           <div className="linkBlock spotifyLinkBlock">
             <a href={requestedUser.SpotifyUrl} target="_blank">
               <div className="linkBlockTopContent">
-                <img className="serviceLogo spotifyLogo" src={SpotifyIcon}/>
+                  <img className="serviceLogo spotifyLogo" src={SpotifyIcon}/>
               </div>
               <div className="linkBlockBottomContent">
                 <h3 className="serviceTitle">Listen</h3>
