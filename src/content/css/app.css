@@ -1595,6 +1595,7 @@ a.valid {
   height: max-content;
   display: flex;
   align-items: center;
+  min-height: 50px;
 }
 
 .linkBlock:hover {
@@ -1628,7 +1629,7 @@ a.valid {
 }
 
 .websiteLogo {
-  height: 35px;
+  height: 33px;
 }
 
 .serviceTitle {
