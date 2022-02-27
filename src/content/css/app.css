@@ -1614,13 +1614,12 @@ a.valid {
   margin: 0px 0 20px;
   /* width: 100%; */
   align-items: center;
-  opacity: 0.9;
   transition: all .2s ease-in-out;
 }
 
 .linkBlock:hover {
   background: #f9f9f9;
-  opacity: 1;
+  filter: brightness(1.1);
 }
 
 .linkBlock a {
