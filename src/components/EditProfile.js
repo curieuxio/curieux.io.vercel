@@ -93,7 +93,7 @@ export default function EditProfile() {
           {/* Deezer Link */}
           <div className="linkBlock deezerLinkBlock">
             <a href={requestedUser.DeezerUrl} target="_blank">
-              <img className="serviceLogo" src={DeezerIcon}/>
+              <img className="serviceLogo deezerLogo" src={DeezerIcon}/>
               <h3 className="serviceTitle">Listen</h3>
             </a>
           </div>
