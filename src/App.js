@@ -10,7 +10,6 @@ import './content/css/app.css';
 
 // Importing Components //
 import Auth from './components/Auth';
-import EditProfile from './components/EditProfile';
 import PublicProfile from './components/PublicProfile';
 
 
@@ -29,7 +28,7 @@ export default function App() {
     <Router>
       <Switch>
         
-        <EditProfile/>
+        <PublicProfile/>
 
       </Switch>
     </Router>

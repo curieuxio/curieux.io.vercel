@@ -1,66 +1,85 @@
 // Importing Dependencies //
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-// import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import Link from 'react-scroll/modules/components/Link';
 import { supabase } from '../supabase/supabaseClient';
 import PersonalAvatar from './profile-content/personalAvatar';
 import { Box, useColorModeValue, Button, Flex, FormControl, FormLabel, Input, Stack, Text, useToast } from '@chakra-ui/react';
 
 // Importing Artist Card Icons Images SRC //
-import ArtistProfileIcon from '../content/images/icons/profile-icon.svg';
 import SpotifyIcon from '../content/images/logos/musicServicesLogos/spotify-logo.svg';
 import DeezerIcon from '../content/images/logos/musicServicesLogos/deezer-logo.svg';
 import AppleMusicIcon from '../content/images/logos/musicServicesLogos/applemusic-logo.svg';
 import TidalIcon from '../content/images/logos/musicServicesLogos/tidal-logo.svg';
 import YoutubeIcon from '../content/images/logos/musicServicesLogos/youtube-logo.svg';
 import AmazonIcon from '../content/images/logos/musicServicesLogos/amazon-logo.svg';
+import WebsiteIcon from '../content/images/logos/musicServicesLogos/website-logo.svg';
 import InstagramIcon from '../content/images/icons/social-icons/instagram-icon.svg';
 import TwitterIcon from '../content/images/icons/social-icons/twitter-icon.svg';
 import LinkIcon from '../content/images/icons/link-icon.svg';
 
-// Importing User Avatar //
-import { Avatar } from '@chakra-ui/react';
-
 // Importing Logo Images SRC //
-import HeaderLogo from '../content/images/logos/curieux-logo-white.svg';
-
-// Importing Header Icons Images SRC //
-import DashboardIcon from '../content/images/icons/dashboard.svg';
-import ProfileIcon from '../content/images/icons/profile.svg';
-import WalletIcon from '../content/images/icons/wallet.svg';
-import SettingsIcon from '../content/images/icons/settings.svg';
+import CurieuxWhiteLogo from '../content/images/logos/curieux-logo-white.svg';
 
 // Profile Page //
-export default function Account({ session }) {
 
-  const { id } = useParams();
+const user = [
+	{
+		ArtistUsername: "blurblur",
+    ArtistName: "blurblur",
+    SpotifyUrl: "https://open.spotify.com/artist/75Up6LdWwOKmrHwDILwdwz",
+    DeezerUrl: "https://www.deezer.com/fr/artist/15239255",
+    AppleMusicUrl: "https://music.apple.com/en/artist/blurblur/1391996009",
+    TidalUrl: "https://tidal.com/browse/artist/10688119",
+    YoutubeUrl: "https://www.youtube.com/c/blurblur",
+    AmazonUrl: "https://music.amazon.fr/artists/B07L3GX331/blurblur",
+    WebsiteUrl: "",
+	},
 
-  const [loading, setLoading] = useState(true);
+  {
+		ArtistUsername: "theweeknd",
+    ArtistName: "The Weeknd",
+    SpotifyUrl: "https://open.spotify.com/artist/75Up6LdWwOKmrHwDILwdwz",
+    DeezerUrl: "https://www.deezer.com/fr/artist/15239255",
+    AppleMusicUrl: "https://music.apple.com/en/artist/blurblur/1391996009",
+    TidalUrl: "https://tidal.com/browse/artist/10688119",
+    YoutubeUrl: "https://www.youtube.com/c/blurblur",
+    AmazonUrl: "https://music.amazon.fr/artists/B07L3GX331/blurblur",
+    WebsiteUrl: "",
+	}
+];
+
+export default function EditProfile() {
+
   const [ArtistName, setArtistName] = useState(null);
   const [ArtistUsername, setArtistUsername] = useState(null);
   const [SpotifyUrl, setSpotifyUrl] = useState(null);
   const [DeezerUrl, setDeezerUrl] = useState(null);
   const [AppleMusicUrl, setAppleMusicUrl] = useState(null);
+  const [TidalUrl, setTidalUrl] = useState(null);
+  const [YoutubeUrl, setYoutubeUrl] = useState(null);
+  const [AmazonUrl, setAmazonUrl] = useState(null);
   const [WebSiteUrl, setWebSiteUrl] = useState(null);
-  const [AvatarUrl, setAvatarUrl] = useState(null);
-  const toast = useToast();
+  
+	const [subdomain, setSubDomain] = useState(null);
+	useEffect(() => {
+		const host = window.location.host; // Gets the full domain of the app
 
-  // Update Email //
-  //const { user, error } = await supabase.auth.update({email: 'new@email.com'})
+		const arr = host
+			.split(".")
+			.slice(0, host.includes("localhost") ? -1 : -2);
+		if (arr.length > 0) setSubDomain(arr[0]);
+	}, []);
 
-  useEffect(() => {
-    getProfile();
-  }, [session]);
 
   async function getProfile() {
     try {
-      setLoading(true);
       const user = supabase.auth.user();
 
       let { data, error, status } = await supabase
         .from('profiles')
-        .select(`ArtistName, ArtistUsername, SpotifyUrl, DeezerUrl, AppleMusicUrl, WebSiteUrl, AvatarUrl`)
+        .select(`ArtistName, ArtistUsername, SpotifyUrl, DeezerUrl, AppleMusicUrl, TidalUrl, YoutubeUrl, AmazonUral, WebSiteUrl`)
         .eq('id', user.id)
         .single();
 
@@ -75,335 +94,176 @@ export default function Account({ session }) {
         setDeezerUrl(data.DeezerUrl);
         setAppleMusicUrl(data.AppleMusicUrl);
         setWebSiteUrl(data.WebSiteUrl);
-        setAvatarUrl(data.AvatarUrl);
       }
     } catch (error) {
       alert(error.message);
     } finally {
-      setLoading(false);
     }
   }
+	
+	const requestedUser = user.find((user) => user.ArtistUsername === subdomain);
 
-  async function updateProfile({ ArtistName, ArtistUsername, SpotifyUrl, DeezerUrl, AppleMusicUrl, WebSiteUrl, AvatarUrl }) {
-    try {
-      setLoading(true);
-      const user = supabase.auth.user();
-
-      const updates = {
-        id: user.id,
-        ArtistName,
-        ArtistUsername,
-        SpotifyUrl,
-        AppleMusicUrl,
-        DeezerUrl,
-        WebSiteUrl,
-        AvatarUrl,
-        updated_at: new Date()
-      };
-
-      let { error } = await supabase.from('profiles').upsert(updates, {
-        returning: 'minimal' // Don't return the value after inserting
-      });
-
-      if (error) {
-        throw error;
-      }
-      toast({
-        title: 'Profile updated! 🤟',
-        position: 'top',
-        variant: 'subtle',
-        description: '',
-        status: 'success',
-        duration: 3000,
-        isClosable: true
-      });
-    } catch (error) {
-      alert(error.message);
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  return (
-
-    <section className="artist-profile-page">
-
-      {/* Header Wrapper Part */}
-
-      {/*<section className="header">
-
-        <div className="header-top-informations">
-            <Link to="/studio/dashboard"><img className="header-logo" src={HeaderLogo} alt="Curieux logo"/></Link>
-            <a className="header-user-name">Hello {ArtistUsername} !</a>
-        </div>
-
-        <div className="header-menu">
-            <div className="header-menu-content">   
-                <Link to="/studio/dashboard">
-                    <div className="header-menu-button-div" id="dashboardBtn">
-                        <img className="header-menu-button" id="dashboardBtn-img" src={DashboardIcon} alt="Dashboard Icon"/>
-                        <a className="header-menu-button-text" id="dashboardBtn-text">Dashboard</a>
-                    </div>
-                </Link>
-
-                <Link to="/studio/profile">
-                    <div className="header-menu-button-div" id="profileBtn">
-                        <img className="header-menu-button" id="profileBtn-img" src={ProfileIcon} alt="Profile Icon"/>
-                        <a className="header-menu-button-text" id="profileBtn-text">Profile</a>
-                    </div>
-                </Link>
-
-                <Link to="/studio/wallet">
-                    <div className="header-menu-button-div" id="walletBtn">
-                        <img className="header-menu-button" id="walletBtn-img" src={WalletIcon} alt="Wallet Icon"/>
-                        <a className="header-menu-button-text" id="walletBtn-text">Wallet</a>
-                    </div>
-                </Link>
-                
-                <Link to="/studio/settings">
-                    <div className="header-menu-button-div" id="settingsBtn">
-                        <img className="header-menu-button" id="settingsBtn-img" src={SettingsIcon} alt="Settings Icon"/>
-                        <a className="header-menu-button-text" id="settingsBtn-text">Settings</a>
-                    </div>
-                </Link>
-            </div>
-
-        </div>
-
-        </section>*/}
-
-      {/* Changing Meta Data Dynamically
-      <Helmet>
-        <title>Profile! ⚡</title>
-        <meta name="description" content="Edit your artist profile! ⚡"></meta>
-      </Helmet>*/}
-
-      <div className="artist-profile-section">
-
-        {/* Form Informations */}
-        <div className="artist-profile-block"
-          maxW={'445px'}
-          w={'full'}
-          bg={useColorModeValue('white', 'gray.900')}
-          boxShadow={'2xl'}
-          rounded={'lg'}
-          p={6}
-          textAlign={'center'}
-          justifyItems={'center'}
-          justifyContent={'center'}>
-
-          <div className="profile-user">
-            <PersonalAvatar
-              url={AvatarUrl}
-              onUpload={url => {
-                setAvatarUrl(url);
-                updateProfile({ ArtistName, ArtistUsername, SpotifyUrl, DeezerUrl, AppleMusicUrl, WebSiteUrl, AvatarUrl: url });
-              }}
-            />
-          </div>
+	return (
+    <section className="artistProfilePage">
+      
+      {/* Changing Meta Data Dynamically */}
+      
+      
+      {subdomain ? (requestedUser ? (
+        <div className="artistProfileBlock">
+          <Helmet>
+            <title>{requestedUser.ArtistName} - Curieux ⚡</title>
+            <meta name="description" content="Edit your artist profile! ⚡"></meta>
+          </Helmet>
 
           {/* USER INFOS */}
-          <div className="artist-profile-block-content">
-
-            {/* USER MAIN INFOS */}
-            <h1 className="profile-user-logged-as">You are logged as</h1>
-            <h2 className="profile-user-email">{session.user.email}</h2>
+          <div className="artistProfile">
 
             {/* ARTIST NAME INFORMATIONS */}
-            <div className="artist-name-informations">
-              {/* Artist Name */}
-              <div className="link-input">
-                <p className="form-input-category">Artist Name</p>
-                <div className="artist-card-socials-block">
-                  <a><img className="artist-card-socials-icons" src={ArtistProfileIcon} alt="Link Logo" /></a>
-                  <input className="profile-link-input"
-                    type={'text'}
-                    value={ArtistName || ''}
-                    onChange={e => setArtistName(e.target.value)}
-                    placeholder={ArtistName || 'Name'}
-                    color={useColorModeValue('gray.800', 'gray.200')}
-                    bg={useColorModeValue('gray.100', 'gray.600')}
-                    rounded={'full'}
-                    border={0}
 
-                    _focus={{
-                      bg: useColorModeValue('gray.200', 'gray.800'),
-                      outline: 'none'
-                    }}
-                  />
+              {/* Artist Identity */}
+              <section className="artistIdentity">
+
+                <div className="artistPicture">
+
                 </div>
-              </div>
 
-              {/* Artist Username */}
-              <div className="link-input">
-                <p className="form-input-category">Username</p>
-                <div className="artist-card-socials-block">
-                  <a href={ArtistUsername} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={LinkIcon} alt="Link Logo" /></a>
-                  <input className="profile-link-input"
-                    type={'text'}
-                    value={ArtistUsername || ''}
-                    onChange={e => setArtistUsername(e.target.value)}
-                    placeholder={ArtistUsername || 'Username'}
-                    color={useColorModeValue('gray.800', 'gray.200')}
-                    bg={useColorModeValue('gray.100', 'gray.600')}
-                    rounded={'full'}
-                    border={0}
+                <h1 className="artistName">{requestedUser.ArtistName}</h1>
+                <a className="pageSubtitle" href="" target="_blank">
+                  <h2 className="artistUsername">@{requestedUser.ArtistUsername}</h2>
+                  <img className="artistLinkLogo" src={LinkIcon}/>
+                </a>
+              </section>
 
-                    _focus={{
-                      bg: useColorModeValue('gray.200', 'gray.800'),
-                      outline: 'none'
-                    }}
-                  />
+              {/* Artist Links */}
+              <section className="artistLinks">
+
+                {/* Spotify Link */}
+                <div className="linkBlock spotifyLinkBlock">
+                  <a href={requestedUser.SpotifyUrl} target="_blank">
+                    <div className="linkBlockTopContent">
+                        <img className="serviceLogo spotifyLogo" src={SpotifyIcon}/>
+                    </div>
+                    <div className="linkBlockBottomContent">
+                      <h3 className="serviceTitle">Listen on <br/>
+                      <span className="serviceName">Spotify</span></h3>
+                    </div>
+                  </a>
                 </div>
-              </div>
-            </div>
 
-
-            {/* ARTIST LINKS */}
-            <div className="artist-links-block">
-
-              {/* Spotify Link */}
-              <div className="link-input">
-                <p className="form-input-category">Spotify</p>
-                <div className="artist-card-socials-block">
-                  <a href={SpotifyUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={SpotifyIcon} alt="Spotify Logo" /></a>
-                  <input className="profile-link-input"
-                    type={'text'}
-                    value={SpotifyUrl || ''}
-                    onChange={e => setSpotifyUrl(e.target.value)}
-                    placeholder={SpotifyUrl || 'https://open.spotify.com'}
-                    color={useColorModeValue('gray.800', 'gray.200')}
-                    bg={useColorModeValue('gray.100', 'gray.600')}
-                    rounded={'full'}
-                    border={0}
-
-                    _focus={{
-                      bg: useColorModeValue('gray.200', 'gray.800'),
-                      outline: 'none'
-                    }}
-                  />
+                {/* Deezer Link */}
+                <div className="linkBlock deezerLinkBlock">
+                  <a href={requestedUser.DeezerUrl} target="_blank">
+                    <div className="linkBlockTopContent">
+                      <img className="serviceLogo deezerLogo" src={DeezerIcon}/>
+                    </div>
+                    <div className="linkBlockBottomContent">
+                      <h3 className="serviceTitle">Listen on <br/>
+                      <span className="serviceName">Deezer</span></h3>
+                    </div>
+                  </a>
                 </div>
-              </div>
 
-              {/* Deezer Link */}
-              <div className="link-input">
-                <p className="form-input-category">Deezer</p>
-                <div className="artist-card-socials-block">
-                  <a href={DeezerUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={DeezerIcon} alt="Deezer Logo" /></a>
-                  <input className="profile-link-input"
-                    type={'text'}
-                    value={DeezerUrl || ''}
-                    onChange={e => setDeezerUrl(e.target.value)}
-                    placeholder={DeezerUrl || 'https://deezer.com'}
-                    color={useColorModeValue('gray.800', 'gray.200')}
-                    bg={useColorModeValue('gray.100', 'gray.600')}
-                    rounded={'full'}
-                    border={0}
-
-                    _focus={{
-                      bg: useColorModeValue('gray.200', 'gray.800'),
-                      outline: 'none'
-                    }}
-                  />
+                {/* AppleMusic Link */}
+                <div className="linkBlock appleMusicLinkBlock">
+                  <a href={requestedUser.AppleMusicUrl} target="_blank">
+                    <div className="linkBlockTopContent">
+                      <img className="serviceLogo appleMusicLogo" src={AppleMusicIcon}/>
+                    </div>
+                    <div className="linkBlockBottomContent">
+                      <h3 className="serviceTitle">Listen on <br/>
+                      <span className="serviceName">Apple Music</span></h3>
+                    </div>
+                  </a>
                 </div>
-              </div>
 
-              {/* Apple Music Link */}
-              <div className="link-input">
-                <p className="form-input-category">Apple Music</p>
-                <div className="artist-card-socials-block">
-                  <a href={AppleMusicUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons artist-card-socials-icons-apple" src={AppleMusicIcon} alt="Apple Music Logo" /></a>
-                  <input className="profile-link-input"
-                    type={'text'}
-                    value={AppleMusicUrl || ''}
-                    onChange={e => setAppleMusicUrl(e.target.value)}
-                    placeholder={AppleMusicUrl || 'https://music.apple.com'}
-                    color={useColorModeValue('gray.800', 'gray.200')}
-                    bg={useColorModeValue('gray.100', 'gray.600')}
-                    rounded={'full'}
-                    border={0}
-
-                    _focus={{
-                      bg: useColorModeValue('gray.200', 'gray.800'),
-                      outline: 'none'
-                    }}
-                  />
+                {/* Tidal Link */}
+                <div className="linkBlock tidalLinkBlock">
+                  <a href={requestedUser.TidalUrl} target="_blank">
+                    <div className="linkBlockTopContent">
+                      <img className="serviceLogo tidalLogo" src={TidalIcon}/>
+                    </div>
+                    <div className="linkBlockBottomContent">
+                      <h3 className="serviceTitle">Listen on <br/>
+                      <span className="serviceName">Tidal</span></h3>
+                    </div>
+                  </a>
                 </div>
-              </div>
 
-              {/* WebSite Link */}
-              <div className="link-input">
-                <p className="form-input-category">Web Site</p>
-                <div className="artist-card-socials-block">
-                  <a href={WebSiteUrl} target="_blank" className="artist-card-socials-icons-a"><img className="artist-card-socials-icons" src={LinkIcon} alt="Link Logo" /></a>
-                  <input className="profile-link-input"
-                    type={'text'}
-                    value={WebSiteUrl || ''}
-                    onChange={e => setWebSiteUrl(e.target.value)}
-                    placeholder={WebSiteUrl || 'https://artistwebsite.com'}
-                    color={useColorModeValue('gray.800', 'gray.200')}
-                    bg={useColorModeValue('gray.100', 'gray.600')}
-                    rounded={'full'}
-                    border={0}
-
-                    _focus={{
-                      bg: useColorModeValue('gray.200', 'gray.800'),
-                      outline: 'none'
-                    }}
-                  />
+                {/* Youtube Link */}
+                <div className="linkBlock youtubeLinkBlock">
+                  <a href={requestedUser.YoutubeUrl} target="_blank">
+                    <div className="linkBlockTopContent">
+                      <img className="serviceLogo youtubeLogo" src={YoutubeIcon}/>
+                    </div>
+                    <div className="linkBlockBottomContent">
+                      <h3 className="serviceTitle">Listen on <br/>
+                      <span className="serviceName">Youtube</span></h3>
+                    </div>
+                  </a>
                 </div>
-              </div>
-            </div>
 
-            {/* Buttons Part */}
-            <div className="profile-bottom-buttons">
+                {/* Amazon Link */}
+                <div className="linkBlock amazonLinkBlock">
+                  <a href={requestedUser.AmazonUrl} target="_blank">
+                    <div className="linkBlockTopContent">
+                      <img className="serviceLogo amazonLogo" src={AmazonIcon}/>
+                    </div>
+                    <div className="linkBlockBottomContent">
+                      <h3 className="serviceTitle">Listen on <br/>
+                      <span className="serviceName">Amazon</span></h3>
+                    </div>
+                  </a>
+                </div>
 
-              {/* Update Button */}
-              <button className="button-purple update-profile-button"
-                isLoading={loading}
-                loadingText="Updating ..."
-                onClick={() => updateProfile({ ArtistName, ArtistUsername, SpotifyUrl, DeezerUrl, AppleMusicUrl, WebSiteUrl, AvatarUrl })}
-                flex={1}
-                fontSize={'sm'}
-                rounded={'full'}
-                bg={'#7000FF'}
-                color={'white'}
-                boxShadow={'0 5px 20px 0px rgb(72 187 120 / 43%)'}
+                {/* Website Link */}
+                <div className="linkBlock websiteLinkBlock">
+                  <a href={requestedUser.WebsiteUrl} target="_blank">
+                  <div className="linkBlockTopContent">
+                      <img className="serviceLogo websiteLogo" src={WebsiteIcon}/>
+                    </div>
+                    <div className="linkBlockBottomContent">
+                      <h3 className="serviceTitle">Go on my on <br/>
+                      <span className="serviceName">Website</span></h3>
+                    </div>
+                  </a>
+                </div>
 
-                _hover={{
-                  bg: '#5800CC'
-                }}
-
-                _focus={{
-                  bg: '#5800CC'
-                }}>
-
-                {loading ? 'Updating...' : 'Update'}
-              </button>
-
-              {/* Logout Button */}
-              <button className="button-grey logout-button"
-                onClick={() => supabase.auth.signOut()}
-                flex={1}
-                fontSize={'sm'}
-                rounded={'full'}
-
-                _focus={{
-                  bg: 'gray.200'
-                }}>
-
-                Logout
-              </button>
-            </div>
+              </section>
 
             {/* FOOTER PART */}
-            <div className="profile-footer">
-              <p className="profile-footer-app-version">Bêta, version 0.1.0</p>
+            <div className="profileFooter">
+              <a href="https://app.curieux.io" target="_blank"><img className="footerCurieuxLogo" src={CurieuxWhiteLogo}/></a>
+              <p className="footerCopyright">Bêta, version 0.1.0</p>
             </div>
 
           </div>
         </div>
-      </div>
+                        
+                    ) : (
+                      <h1>Not Found</h1>
+                    )
+                  ) : (
+                    <div>
+                      {user.map((user) => (
+                        <div>
+                          <a
+                            key={user.ArtistUsername}
+                            href={
+                              window.location.protocol +
+                              "//" +
+                              user.ArtistUsername +
+                              "." +
+                              window.location.host
+                            }
+                          >
+                            {user.ArtistUsername}
+                          </a>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+      
     </section>
   );
 }
