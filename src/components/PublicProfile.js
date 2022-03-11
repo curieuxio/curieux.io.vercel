@@ -10,7 +10,7 @@ import { Box, useColorModeValue, Button, Flex, FormControl, FormLabel, Input, St
 // Importing Artist Card Icons Images SRC //
 import SpotifyIcon from '../content/images/logos/musicServicesLogos/spotify-logo.svg';
 import DeezerIcon from '../content/images/logos/musicServicesLogos/deezer-logo.svg';
-import AppleMusicIcon from '../content/images/logos/musicServicesLogos/applemusic-logo.svg';
+import AppleMusicIcon from '../content/images/logos/musicServicesLogos/apple-logo.svg';
 import TidalIcon from '../content/images/logos/musicServicesLogos/tidal-logo.svg';
 import YoutubeIcon from '../content/images/logos/musicServicesLogos/youtube-logo.svg';
 import AmazonIcon from '../content/images/logos/musicServicesLogos/amazon-logo.svg';
@@ -20,7 +20,7 @@ import TwitterIcon from '../content/images/icons/social-icons/twitter-icon.svg';
 import LinkIcon from '../content/images/icons/link-icon.svg';
 
 // Importing Logo Images SRC //
-import CurieuxWhiteLogo from '../content/images/logos/curieux-logo-white.svg';
+import CurieuxPurpleLogo from '../content/images/logos/curieux-logo-purple.svg';
 
 // Profile Page //
 
@@ -124,7 +124,7 @@ export default function EditProfile() {
               {/* Artist Identity */}
               <section className="artistIdentity">
 
-                <div className="artistPicture">
+                <div className="artistPicture card-placeholder">
 
                 </div>
 
@@ -233,7 +233,7 @@ export default function EditProfile() {
 
             {/* FOOTER PART */}
             <div className="profileFooter">
-              <a href="https://app.curieux.io" target="_blank"><img className="footerCurieuxLogo" src={CurieuxWhiteLogo}/></a>
+              <a href="https://app.curieux.io" target="_blank"><img className="footerCurieuxLogo" src={CurieuxPurpleLogo}/></a>
               <p className="footerCopyright">Bêta, version 0.1.0</p>
             </div>
 
